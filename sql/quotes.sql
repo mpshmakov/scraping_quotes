@@ -27,15 +27,14 @@ CREATE TABLE quotes (
 );
 
 CREATE TABLE tags (
-    id UUID PRIMARY KEY,
-    tag VARCHAR(100) UNIQUE NOT NULL
+    tag VARCHAR(100) PRIMARY KEY
 )
 
 CREATE TABLE quotes_tags_link (
     quote_id UUID,
-    tag_id UUID,
+    tag VARCHAR(100),
     FOREIGN KEY (quote_id) REFERENCES quotes(id),
-    FOREIGN KEY (tag_id) REFERENCES tags(id)
+    FOREIGN KEY (tag) REFERENCES tags(tag)
 )
 
 CREATE TABLE authors (
