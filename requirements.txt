@@ -1,0 +1,8 @@
+beautifulsoup4
+coverage
+pandas
+pytest
+requests
+sqlalchemy
+loguru
+tqdm

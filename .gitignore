@@ -1,0 +1,26 @@
+# OS X files
+.history
+.htaccess
+.DS_Store
+
+# Python
+venv
+.venv
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Mock user-data log file
+mock-user-data.log
+
+# Others
+.vscode
+push.sh
+test.csv
+test.json
+.coverage
+wikipedia_uuid.prof
+.pytest_cache
+test.py
+tttt.py
