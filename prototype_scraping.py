@@ -18,6 +18,7 @@ from tqdm import tqdm
 # create 4 dataframes
 # insert all tables into 1 json
 # 4 csv files for each table
+# insert data into db while parsing it
 
 #*
 # quote_page_worker:
@@ -64,7 +65,7 @@ def quote_page_worker(main_div: bs):
 
         quote_uuid = str(uuid.uuid4()) 
         quote_text = div_quote_tag.find(class_="text").get_text().strip()
-        quote = {quote_uuid: quote_uuid ,quote_text: quote_text, author: author}
+        quote = {"quote_uuid": quote_uuid ,"quote_text": quote_text, "author": author}
         print("quote: ",id, quote)
         
 
@@ -146,7 +147,7 @@ for result_dict in quotes_map:
 
     for i in range(len(quotes_tmp)):
         for j in range(len(tags_tmp[i])):
-            quote_tag_link.append([quotes_tmp[i]["quote_id"], tags_tmp[i][j]])
+            quote_tag_link.append([quotes_tmp[i]["quote_uuid"], tags_tmp[i][j]])
         
         quotes.append(quotes_tmp[i])
 

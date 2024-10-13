@@ -1,0 +1,13 @@
+2024-10-11T19:05:40.208142+0100 INFO 3560 Ensured data directory exists at C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes\data
+2024-10-11T19:05:40.219155+0100 INFO 3560 Created database engine for C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes\data\scraping_quotes.db
+2024-10-11T19:05:40.672364+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:40.676364+0100 INFO 3560 Created the soup.
+2024-10-11T19:05:41.344989+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:41.923916+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:42.534114+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:43.114964+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:43.671520+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:44.241922+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:44.795778+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:45.357144+0100 INFO 3560 Successfully fetched the page
+2024-10-11T19:05:45.949994+0100 INFO 3560 Successfully fetched the page
