@@ -4,7 +4,7 @@ import uuid
 
 import pandas as pd
 from bs4 import Tag
-from configuration import url
+from configuration import init_configuration, url, pagesnum
 from database import Books, Session, TestTable, initDB, insertRow
 from database.operations import check_tables_exist, initialize_schema
 from sbooks import BeautifulSoup as bs
@@ -13,6 +13,8 @@ from sbooks.export_functions import exportToCsv, exportToJson
 from sbooks.utils import clean_numeric
 from sqlalchemy.exc import SQLAlchemyError
 from tqdm import tqdm
+import json
+
 
 # reminder:
 # create 4 dataframes
@@ -39,7 +41,64 @@ from tqdm import tqdm
 # 1. append quotes lists to each other
 # 
 
-def quote_page_worker(main_div: bs):
+def update_pagesnum():    
+    next_page_url = url + "page/" + str(pagesnum + 1)
+    quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
+    addendant = 2
+
+    while True:
+        try:
+            main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+            next_page = main_div.find("nav").find("li", class_="next").find("a")["href"]
+
+        except AttributeError:
+            next_page = None
+
+        if next_page != None:
+            next_page_url = url + "page/" + str(pagesnum + addendant)
+            quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
+            addendant = addendant + 1
+        else:
+            #update configuration.json pagesnum value
+            with open("configuration.json", "r") as jsonFile:
+                data = json.load(jsonFile)
+                data["pagesnum"] = pagesnum + addendant
+                jsonFile.close()
+
+            with open("configuration.json", "w") as jsonFile:
+                json.dump(data, jsonFile)
+                jsonFile.close()
+            break
+
+
+def check_for_new_pages_and_update_pagesnum():
+    """
+    Checks if pagesnum + 1 from configuration.json exists. If they do, updates pagesnum in configuration.json
+
+    Returns:
+        True or False. True if new pages exist, False if they don't. 
+    """
+
+    next_page_url = url + "page/" + str(pagesnum)
+    quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
+    try:
+        main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+        next_page = main_div.find("nav").find("li", class_="next").find("a")["href"]
+
+    except AttributeError:
+        return False
+    
+    update_pagesnum()
+
+    # reinitialize configuration because pagesnum is different
+    init_configuration()
+    return True
+
+
+def quote_page_worker(page_url: str):
+    quote_page = bs(fetchPage(page_url).content, features="html.parser")
+    main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+
     div_quote_tags = main_div.find_all(class_="quote")
     id = str(uuid.uuid4()) # for debugging
     # uuid, quote, author
@@ -90,40 +149,25 @@ def quote_page_worker(main_div: bs):
     return {"authors": authors, "all_tags": all_tags, "tags_relative_to_quotes": tags_relative_to_quotes, "quotes": quotes}
         
 
-
 response = fetchPage(url)
 if response is None:
     raise Exception("Failed to fetch the Quotes page")
 
-quote_page = bs(response.content, features="html.parser")
-logger.info("Created the soup.")
+quotes_pages_urls = []
 
-quotes_pages = []
-page_number = 1
+# 10 pages exist for sure.
+# create a function which checks if 11th page exists. if true, iterate and change pages number in configuration.json
+init_configuration()
+check_for_new_pages_and_update_pagesnum()
 
+for i in range(pagesnum):
+    next_page_url = url + "page/" + str(i+1)
+    quotes_pages_urls.append(next_page_url)
 
-while True:
-    try:
-        main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
-        quotes_pages.append(main_div)
-        next_page = main_div.find("nav").find("li", class_="next").find("a")["href"]
-
-    except AttributeError:
-        next_page = None
-
-    print(next_page)
-    if next_page != None:
-        page_number += 1
-        next_page_url = url + "page/" + str(page_number)
-        # print("next page url: ",next_page_url)
-        quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
-    else:
-        break
-
-print("len(quotes_pages)", len(quotes_pages))
+print("len(quotes_pages)", len(quotes_pages_urls))
     
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    quotes_map = executor.map(quote_page_worker, quotes_pages)
+    quotes_map = executor.map(quote_page_worker, quotes_pages_urls)
 
 #*
 # 

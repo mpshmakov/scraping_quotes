@@ -16,7 +16,7 @@ logger.remove()  # so that the logs aren't being output in the terminal (necessa
 logger.add(
     logs_path + "/logs_{time:DD-MM-YY_HH.mm.ss}.log",
     format="{time} {level} {thread} {message}",
-    retention=timedelta(weeks=14),
+    retention=timedelta(days=14),
 )  # write logs into a log file
 
 
