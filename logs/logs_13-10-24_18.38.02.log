@@ -1,0 +1,14 @@
+2024-10-13T18:38:02.508771+0100 INFO 125219925500032 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-13T18:38:02.519747+0100 INFO 125219925500032 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/scraping_quotes.db
+2024-10-13T18:38:03.102674+0100 INFO 125219925500032 Successfully fetched the page
+2024-10-13T18:38:04.119742+0100 INFO 125219925500032 Successfully fetched the page
+2024-10-13T18:38:04.738842+0100 INFO 125219480012480 Successfully fetched the page
+2024-10-13T18:38:04.741145+0100 INFO 125219459040960 Successfully fetched the page
+2024-10-13T18:38:04.796411+0100 INFO 125219448555200 Successfully fetched the page
+2024-10-13T18:38:04.840300+0100 INFO 125219490498240 Successfully fetched the page
+2024-10-13T18:38:04.841438+0100 INFO 125219345794752 Successfully fetched the page
+2024-10-13T18:38:04.842488+0100 INFO 125219500984000 Successfully fetched the page
+2024-10-13T18:38:04.886125+0100 INFO 125219356280512 Successfully fetched the page
+2024-10-13T18:38:04.887789+0100 INFO 125219335308992 Successfully fetched the page
+2024-10-13T18:38:04.899940+0100 INFO 125219366766272 Successfully fetched the page
+2024-10-13T18:38:04.901110+0100 INFO 125219469526720 Successfully fetched the page
