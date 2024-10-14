@@ -1,5 +1,4 @@
-"""
-Utility functions for the Sbooks module.
+"""Utility functions for the Sbooks module.
 
 This module provides helper functions for file operations, UUID handling,
 and data cleaning.
@@ -9,16 +8,24 @@ import os
 import uuid
 from datetime import timedelta
 
-from configuration import logs_path
 from loguru import logger
 
 logger.remove()  # so that the logs aren't being output in the terminal (necessary for the progress bar to work properly)
+
+## Issue resolved, Max.
+## Let us discuss it during one of our calls.
+"""
+Create logs directory in the project root and set up logging
+"""
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+logs_path = os.path.join(project_root, 'logs')
+os.makedirs(logs_path, exist_ok=True)
+log_file = os.path.join(logs_path, "logs_{time:DD-MM-YY_HH.mm.ss}.log")
 logger.add(
-    logs_path + "/logs_{time:DD-MM-YY_HH.mm.ss}.log",
+    log_file,
     format="{time} {level} {thread} {message}",
     retention=timedelta(days=14),
 )  # write logs into a log file
-
 
 def create_data_folder(filename):
     """
