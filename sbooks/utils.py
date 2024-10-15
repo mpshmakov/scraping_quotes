@@ -7,8 +7,10 @@ and data cleaning.
 import os
 import uuid
 from datetime import timedelta
-
+from configuration import  get_configuration
 from loguru import logger
+
+configuration = get_configuration()
 
 logger.remove()  # so that the logs aren't being output in the terminal (necessary for the progress bar to work properly)
 

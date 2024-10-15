@@ -9,7 +9,7 @@ import uuid
 
 import pandas as pd
 from bs4 import Tag
-from configuration import url
+from configuration import get_configuration
 from database import Books, Session, TestTable, initDB, insertRow
 from database.operations import check_tables_exist, initialize_schema
 from sbooks import BeautifulSoup as bs

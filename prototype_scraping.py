@@ -4,7 +4,7 @@ import uuid
 
 import pandas as pd
 from bs4 import Tag
-from configuration import init_configuration, url, pagesnum
+from configuration import get_configuration
 from database import Books, Session, TestTable, initDB, insertRow
 from database.operations import check_tables_exist, initialize_schema
 from sbooks import BeautifulSoup as bs
@@ -41,10 +41,15 @@ import json
 # 1. append quotes lists to each other
 # 
 
+configuration = get_configuration()
+
 def update_pagesnum():    
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
+
+    addendant = 2
     next_page_url = url + "page/" + str(pagesnum + 1)
     quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
-    addendant = 2
 
     while True:
         try:
@@ -62,7 +67,7 @@ def update_pagesnum():
             #update configuration.json pagesnum value
             with open("configuration.json", "r") as jsonFile:
                 data = json.load(jsonFile)
-                data["pagesnum"] = pagesnum + addendant
+                data["pagesnum"] = pagesnum + (addendant-1)
                 jsonFile.close()
 
             with open("configuration.json", "w") as jsonFile:
@@ -78,6 +83,8 @@ def check_for_new_pages_and_update_pagesnum():
     Returns:
         True or False. True if new pages exist, False if they don't. 
     """
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
 
     next_page_url = url + "page/" + str(pagesnum)
     quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
@@ -89,9 +96,6 @@ def check_for_new_pages_and_update_pagesnum():
         return False
     
     update_pagesnum()
-
-    # reinitialize configuration because pagesnum is different
-    init_configuration()
     return True
 
 
@@ -147,9 +151,16 @@ def quote_page_worker(page_url: str):
     print("quotes: ",id, len(quotes))
 
     return {"authors": authors, "all_tags": all_tags, "tags_relative_to_quotes": tags_relative_to_quotes, "quotes": quotes}
-        
 
-response = fetchPage(url)
+# basically changes about from url to the description text of the author (done separately from quote worker to potentially save execution time)
+def authors_worker(author):
+    about_url = url + author["about"].split("/", 1)[1]
+    print("about_url", about_url)
+    about_page = bs(fetchPage(about_url).content, features="html.parser")
+    about_text = about_page.find(class_="author-details").get_text()
+    return {"author": author, "about": about_text}
+        
+response = fetchPage(configuration["url"])
 if response is None:
     raise Exception("Failed to fetch the Quotes page")
 
@@ -157,8 +168,12 @@ quotes_pages_urls = []
 
 # 10 pages exist for sure.
 # create a function which checks if 11th page exists. if true, iterate and change pages number in configuration.json
-init_configuration()
+
 check_for_new_pages_and_update_pagesnum()
+configuration = get_configuration()
+
+url = configuration["url"]
+pagesnum = configuration["pagesnum"]
 
 for i in range(pagesnum):
     next_page_url = url + "page/" + str(i+1)
@@ -184,6 +199,7 @@ tags = set()
 
 quote_tag_link = []
 
+#quotes and tags_quote_link
 for result_dict in quotes_map:
 
     quotes_tmp = result_dict["quotes"]
@@ -191,20 +207,41 @@ for result_dict in quotes_map:
 
     for i in range(len(quotes_tmp)):
         for j in range(len(tags_tmp[i])):
-            quote_tag_link.append([quotes_tmp[i]["quote_uuid"], tags_tmp[i][j]])
+            quote_tag_link.append({"quote_uuid": quotes_tmp[i]["quote_uuid"], "tag": tags_tmp[i][j]})
         
         quotes.append(quotes_tmp[i])
 
     tags.update(result_dict["all_tags"])
     authors.update(result_dict["authors"])
 
-print("quotes", quotes)
-print("authors: ", authors)
-print("tags", tags)
-print("quotes_tag_)link", quote_tag_link)
+tags = list(tags)
 
-# quotes_df = pd.DataFrame(quotes)
-# tags_arr = []
-# for tag in tags:
-#     tags_arr.append(tag)
-# tags_df = pd.DataFrame(tags)
+authors_list = []
+for author in authors:
+    authors_list.append({"author":author, "about":authors[author]})
+
+# authors
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    authors_map = executor.map(authors_worker, authors_list)
+
+authors = []
+for author in authors_map:
+    authors.append(author)
+
+
+print("quotes", len(quotes))
+print("authors: ", len(authors))
+print("tags", len(tags))
+print("quotes_tag_)link", len(quote_tag_link))
+
+quotes_df = pd.DataFrame(quotes)
+quote_tag_df = pd.DataFrame(quote_tag_link)
+tags_df = pd.DataFrame(tags)
+authors_df = pd.DataFrame(authors)
+
+#create pk tables first, fk second
+
+print(quotes_df.head())
+print(quote_tag_df.head())
+print(tags_df.head())
+print(authors_df.head())
