@@ -3,33 +3,43 @@
 This module defines the SQLAlchemy ORM models for the database tables.
 """
 
-from sqlalchemy import DECIMAL, CheckConstraint, Column, Integer, String
+from sqlalchemy import DECIMAL, CheckConstraint, Column, Integer, String, TEXT, ForeignKey
 from sqlalchemy.orm import declarative_base, validates
 
 Base = declarative_base()
 
+class Tags(Base):
 
-class Books(Base):
+    __tablename__ = "tags"
+
+    tag = Column(String(100), primary_key=True)
+
+    def __init__(self, tag: str):
+        self.tag = tag
+
+class Authors(Base):
+
+    __tablename__ = "authors"
+
+    author = Column(String(100), primary_key=True)
+    about = Column(TEXT)
+
+    def __init__(self, author: str, about: str):
+        self.author = author
+        self.about = about
+
+
+
+class Quotes(Base):
     """
-    SQLAlchemy ORM model for the books table.
+    SQLAlchemy ORM model for the quotes table.
     """
 
-    __tablename__ = "books"
+    __tablename__ = "quotes"
 
     id = Column(String(36), primary_key=True)
-    title = Column(String(255), nullable=False)
-    price = Column(DECIMAL(10, 2), nullable=False)
-    availability = Column(Integer, nullable=False)
-    star_rating = Column(Integer, nullable=True)
-    category = Column(String(70), nullable=False)
-
-    __table_args__ = (
-        CheckConstraint("price >= 0", name="check_price"),
-        CheckConstraint("availability >= 0", name="check_availability"),
-        CheckConstraint(
-            "star_rating >= 0 AND star_rating <= 5", name="check_star_rating"
-        ),
-    )
+    text = Column(String(255), nullable=False)
+    author = Column(String(100), ForeignKey('authors.author'))
 
     @validates("id")
     def validate_id(self, key, value):
@@ -37,36 +47,11 @@ class Books(Base):
             raise Exception("uuid field doesn't have 36 characters.")
         return value
 
-    @validates("availability")
-    def validate_availability(self, key, value):
-        # print("availability", type(value))
-        if type(value) != int:
-            print(type(value))
-            raise Exception("availability field isn't Integer.")
-        return value
-
-    @validates("star_rating")
-    def validate_star_rating(self, key, value):
-        # print("star rating", type(value))
-        if type(value) != int:
-            raise Exception("star_rating field isn't Integer.")
-        return value
-
-    @validates("price")
-    def validate_price(self, key, value):
-        # print("price", type(value))
-        if type(value) != float:
-            raise Exception("price field isn't float.")
-        return value
-
     def __init__(
         self,
         id: str,
-        title: str,
-        price: float,
-        availability: int,
-        star_rating: int,
-        category: str,
+        text: str,
+        author: float,
     ):
         """
         Initialize a Books instance.
@@ -80,12 +65,20 @@ class Books(Base):
             category (str): Category of the book.
         """
         self.id = id
-        self.title = title
-        self.price = price
-        self.availability = availability
-        self.star_rating = star_rating
-        self.category = category
+        self.text = text
+        self.author = author
 
+class QuotesTagsLink(Base):
+
+    __tablename__ = "quotes_tags_link"
+
+    quote_id = Column(String(36), ForeignKey('quotes.id'))
+    tag = Column(String(100), ForeignKey('tags.tag'))
+
+    def __init__(self, quote_id: str, tag: str):
+        self.quote_id = quote_id
+        self.tag = tag
+        
 
 class TestTable(Base):
     """
