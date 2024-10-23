@@ -1,0 +1,4 @@
+2024-10-23T15:34:48.659307+0100 INFO 138732550930560 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T15:34:48.704694+0100 INFO 138732550930560 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/scraping_quotes.db
+2024-10-23T15:34:48.721099+0100 ERROR 138732550930560 Error initializing database schema: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'root' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

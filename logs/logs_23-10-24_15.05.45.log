@@ -1,0 +1,2 @@
+2024-10-23T15:05:46.451539+0100 INFO 132835056697472 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T15:06:49.000816+0100 INFO 132835056697472 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/scraping_quotes.db

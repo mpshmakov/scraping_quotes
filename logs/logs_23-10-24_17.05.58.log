@@ -1,0 +1,21 @@
+2024-10-23T17:05:58.887552+0100 INFO 129684180947072 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T17:05:58.915896+0100 INFO 129684180947072 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/quotes.db
+2024-10-23T17:05:58.947305+0100 INFO 129684180947072 Database schema initialized successfully.
+2024-10-23T17:05:58.949283+0100 INFO 129684180947072 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:05:58.949400+0100 ERROR 129684180947072 Not all required tables were created.
+2024-10-23T17:05:58.957271+0100 INFO 129684180947072 Database schema initialized successfully.
+2024-10-23T17:05:58.959022+0100 INFO 129684180947072 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:05:58.959131+0100 ERROR 129684180947072 Not all required tables were created.
+2024-10-23T17:05:58.960706+0100 ERROR 129684180947072 Tables were not created successfully.
+2024-10-23T17:05:59.988653+0100 INFO 129684180947072 Successfully fetched the page
+2024-10-23T17:06:00.598595+0100 INFO 129684180947072 Successfully fetched the page
+2024-10-23T17:06:01.255900+0100 INFO 129683448399552 Successfully fetched the page
+2024-10-23T17:06:01.257769+0100 INFO 129683607783104 Successfully fetched the page
+2024-10-23T17:06:01.306910+0100 INFO 129683639240384 Successfully fetched the page
+2024-10-23T17:06:01.308415+0100 INFO 129683756680896 Successfully fetched the page
+2024-10-23T17:06:01.340278+0100 INFO 129683628754624 Successfully fetched the page
+2024-10-23T17:06:01.341833+0100 INFO 129683597297344 Successfully fetched the page
+2024-10-23T17:06:01.344039+0100 INFO 129683618268864 Successfully fetched the page
+2024-10-23T17:06:01.351581+0100 INFO 129683735709376 Successfully fetched the page
+2024-10-23T17:06:01.353343+0100 INFO 129683649726144 Successfully fetched the page
+2024-10-23T17:06:01.410816+0100 INFO 129683746195136 Successfully fetched the page

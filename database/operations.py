@@ -5,11 +5,11 @@ checking table existence, inserting records into the database, and truncating ta
 """
 
 from sbooks import logger
-from sqlalchemy import MetaData, Table, inspect
+from sqlalchemy import MetaData, Table, inspect, select, update, exc
 from sqlalchemy.exc import SQLAlchemyError
 
 from . import Base, Session, engine
-from .schema import Books, TestTable
+from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags
 
 # from sqlalchemy.orm import Session
 
@@ -24,12 +24,13 @@ def initialize_schema():
     try:
         metadata = MetaData()
         # Explicitly define tables
-        Table(
-            "books",
-            metadata,
-            *[c.copy() for c in Books.__table__.columns],
-        )
-        Table("TestTable", metadata, *[c.copy() for c in TestTable.__table__.columns])
+        Table(Tags.__tablename__, metadata, *[c.copy() for c in Tags.__table__.columns],)
+        Table(Authors.__tablename__, metadata, *[c.copy() for c in Authors.__table__.columns],)
+        Table(Quotes.__tablename__, metadata, *[c.copy() for c in Quotes.__table__.columns],)
+        Table(QuotesTagsLink.__tablename__, metadata, *[c.copy() for c in QuotesTagsLink.__table__.columns],)
+        Table(TestTable.__tablename__, metadata, *[c.copy() for c in TestTable.__table__.columns],)
+
+
         # Create tables
         metadata.create_all(engine)
         logger.info("Database schema initialized successfully.")
@@ -39,6 +40,7 @@ def initialize_schema():
         tables = inspector.get_table_names()
         logger.info(f"Tables in the database: {tables}")
 
+        # TODO: change
         if "books" in tables and "TestTable" in tables:
             logger.info("All required tables have been created successfully.")
         else:
@@ -65,7 +67,7 @@ def check_tables_exist():
         logger.error(f"Error inspecting database engine: {str(e)}")
         raise
 
-    required_tables = ["books", "TestTable"]
+    required_tables = ["quotes", "tags", "authors", "quotes_tags_link", "TestTable"]
     return all(table in existing_tables for table in required_tables)
 
 
@@ -79,7 +81,7 @@ def truncate_tables(session):
     Raises:
         SQLAlchemyError: If there's an error during table truncation.
     """
-    for table in [Books, TestTable]:
+    for table in [Quotes, Authors, Tags, QuotesTagsLink, TestTable]:
         try:
             session.query(table).delete()
         except SQLAlchemyError as e:
@@ -114,7 +116,7 @@ def insert_records(session, records, commit=True):
         raise
 
 
-def initDB(records):
+def initDB():
     """
     Initialize the database by creating schema, truncating existing tables, and inserting initial records.
 
@@ -139,7 +141,7 @@ def initDB(records):
             truncate_tables(session)
 
             # Insert new records without committing
-            insert_records(session, records, commit=False)
+            #insert_records(session, records, commit=False)
 
             # Commit all changes in a single transaction
             session.commit()
@@ -174,11 +176,39 @@ def insertRow(row):
     session = Session()
     try:
         session.add(row)
-        session.commit()
+        # session.commit()
+        session.flush()
         logger.info(f"Row inserted successfully into {row.__tablename__}.")
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error inserting row into {row.__tablename__}: {str(e)}")
         raise
+    except exc.IntegrityError as e:
+        session.rollback()
+        print("integrity error")
+
+    finally:
+        session.close()
+
+def updateAuthorRowAboutValue(author: str, about_text: str):
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot insert row.")
+        return
+
+    session = Session()
+    try:
+        print("updating ", author)
+        res =  session.execute(select(Authors).filter_by(author=author)).scalar_one() 
+        print("updateD ", author)
+        res.about = about_text
+        session.flush()
+        logger.info(f"Row for {author} updated successfully.")
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error updating {author} row: {str(e)}")
+        raise
+    except exc.NoResultFound as e:
+        session.rollback()
+        print("NoResultFound error for this author: ", author)
     finally:
         session.close()

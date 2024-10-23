@@ -1,0 +1,112 @@
+2024-10-23T17:46:09.769404+0100 INFO 135737723547776 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T17:46:09.797541+0100 INFO 135737723547776 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/quotes.db
+2024-10-23T17:46:09.824524+0100 INFO 135737723547776 Database schema initialized successfully.
+2024-10-23T17:46:09.826362+0100 INFO 135737723547776 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:46:09.826474+0100 ERROR 135737723547776 Not all required tables were created.
+2024-10-23T17:46:09.834308+0100 INFO 135737723547776 Database schema initialized successfully.
+2024-10-23T17:46:09.836059+0100 INFO 135737723547776 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:46:09.836167+0100 ERROR 135737723547776 Not all required tables were created.
+2024-10-23T17:46:09.852351+0100 INFO 135737723547776 All tables truncated successfully.
+2024-10-23T17:46:09.860873+0100 INFO 135737723547776 Database initialized successfully with new records.
+2024-10-23T17:46:10.634347+0100 INFO 135737723547776 Successfully fetched the page
+2024-10-23T17:46:11.452434+0100 INFO 135737723547776 Successfully fetched the page
+2024-10-23T17:46:12.118591+0100 INFO 135737183831744 Successfully fetched the page
+2024-10-23T17:46:12.128413+0100 INFO 135737204803264 Successfully fetched the page
+2024-10-23T17:46:12.166970+0100 INFO 135737194317504 Successfully fetched the page
+2024-10-23T17:46:12.169005+0100 INFO 135737299175104 Successfully fetched the page
+2024-10-23T17:46:12.170490+0100 INFO 135737152374464 Successfully fetched the page
+2024-10-23T17:46:12.176570+0100 INFO 135737162860224 Successfully fetched the page
+2024-10-23T17:46:12.193238+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:12.194633+0100 INFO 135737173345984 Successfully fetched the page
+2024-10-23T17:46:12.283628+0100 INFO 135737288689344 Successfully fetched the page
+2024-10-23T17:46:12.285276+0100 INFO 135737003476672 Successfully fetched the page
+2024-10-23T17:46:12.712213+0100 INFO 135737183831744 Row inserted successfully into tags.
+2024-10-23T17:46:12.728862+0100 INFO 135737204803264 Row inserted successfully into tags.
+2024-10-23T17:46:12.732550+0100 INFO 135737183831744 Row inserted successfully into authors.
+2024-10-23T17:46:12.746596+0100 INFO 135737162860224 Row inserted successfully into tags.
+2024-10-23T17:46:12.751967+0100 INFO 135737288689344 Row inserted successfully into tags.
+2024-10-23T17:46:12.756327+0100 INFO 135737183831744 Row inserted successfully into quotes.
+2024-10-23T17:46:12.759665+0100 INFO 135737204803264 Row inserted successfully into authors.
+2024-10-23T17:46:12.762644+0100 INFO 135737299175104 Row inserted successfully into tags.
+2024-10-23T17:46:12.766153+0100 INFO 135737003476672 Row inserted successfully into tags.
+2024-10-23T17:46:12.771127+0100 INFO 135737288689344 Row inserted successfully into authors.
+2024-10-23T17:46:12.771439+0100 INFO 135737162860224 Row inserted successfully into authors.
+2024-10-23T17:46:12.789907+0100 INFO 135737183831744 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.793029+0100 INFO 135737204803264 Row inserted successfully into quotes.
+2024-10-23T17:46:12.795123+0100 INFO 135736992990912 Row inserted successfully into tags.
+2024-10-23T17:46:12.797761+0100 INFO 135737152374464 Row inserted successfully into tags.
+2024-10-23T17:46:12.801467+0100 INFO 135737288689344 Row inserted successfully into quotes.
+2024-10-23T17:46:12.805424+0100 INFO 135737003476672 Row inserted successfully into authors.
+2024-10-23T17:46:12.805829+0100 INFO 135737162860224 Row inserted successfully into quotes.
+2024-10-23T17:46:12.807404+0100 INFO 135737299175104 Row inserted successfully into authors.
+2024-10-23T17:46:12.813791+0100 INFO 135737194317504 Row inserted successfully into tags.
+2024-10-23T17:46:12.817561+0100 INFO 135737173345984 Row inserted successfully into tags.
+2024-10-23T17:46:12.824314+0100 INFO 135736992990912 Row inserted successfully into authors.
+2024-10-23T17:46:12.831015+0100 INFO 135737204803264 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.832277+0100 INFO 135737003476672 Row inserted successfully into quotes.
+2024-10-23T17:46:12.838775+0100 INFO 135737162860224 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.839085+0100 INFO 135737288689344 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.840674+0100 INFO 135737152374464 Row inserted successfully into authors.
+2024-10-23T17:46:12.843480+0100 INFO 135737194317504 Row inserted successfully into authors.
+2024-10-23T17:46:12.844380+0100 INFO 135737173345984 Row inserted successfully into authors.
+2024-10-23T17:46:12.846701+0100 INFO 135737299175104 Row inserted successfully into quotes.
+2024-10-23T17:46:12.848836+0100 INFO 135736992990912 Row inserted successfully into quotes.
+2024-10-23T17:46:12.854386+0100 INFO 135737003476672 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.862343+0100 INFO 135737173345984 Row inserted successfully into quotes.
+2024-10-23T17:46:12.863483+0100 INFO 135737152374464 Row inserted successfully into quotes.
+2024-10-23T17:46:12.871217+0100 INFO 135736992990912 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.874013+0100 INFO 135737194317504 Row inserted successfully into quotes.
+2024-10-23T17:46:12.874610+0100 INFO 135737299175104 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.877642+0100 INFO 135737173345984 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.879992+0100 INFO 135737152374464 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:12.885564+0100 INFO 135737194317504 Row inserted successfully into quotes_tags_link.
+2024-10-23T17:46:13.666201+0100 INFO 135737003476672 Successfully fetched the page
+2024-10-23T17:46:13.668167+0100 INFO 135737162860224 Successfully fetched the page
+2024-10-23T17:46:13.670263+0100 INFO 135736982505152 Successfully fetched the page
+2024-10-23T17:46:13.682884+0100 INFO 135737152374464 Successfully fetched the page
+2024-10-23T17:46:13.685056+0100 INFO 135737204803264 Successfully fetched the page
+2024-10-23T17:46:13.696148+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:13.697657+0100 INFO 135736961533632 Successfully fetched the page
+2024-10-23T17:46:13.707783+0100 INFO 135737194317504 Successfully fetched the page
+2024-10-23T17:46:13.710049+0100 INFO 135737299175104 Successfully fetched the page
+2024-10-23T17:46:13.711667+0100 INFO 135737183831744 Successfully fetched the page
+2024-10-23T17:46:13.714172+0100 INFO 135737173345984 Successfully fetched the page
+2024-10-23T17:46:13.717742+0100 INFO 135736972019392 Successfully fetched the page
+2024-10-23T17:46:14.307120+0100 INFO 135736982505152 Successfully fetched the page
+2024-10-23T17:46:14.340992+0100 INFO 135737162860224 Successfully fetched the page
+2024-10-23T17:46:14.343154+0100 INFO 135737152374464 Successfully fetched the page
+2024-10-23T17:46:14.364904+0100 INFO 135737003476672 Successfully fetched the page
+2024-10-23T17:46:14.374042+0100 INFO 135737204803264 Successfully fetched the page
+2024-10-23T17:46:14.391803+0100 INFO 135737194317504 Successfully fetched the page
+2024-10-23T17:46:14.393594+0100 INFO 135736961533632 Successfully fetched the page
+2024-10-23T17:46:14.395669+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:14.438583+0100 INFO 135737299175104 Successfully fetched the page
+2024-10-23T17:46:14.441282+0100 INFO 135737173345984 Successfully fetched the page
+2024-10-23T17:46:14.443079+0100 INFO 135736972019392 Successfully fetched the page
+2024-10-23T17:46:14.451353+0100 INFO 135737183831744 Successfully fetched the page
+2024-10-23T17:46:14.966522+0100 INFO 135736982505152 Successfully fetched the page
+2024-10-23T17:46:14.987508+0100 INFO 135737152374464 Successfully fetched the page
+2024-10-23T17:46:14.989304+0100 INFO 135737162860224 Successfully fetched the page
+2024-10-23T17:46:15.018054+0100 INFO 135737003476672 Successfully fetched the page
+2024-10-23T17:46:15.065858+0100 INFO 135736972019392 Successfully fetched the page
+2024-10-23T17:46:15.068103+0100 INFO 135737204803264 Successfully fetched the page
+2024-10-23T17:46:15.079988+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:15.087619+0100 INFO 135736961533632 Successfully fetched the page
+2024-10-23T17:46:15.095479+0100 INFO 135737194317504 Successfully fetched the page
+2024-10-23T17:46:15.104201+0100 INFO 135737299175104 Successfully fetched the page
+2024-10-23T17:46:15.106175+0100 INFO 135737183831744 Successfully fetched the page
+2024-10-23T17:46:15.122952+0100 INFO 135737173345984 Successfully fetched the page
+2024-10-23T17:46:15.717157+0100 INFO 135736982505152 Successfully fetched the page
+2024-10-23T17:46:15.718874+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:15.720983+0100 INFO 135737003476672 Successfully fetched the page
+2024-10-23T17:46:15.744390+0100 INFO 135737152374464 Successfully fetched the page
+2024-10-23T17:46:15.755514+0100 INFO 135736972019392 Successfully fetched the page
+2024-10-23T17:46:15.760260+0100 INFO 135737162860224 Successfully fetched the page
+2024-10-23T17:46:15.864979+0100 INFO 135737194317504 Successfully fetched the page
+2024-10-23T17:46:15.867003+0100 INFO 135737204803264 Successfully fetched the page
+2024-10-23T17:46:15.868898+0100 INFO 135737173345984 Successfully fetched the page
+2024-10-23T17:46:15.870901+0100 INFO 135736961533632 Successfully fetched the page
+2024-10-23T17:46:15.899850+0100 INFO 135737299175104 Successfully fetched the page
+2024-10-23T17:46:15.909802+0100 INFO 135737183831744 Successfully fetched the page
+2024-10-23T17:46:16.466999+0100 INFO 135736992990912 Successfully fetched the page
+2024-10-23T17:46:16.468793+0100 INFO 135736982505152 Successfully fetched the page

@@ -6,7 +6,6 @@ CREATE TABLE authors (
 CREATE TABLE quotes (
     id UUID PRIMARY KEY,
     text VARCHAR(255) NOT NULL,
-    category VARCHAR(70) NOT NULL,
     author VARCHAR(100),
     FOREIGN KEY (author) REFERENCES authors(author)
 );

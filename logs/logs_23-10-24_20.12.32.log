@@ -1,0 +1,162 @@
+2024-10-23T20:12:33.190273+0100 INFO 129025946546304 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T20:12:33.219039+0100 INFO 129025946546304 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/quotes.db
+2024-10-23T20:12:33.245817+0100 INFO 129025946546304 Database schema initialized successfully.
+2024-10-23T20:12:33.247654+0100 INFO 129025946546304 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T20:12:33.247785+0100 ERROR 129025946546304 Not all required tables were created.
+2024-10-23T20:12:33.255611+0100 INFO 129025946546304 Database schema initialized successfully.
+2024-10-23T20:12:33.257377+0100 INFO 129025946546304 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T20:12:33.257484+0100 ERROR 129025946546304 Not all required tables were created.
+2024-10-23T20:12:33.274495+0100 INFO 129025946546304 All tables truncated successfully.
+2024-10-23T20:12:33.346093+0100 INFO 129025946546304 Database initialized successfully with new records.
+2024-10-23T20:12:34.091000+0100 INFO 129025946546304 Successfully fetched the page
+2024-10-23T20:12:35.114232+0100 INFO 129025946546304 Successfully fetched the page
+2024-10-23T20:12:35.744657+0100 INFO 129025378879168 Successfully fetched the page
+2024-10-23T20:12:35.753256+0100 INFO 129025458570944 Successfully fetched the page
+2024-10-23T20:12:35.761401+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:35.805522+0100 INFO 129025500513984 Successfully fetched the page
+2024-10-23T20:12:35.852378+0100 INFO 129025357907648 Successfully fetched the page
+2024-10-23T20:12:35.859580+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:35.917015+0100 INFO 129025368393408 Successfully fetched the page
+2024-10-23T20:12:35.932906+0100 INFO 129025521485504 Successfully fetched the page
+2024-10-23T20:12:35.935047+0100 INFO 129025490028224 Successfully fetched the page
+2024-10-23T20:12:35.936073+0100 INFO 129025510999744 Successfully fetched the page
+2024-10-23T20:12:36.071883+0100 INFO 129025479542464 Row inserted successfully into tags.
+2024-10-23T20:12:36.242911+0100 INFO 129025500513984 Row inserted successfully into tags.
+2024-10-23T20:12:36.245039+0100 INFO 129025378879168 Row inserted successfully into tags.
+2024-10-23T20:12:36.247849+0100 INFO 129025479542464 Row inserted successfully into authors.
+2024-10-23T20:12:36.266308+0100 INFO 129025368393408 Row inserted successfully into tags.
+2024-10-23T20:12:36.280286+0100 INFO 129025469056704 Row inserted successfully into tags.
+2024-10-23T20:12:36.294872+0100 INFO 129025490028224 Row inserted successfully into tags.
+2024-10-23T20:12:36.302818+0100 INFO 129025357907648 Row inserted successfully into tags.
+2024-10-23T20:12:36.303435+0100 INFO 129025458570944 Row inserted successfully into tags.
+2024-10-23T20:12:36.316438+0100 INFO 129025378879168 Row inserted successfully into authors.
+2024-10-23T20:12:36.323169+0100 INFO 129025479542464 Row inserted successfully into quotes.
+2024-10-23T20:12:36.327622+0100 INFO 129025368393408 Row inserted successfully into authors.
+2024-10-23T20:12:36.336697+0100 INFO 129025500513984 Row inserted successfully into authors.
+2024-10-23T20:12:36.339897+0100 INFO 129025521485504 Row inserted successfully into tags.
+2024-10-23T20:12:36.350297+0100 INFO 129025490028224 Row inserted successfully into authors.
+2024-10-23T20:12:36.350816+0100 INFO 129025469056704 Row inserted successfully into authors.
+2024-10-23T20:12:36.356782+0100 INFO 129025510999744 Row inserted successfully into tags.
+2024-10-23T20:12:36.397381+0100 INFO 129025368393408 Row inserted successfully into quotes.
+2024-10-23T20:12:36.400019+0100 INFO 129025378879168 Row inserted successfully into quotes.
+2024-10-23T20:12:36.401164+0100 INFO 129025458570944 Row inserted successfully into authors.
+2024-10-23T20:12:36.405192+0100 INFO 129025357907648 Row inserted successfully into authors.
+2024-10-23T20:12:36.411006+0100 INFO 129025500513984 Row inserted successfully into quotes.
+2024-10-23T20:12:36.411532+0100 INFO 129025479542464 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.416995+0100 INFO 129025521485504 Row inserted successfully into authors.
+2024-10-23T20:12:36.422585+0100 INFO 129025490028224 Row inserted successfully into quotes.
+2024-10-23T20:12:36.428856+0100 INFO 129025469056704 Row inserted successfully into quotes.
+2024-10-23T20:12:36.459458+0100 INFO 129025458570944 Row inserted successfully into quotes.
+2024-10-23T20:12:36.462652+0100 INFO 129025368393408 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.473344+0100 INFO 129025378879168 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.481052+0100 INFO 129025357907648 Row inserted successfully into quotes.
+2024-10-23T20:12:36.490029+0100 INFO 129025500513984 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.495980+0100 INFO 129025510999744 Row inserted successfully into authors.
+2024-10-23T20:12:36.497097+0100 INFO 129025521485504 Row inserted successfully into quotes.
+2024-10-23T20:12:36.498802+0100 INFO 129025490028224 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.501665+0100 INFO 129025469056704 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.502884+0100 INFO 129025458570944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.527618+0100 INFO 129025510999744 Row inserted successfully into quotes.
+2024-10-23T20:12:36.530196+0100 INFO 129025357907648 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.534497+0100 INFO 129025521485504 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:36.545756+0100 INFO 129025510999744 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:12:37.166469+0100 INFO 129025357907648 Successfully fetched the page
+2024-10-23T20:12:37.174064+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:37.177054+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:37.190898+0100 INFO 129025510999744 Successfully fetched the page
+2024-10-23T20:12:37.197542+0100 INFO 129025347421888 Successfully fetched the page
+2024-10-23T20:12:37.202323+0100 INFO 129025490028224 Successfully fetched the page
+2024-10-23T20:12:37.203664+0100 INFO 129025500513984 Successfully fetched the page
+2024-10-23T20:12:37.204985+0100 INFO 129025521485504 Successfully fetched the page
+2024-10-23T20:12:37.207289+0100 INFO 129025458570944 Successfully fetched the page
+2024-10-23T20:12:37.209361+0100 INFO 129025378879168 Successfully fetched the page
+2024-10-23T20:12:37.212435+0100 INFO 129025368393408 Successfully fetched the page
+2024-10-23T20:12:37.214512+0100 INFO 129025336936128 Successfully fetched the page
+2024-10-23T20:12:37.323518+0100 ERROR 129025479542464 Error updating Eleanor Roosevelt row: No row was found when one was required
+2024-10-23T20:12:37.324634+0100 ERROR 129025357907648 Error updating Jane Austen row: No row was found when one was required
+2024-10-23T20:12:37.355212+0100 ERROR 129025510999744 Error updating Albert Einstein row: No row was found when one was required
+2024-10-23T20:12:37.374046+0100 INFO 129025469056704 Row for Steve Martin updated successfully.
+2024-10-23T20:12:37.382477+0100 ERROR 129025347421888 Error updating Douglas Adams row: No row was found when one was required
+2024-10-23T20:12:37.419669+0100 ERROR 129025490028224 Error updating Thomas A. Edison row: No row was found when one was required
+2024-10-23T20:12:37.423134+0100 ERROR 129025458570944 Error updating Marilyn Monroe row: No row was found when one was required
+2024-10-23T20:12:37.443421+0100 ERROR 129025500513984 Error updating André Gide row: No row was found when one was required
+2024-10-23T20:12:37.448060+0100 ERROR 129025521485504 Error updating J.K. Rowling row: No row was found when one was required
+2024-10-23T20:12:37.458949+0100 INFO 129025378879168 Row for Bob Marley updated successfully.
+2024-10-23T20:12:37.468046+0100 ERROR 129025336936128 Error updating Elie Wiesel row: No row was found when one was required
+2024-10-23T20:12:37.475808+0100 INFO 129025368393408 Row for Dr. Seuss updated successfully.
+2024-10-23T20:12:37.941523+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:37.958582+0100 ERROR 129025479542464 Error updating Friedrich Nietzsche row: No row was found when one was required
+2024-10-23T20:12:38.028967+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:38.038195+0100 INFO 129025510999744 Successfully fetched the page
+2024-10-23T20:12:38.040019+0100 INFO 129025357907648 Successfully fetched the page
+2024-10-23T20:12:38.042184+0100 INFO 129025458570944 Successfully fetched the page
+2024-10-23T20:12:38.058949+0100 INFO 129025490028224 Successfully fetched the page
+2024-10-23T20:12:38.060470+0100 INFO 129025347421888 Successfully fetched the page
+2024-10-23T20:12:38.065522+0100 INFO 129025336936128 Successfully fetched the page
+2024-10-23T20:12:38.093170+0100 INFO 129025368393408 Successfully fetched the page
+2024-10-23T20:12:38.098915+0100 INFO 129025378879168 Successfully fetched the page
+2024-10-23T20:12:38.103532+0100 INFO 129025500513984 Successfully fetched the page
+2024-10-23T20:12:38.125515+0100 ERROR 129025469056704 Error updating Pablo Neruda row: No row was found when one was required
+2024-10-23T20:12:38.157680+0100 INFO 129025357907648 Row for Mark Twain updated successfully.
+2024-10-23T20:12:38.161691+0100 INFO 129025510999744 Row for Allen Saunders updated successfully.
+2024-10-23T20:12:38.169880+0100 ERROR 129025490028224 Error updating Mother Teresa row: No row was found when one was required
+2024-10-23T20:12:38.176332+0100 INFO 129025521485504 Successfully fetched the page
+2024-10-23T20:12:38.182620+0100 ERROR 129025458570944 Error updating Garrison Keillor row: No row was found when one was required
+2024-10-23T20:12:38.235647+0100 ERROR 129025378879168 Error updating William Nicholson row: No row was found when one was required
+2024-10-23T20:12:38.253353+0100 ERROR 129025336936128 Error updating Jorge Luis Borges row: No row was found when one was required
+2024-10-23T20:12:38.254186+0100 INFO 129025368393408 Row for George Eliot updated successfully.
+2024-10-23T20:12:38.262759+0100 ERROR 129025500513984 Error updating Jim Henson row: No row was found when one was required
+2024-10-23T20:12:38.282827+0100 ERROR 129025347421888 Error updating Ralph Waldo Emerson row: No row was found when one was required
+2024-10-23T20:12:38.288860+0100 ERROR 129025521485504 Error updating Charles M. Schulz row: No row was found when one was required
+2024-10-23T20:12:38.615575+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:38.658155+0100 INFO 129025479542464 Row for George R.R. Martin updated successfully.
+2024-10-23T20:12:38.812445+0100 INFO 129025510999744 Successfully fetched the page
+2024-10-23T20:12:38.821190+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:38.832336+0100 INFO 129025490028224 Successfully fetched the page
+2024-10-23T20:12:38.846545+0100 INFO 129025378879168 Successfully fetched the page
+2024-10-23T20:12:38.851007+0100 INFO 129025336936128 Successfully fetched the page
+2024-10-23T20:12:38.860068+0100 INFO 129025357907648 Successfully fetched the page
+2024-10-23T20:12:38.887198+0100 INFO 129025458570944 Successfully fetched the page
+2024-10-23T20:12:38.895354+0100 INFO 129025500513984 Successfully fetched the page
+2024-10-23T20:12:38.905205+0100 INFO 129025347421888 Successfully fetched the page
+2024-10-23T20:12:38.911596+0100 INFO 129025521485504 Successfully fetched the page
+2024-10-23T20:12:38.913825+0100 INFO 129025469056704 Row for C.S. Lewis updated successfully.
+2024-10-23T20:12:38.921808+0100 INFO 129025368393408 Successfully fetched the page
+2024-10-23T20:12:38.987890+0100 INFO 129025510999744 Row for James Baldwin updated successfully.
+2024-10-23T20:12:39.007364+0100 ERROR 129025458570944 Error updating Alexandre Dumas fils row: No row was found when one was required
+2024-10-23T20:12:39.009552+0100 ERROR 129025336936128 Error updating Ernest Hemingway row: No row was found when one was required
+2024-10-23T20:12:39.019949+0100 ERROR 129025490028224 Error updating Haruki Murakami row: No row was found when one was required
+2024-10-23T20:12:39.027191+0100 ERROR 129025378879168 Error updating Stephenie Meyer row: No row was found when one was required
+2024-10-23T20:12:39.067386+0100 ERROR 129025347421888 Error updating Charles Bukowski row: No row was found when one was required
+2024-10-23T20:12:39.073367+0100 ERROR 129025521485504 Error updating Suzanne Collins row: No row was found when one was required
+2024-10-23T20:12:39.088666+0100 ERROR 129025368393408 Error updating Helen Keller row: No row was found when one was required
+2024-10-23T20:12:39.095210+0100 ERROR 129025357907648 Error updating Martin Luther King Jr. row: No row was found when one was required
+2024-10-23T20:12:39.102418+0100 INFO 129025500513984 Row for George Bernard Shaw updated successfully.
+2024-10-23T20:12:39.304145+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:39.326189+0100 ERROR 129025479542464 Error updating J.R.R. Tolkien row: No row was found when one was required
+2024-10-23T20:12:39.569670+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:39.587649+0100 ERROR 129025469056704 Error updating Alfred Tennyson row: No row was found when one was required
+2024-10-23T20:12:39.616085+0100 INFO 129025510999744 Successfully fetched the page
+2024-10-23T20:12:39.617816+0100 INFO 129025458570944 Successfully fetched the page
+2024-10-23T20:12:39.619887+0100 INFO 129025336936128 Successfully fetched the page
+2024-10-23T20:12:39.654433+0100 INFO 129025378879168 Successfully fetched the page
+2024-10-23T20:12:39.661630+0100 INFO 129025347421888 Successfully fetched the page
+2024-10-23T20:12:39.662607+0100 ERROR 129025510999744 Error updating Terry Pratchett row: No row was found when one was required
+2024-10-23T20:12:39.665990+0100 INFO 129025490028224 Successfully fetched the page
+2024-10-23T20:12:39.698276+0100 INFO 129025357907648 Successfully fetched the page
+2024-10-23T20:12:39.700207+0100 INFO 129025368393408 Successfully fetched the page
+2024-10-23T20:12:39.720916+0100 INFO 129025500513984 Successfully fetched the page
+2024-10-23T20:12:39.722803+0100 INFO 129025521485504 Successfully fetched the page
+2024-10-23T20:12:39.740037+0100 ERROR 129025336936128 Error updating George Carlin row: No row was found when one was required
+2024-10-23T20:12:39.740891+0100 ERROR 129025458570944 Error updating J.D. Salinger row: No row was found when one was required
+2024-10-23T20:12:39.783318+0100 ERROR 129025347421888 Error updating Ayn Rand row: No row was found when one was required
+2024-10-23T20:12:39.786437+0100 ERROR 129025490028224 Error updating John Lennon row: No row was found when one was required
+2024-10-23T20:12:39.789595+0100 ERROR 129025378879168 Error updating W.C. Fields row: No row was found when one was required
+2024-10-23T20:12:39.790421+0100 ERROR 129025500513984 Error updating Khaled Hosseini row: No row was found when one was required
+2024-10-23T20:12:39.791321+0100 ERROR 129025357907648 Error updating E.E. Cummings row: No row was found when one was required
+2024-10-23T20:12:39.806871+0100 ERROR 129025521485504 Error updating Jimi Hendrix row: No row was found when one was required
+2024-10-23T20:12:39.808307+0100 ERROR 129025368393408 Error updating J.M. Barrie row: No row was found when one was required
+2024-10-23T20:12:39.962464+0100 INFO 129025479542464 Successfully fetched the page
+2024-10-23T20:12:39.985786+0100 ERROR 129025479542464 Error updating Harper Lee row: No row was found when one was required
+2024-10-23T20:12:40.337235+0100 INFO 129025469056704 Successfully fetched the page
+2024-10-23T20:12:40.353423+0100 ERROR 129025469056704 Error updating Madeleine L'Engle row: No row was found when one was required

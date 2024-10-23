@@ -1,0 +1,657 @@
+2024-10-23T20:46:34.413412+0100 INFO 136634975801472 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T20:46:34.443031+0100 INFO 136634975801472 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/quotes.db
+2024-10-23T20:46:34.680809+0100 INFO 136634975801472 Database schema initialized successfully.
+2024-10-23T20:46:34.685794+0100 INFO 136634975801472 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T20:46:34.686106+0100 ERROR 136634975801472 Not all required tables were created.
+2024-10-23T20:46:34.711286+0100 INFO 136634975801472 Database schema initialized successfully.
+2024-10-23T20:46:34.715799+0100 INFO 136634975801472 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T20:46:34.716095+0100 ERROR 136634975801472 Not all required tables were created.
+2024-10-23T20:46:34.769072+0100 INFO 136634975801472 All tables truncated successfully.
+2024-10-23T20:46:34.770774+0100 INFO 136634975801472 Database initialized successfully with new records.
+2024-10-23T20:46:35.501306+0100 INFO 136634975801472 Successfully fetched the page
+2024-10-23T20:46:36.127526+0100 INFO 136634975801472 Successfully fetched the page
+2024-10-23T20:46:36.770670+0100 INFO 136634530006720 Successfully fetched the page
+2024-10-23T20:46:36.783449+0100 INFO 136634418857664 Successfully fetched the page
+2024-10-23T20:46:36.786026+0100 INFO 136634450314944 Successfully fetched the page
+2024-10-23T20:46:36.804910+0100 INFO 136634439829184 Successfully fetched the page
+2024-10-23T20:46:36.805911+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:36.817178+0100 INFO 136634248988352 Successfully fetched the page
+2024-10-23T20:46:36.818386+0100 INFO 136634429343424 Successfully fetched the page
+2024-10-23T20:46:36.884809+0100 INFO 136634397886144 Successfully fetched the page
+2024-10-23T20:46:36.901265+0100 INFO 136634540492480 Successfully fetched the page
+2024-10-23T20:46:36.913948+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:37.152992+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:37.365126+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:37.383169+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:37.384213+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:37.387349+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:37.387980+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.396471+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.397281+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.398239+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:37.399098+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:37.402401+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.414142+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:37.420927+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:37.424640+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:37.426051+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.434114+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.438449+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:37.450248+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.452380+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:37.456096+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:37.456819+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.464687+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:37.467143+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.467854+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:37.468481+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:37.478411+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:37.480873+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.488780+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:37.490997+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:37.497172+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.500404+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.501167+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:37.512959+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.514531+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:37.524156+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.530566+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.538549+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.541238+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:37.543302+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:37.549238+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.562031+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.589882+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:37.592024+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:37.595428+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:37.611638+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:37.621264+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:37.625596+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.630846+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:37.632314+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.633261+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:37.642450+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:37.650854+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:37.660421+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:37.666968+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.678022+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.680956+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:37.682794+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.683615+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.685502+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:37.691516+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:37.698102+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:37.707581+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.710324+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.718421+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:37.723892+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:37.731218+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.732169+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:37.736394+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.738359+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:37.753323+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.760706+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:37.784124+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.785038+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:37.786123+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:37.793321+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:37.797087+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:37.798018+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:37.799277+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:37.800165+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:37.813365+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.819209+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.820223+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:37.825927+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:37.835089+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:37.836173+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:37.842412+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:37.846939+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:37.855979+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.860708+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:37.864561+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.877764+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.882223+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:37.883592+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:37.898625+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:37.899714+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:37.909483+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:37.911400+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:37.916347+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.919052+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.921133+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:37.933764+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.935086+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.956665+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.957698+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.962697+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:37.966166+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:37.973717+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:37.979946+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.982030+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:37.984108+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:37.991365+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:37.994017+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:37.999503+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.011624+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.013226+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.020392+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:38.031241+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.032347+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:38.038315+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:38.048354+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:38.057280+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.061574+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:38.063274+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:38.076657+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.083088+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:38.087058+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:38.088591+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:38.089921+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:38.091579+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.097989+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:38.121537+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.122909+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.125342+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.127463+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:38.135810+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:38.141796+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:38.149402+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.151529+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.163655+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:38.170467+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.188689+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.191585+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.196060+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.198073+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.199870+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:38.203978+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:38.211935+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:38.212914+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.214499+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.222684+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.231159+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:38.241411+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:38.244659+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:38.246637+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.261135+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.271190+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:38.274879+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:38.284465+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:38.288552+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.290195+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:38.294012+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.302307+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.314094+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:38.315248+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:38.316063+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.319475+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.323844+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:38.325068+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:38.327298+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:38.334622+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:38.340302+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:38.347707+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.358510+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:38.371169+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:38.381206+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.385675+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.390167+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.392035+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.401281+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:38.409879+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.411675+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.427537+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:38.441059+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.442605+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.450115+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:38.454593+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.456523+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.472689+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.478100+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:38.498377+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:38.499274+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:38.507395+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:38.515670+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:38.518777+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.530928+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.533002+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.539560+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:38.549317+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.550916+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:38.554358+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:38.561559+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.565778+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:38.578525+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.593889+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.597855+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.599613+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:38.602515+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:38.616856+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:38.619098+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.628074+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:38.633007+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.638491+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.642615+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:38.654600+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:38.659787+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:38.663221+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:38.677231+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:38.679694+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.693907+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:38.699571+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.702303+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.713417+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.715814+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:38.719697+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:38.738472+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.741318+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.742930+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:38.754790+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:38.760497+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:38.765300+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.767935+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:38.776500+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.791482+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.793236+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:38.798434+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:38.809627+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.815504+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.819381+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:38.821092+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:38.823363+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:38.836404+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:38.840761+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:38.841999+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:38.849439+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:38.858662+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:38.863493+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.866651+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:38.871970+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.878302+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.884524+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:38.888396+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:38.890918+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:38.902521+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:38.905891+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:38.910514+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:38.914519+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.922931+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:38.932514+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.933772+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:38.937686+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.940181+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.951894+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:38.955057+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.955969+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:38.961800+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.965172+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:38.966093+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:38.995307+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:38.997851+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:38.999684+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.007690+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.014453+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.015471+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.017271+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.018164+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.019098+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.028281+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:39.047544+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:39.050455+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.051271+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.060380+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.062369+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.066976+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.076349+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:39.078759+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:39.084106+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:39.085193+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.093166+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:39.094091+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:39.101010+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:39.113807+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.114601+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:39.119907+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.127886+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:39.135032+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:39.139663+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:39.151204+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.153088+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.155954+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:39.161688+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:39.170403+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.176337+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:39.182113+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:39.188914+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:39.195001+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:39.204229+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.212561+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.215472+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:39.219235+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.227175+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.233197+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.234949+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:39.238037+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.245245+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.251848+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.257348+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.265688+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.266564+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:39.284296+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.286212+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.291657+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.293215+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.301108+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:39.310229+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:39.316307+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:39.317697+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.325087+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.327225+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:39.335632+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.346356+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:39.351288+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.356197+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.361229+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.365646+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:39.372461+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:39.381396+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.387035+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:39.390121+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.393638+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.395899+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.406854+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.410759+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:39.417322+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.418355+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.426941+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:39.432887+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.438604+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.445577+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:39.451155+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.461262+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.470151+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.472986+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.474295+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.481583+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:39.487887+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.488918+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.496992+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:39.498953+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.511611+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:39.527859+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.535803+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:39.537146+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.540239+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:39.544135+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.544936+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:39.549707+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:39.561166+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.565755+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:39.570825+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.572782+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.579370+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.590008+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.595173+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:39.598176+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.602375+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:39.606853+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.620020+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:39.621939+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:39.628866+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.633331+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.640293+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.649595+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.651148+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:39.654630+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:39.657076+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:39.672122+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:39.673427+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.680889+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.684188+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:39.693025+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.697324+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.704662+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.710597+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:39.716460+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:39.721227+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:39.725508+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.726583+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:39.733782+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.737072+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:39.738788+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:39.745401+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:39.757530+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.760844+0100 INFO 136634530006720 Row inserted successfully into tags.
+2024-10-23T20:46:39.764827+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:39.773881+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.775175+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.785718+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.788215+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:39.802481+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:39.807696+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:39.810695+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.811908+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:39.815360+0100 INFO 136634530006720 Row inserted successfully into authors.
+2024-10-23T20:46:39.818656+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:39.827666+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.838675+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.839596+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:39.850215+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:39.854081+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.863319+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.873358+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.876930+0100 INFO 136634530006720 Row inserted successfully into quotes.
+2024-10-23T20:46:39.880089+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.887214+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.895791+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:39.904061+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:39.911403+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.915556+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.918748+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.921472+0100 INFO 136634530006720 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.923542+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:39.933179+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:39.942593+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:39.946849+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.951829+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:39.961627+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:39.962867+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:39.965421+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:39.970039+0100 INFO 136634418857664 Row inserted successfully into tags.
+2024-10-23T20:46:39.981629+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:39.997479+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:39.998463+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.005436+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:40.006507+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.009472+0100 INFO 136634429343424 Row inserted successfully into tags.
+2024-10-23T20:46:40.014440+0100 INFO 136634418857664 Row inserted successfully into authors.
+2024-10-23T20:46:40.019529+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.022649+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:40.026344+0100 INFO 136634439829184 Row inserted successfully into tags.
+2024-10-23T20:46:40.033635+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:40.041264+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.044568+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.058225+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.061297+0100 INFO 136634429343424 Row inserted successfully into authors.
+2024-10-23T20:46:40.064325+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.065176+0100 INFO 136634418857664 Row inserted successfully into quotes.
+2024-10-23T20:46:40.068069+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.090804+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:40.099250+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:40.102650+0100 INFO 136634439829184 Row inserted successfully into authors.
+2024-10-23T20:46:40.109147+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:40.110469+0100 INFO 136634418857664 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.113863+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:40.116045+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.122671+0100 INFO 136634429343424 Row inserted successfully into quotes.
+2024-10-23T20:46:40.132356+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.133243+0100 INFO 136634439829184 Row inserted successfully into quotes.
+2024-10-23T20:46:40.142088+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.143402+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.164048+0100 INFO 136634248988352 Row inserted successfully into tags.
+2024-10-23T20:46:40.166433+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:40.167655+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:40.170607+0100 INFO 136634429343424 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.180283+0100 INFO 136634439829184 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.184818+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:40.188635+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.191209+0100 INFO 136634450314944 Row inserted successfully into tags.
+2024-10-23T20:46:40.195893+0100 INFO 136634248988352 Row inserted successfully into authors.
+2024-10-23T20:46:40.199863+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.224277+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:40.225998+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:40.227159+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:40.229479+0100 INFO 136634450314944 Row inserted successfully into authors.
+2024-10-23T20:46:40.233261+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.248354+0100 INFO 136634248988352 Row inserted successfully into quotes.
+2024-10-23T20:46:40.268961+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.276120+0100 INFO 136634397886144 Row inserted successfully into tags.
+2024-10-23T20:46:40.298811+0100 INFO 136634450314944 Row inserted successfully into quotes.
+2024-10-23T20:46:40.302000+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.303072+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:40.309470+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:40.321491+0100 INFO 136634248988352 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.335076+0100 INFO 136634397886144 Row inserted successfully into authors.
+2024-10-23T20:46:40.350337+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.354785+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.367116+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:40.369670+0100 INFO 136634450314944 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.385386+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:40.407687+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.410715+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.412482+0100 INFO 136634397886144 Row inserted successfully into quotes.
+2024-10-23T20:46:40.418363+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:40.428102+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.431799+0100 INFO 136634397886144 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.435678+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.444537+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.448282+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.450777+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.456033+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.459754+0100 INFO 136634550978240 Row inserted successfully into tags.
+2024-10-23T20:46:40.466825+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.467473+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.475031+0100 INFO 136634550978240 Row inserted successfully into authors.
+2024-10-23T20:46:40.481907+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:40.485414+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:40.487865+0100 INFO 136634550978240 Row inserted successfully into quotes.
+2024-10-23T20:46:40.493657+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:40.498443+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:40.500782+0100 INFO 136634550978240 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.504088+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.507488+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.512586+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.517316+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.519412+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.523652+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.527594+0100 INFO 136634408371904 Row inserted successfully into tags.
+2024-10-23T20:46:40.531636+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.535404+0100 INFO 136634408371904 Row inserted successfully into authors.
+2024-10-23T20:46:40.540962+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.545051+0100 INFO 136634408371904 Row inserted successfully into quotes.
+2024-10-23T20:46:40.549379+0100 INFO 136634540492480 Row inserted successfully into tags.
+2024-10-23T20:46:40.553316+0100 INFO 136634408371904 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:40.559709+0100 INFO 136634540492480 Row inserted successfully into authors.
+2024-10-23T20:46:40.570920+0100 INFO 136634540492480 Row inserted successfully into quotes.
+2024-10-23T20:46:40.582888+0100 INFO 136634540492480 Row inserted successfully into quotes_tags_link.
+2024-10-23T20:46:41.191416+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:41.192997+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:41.208394+0100 INFO 136634450314944 Successfully fetched the page
+2024-10-23T20:46:41.224709+0100 INFO 136634418857664 Successfully fetched the page
+2024-10-23T20:46:41.226238+0100 INFO 136634530006720 Successfully fetched the page
+2024-10-23T20:46:41.232500+0100 INFO 136634439829184 Successfully fetched the page
+2024-10-23T20:46:41.237047+0100 INFO 136634540492480 Successfully fetched the page
+2024-10-23T20:46:41.242566+0100 ERROR 136634408371904 Error updating J.K. Rowling row: No row was found when one was required
+2024-10-23T20:46:41.249608+0100 INFO 136634397886144 Successfully fetched the page
+2024-10-23T20:46:41.251750+0100 INFO 136634248988352 Successfully fetched the page
+2024-10-23T20:46:41.253458+0100 INFO 136634238502592 Successfully fetched the page
+2024-10-23T20:46:41.263447+0100 INFO 136634228016832 Successfully fetched the page
+2024-10-23T20:46:41.276711+0100 INFO 136634429343424 Successfully fetched the page
+2024-10-23T20:46:41.280185+0100 ERROR 136634550978240 Error updating Jane Austen row: No row was found when one was required
+2024-10-23T20:46:41.357043+0100 ERROR 136634450314944 Error updating Thomas A. Edison row: No row was found when one was required
+2024-10-23T20:46:41.360058+0100 ERROR 136634540492480 Error updating Albert Einstein row: No row was found when one was required
+2024-10-23T20:46:41.375177+0100 ERROR 136634418857664 Error updating Bob Marley row: No row was found when one was required
+2024-10-23T20:46:41.394042+0100 ERROR 136634530006720 Error updating André Gide row: No row was found when one was required
+2024-10-23T20:46:41.394916+0100 ERROR 136634228016832 Error updating Elie Wiesel row: No row was found when one was required
+2024-10-23T20:46:41.401468+0100 ERROR 136634439829184 Error updating Eleanor Roosevelt row: No row was found when one was required
+2024-10-23T20:46:41.421152+0100 ERROR 136634248988352 Error updating Dr. Seuss row: No row was found when one was required
+2024-10-23T20:46:41.434524+0100 ERROR 136634397886144 Error updating Marilyn Monroe row: No row was found when one was required
+2024-10-23T20:46:41.440311+0100 ERROR 136634238502592 Error updating Douglas Adams row: No row was found when one was required
+2024-10-23T20:46:41.445259+0100 ERROR 136634429343424 Error updating Steve Martin row: No row was found when one was required
+2024-10-23T20:46:41.965212+0100 INFO 136634450314944 Successfully fetched the page
+2024-10-23T20:46:41.972799+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:41.974431+0100 INFO 136634540492480 Successfully fetched the page
+2024-10-23T20:46:41.975897+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:42.009762+0100 ERROR 136634550978240 Error updating Mark Twain row: No row was found when one was required
+2024-10-23T20:46:42.018077+0100 ERROR 136634450314944 Error updating Allen Saunders row: No row was found when one was required
+2024-10-23T20:46:42.024865+0100 ERROR 136634408371904 Error updating Friedrich Nietzsche row: No row was found when one was required
+2024-10-23T20:46:42.029693+0100 ERROR 136634540492480 Error updating Pablo Neruda row: No row was found when one was required
+2024-10-23T20:46:42.164889+0100 INFO 136634418857664 Successfully fetched the page
+2024-10-23T20:46:42.174564+0100 INFO 136634530006720 Successfully fetched the page
+2024-10-23T20:46:42.177018+0100 INFO 136634397886144 Successfully fetched the page
+2024-10-23T20:46:42.177983+0100 INFO 136634429343424 Successfully fetched the page
+2024-10-23T20:46:42.197154+0100 INFO 136634238502592 Successfully fetched the page
+2024-10-23T20:46:42.199696+0100 INFO 136634228016832 Successfully fetched the page
+2024-10-23T20:46:42.209575+0100 INFO 136634248988352 Successfully fetched the page
+2024-10-23T20:46:42.235408+0100 ERROR 136634418857664 Error updating Ralph Waldo Emerson row: No row was found when one was required
+2024-10-23T20:46:42.259774+0100 ERROR 136634228016832 Error updating Garrison Keillor row: No row was found when one was required
+2024-10-23T20:46:42.265530+0100 ERROR 136634429343424 Error updating George Eliot row: No row was found when one was required
+2024-10-23T20:46:42.270860+0100 INFO 136634439829184 Successfully fetched the page
+2024-10-23T20:46:42.272169+0100 ERROR 136634397886144 Error updating William Nicholson row: No row was found when one was required
+2024-10-23T20:46:42.285393+0100 ERROR 136634530006720 Error updating Mother Teresa row: No row was found when one was required
+2024-10-23T20:46:42.315848+0100 ERROR 136634238502592 Error updating Jorge Luis Borges row: No row was found when one was required
+2024-10-23T20:46:42.322826+0100 ERROR 136634439829184 Error updating Jim Henson row: No row was found when one was required
+2024-10-23T20:46:42.324416+0100 ERROR 136634248988352 Error updating Charles M. Schulz row: No row was found when one was required
+2024-10-23T20:46:42.661684+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:42.664349+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:42.678162+0100 INFO 136634540492480 Successfully fetched the page
+2024-10-23T20:46:42.701759+0100 INFO 136634450314944 Successfully fetched the page
+2024-10-23T20:46:42.717897+0100 ERROR 136634550978240 Error updating George R.R. Martin row: No row was found when one was required
+2024-10-23T20:46:42.730179+0100 ERROR 136634408371904 Error updating Martin Luther King Jr. row: No row was found when one was required
+2024-10-23T20:46:42.749434+0100 ERROR 136634540492480 Error updating James Baldwin row: No row was found when one was required
+2024-10-23T20:46:42.750142+0100 ERROR 136634450314944 Error updating C.S. Lewis row: No row was found when one was required
+2024-10-23T20:46:42.894231+0100 INFO 136634429343424 Successfully fetched the page
+2024-10-23T20:46:42.910290+0100 ERROR 136634429343424 Error updating Stephenie Meyer row: No row was found when one was required
+2024-10-23T20:46:42.914372+0100 INFO 136634418857664 Successfully fetched the page
+2024-10-23T20:46:42.926446+0100 INFO 136634228016832 Successfully fetched the page
+2024-10-23T20:46:42.928271+0100 INFO 136634397886144 Successfully fetched the page
+2024-10-23T20:46:42.930126+0100 INFO 136634530006720 Successfully fetched the page
+2024-10-23T20:46:42.962533+0100 INFO 136634248988352 Successfully fetched the page
+2024-10-23T20:46:42.993903+0100 ERROR 136634397886144 Error updating Ernest Hemingway row: No row was found when one was required
+2024-10-23T20:46:43.005963+0100 ERROR 136634418857664 Error updating Haruki Murakami row: No row was found when one was required
+2024-10-23T20:46:43.012915+0100 ERROR 136634248988352 Error updating Suzanne Collins row: No row was found when one was required
+2024-10-23T20:46:43.014350+0100 ERROR 136634228016832 Error updating Alexandre Dumas fils row: No row was found when one was required
+2024-10-23T20:46:43.022811+0100 ERROR 136634530006720 Error updating Helen Keller row: No row was found when one was required
+2024-10-23T20:46:43.060208+0100 INFO 136634238502592 Successfully fetched the page
+2024-10-23T20:46:43.077210+0100 ERROR 136634238502592 Error updating George Bernard Shaw row: No row was found when one was required
+2024-10-23T20:46:43.096418+0100 INFO 136634439829184 Successfully fetched the page
+2024-10-23T20:46:43.120775+0100 ERROR 136634439829184 Error updating Charles Bukowski row: No row was found when one was required
+2024-10-23T20:46:43.324341+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:43.326190+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:43.375357+0100 INFO 136634450314944 Successfully fetched the page
+2024-10-23T20:46:43.381205+0100 ERROR 136634550978240 Error updating J.R.R. Tolkien row: No row was found when one was required
+2024-10-23T20:46:43.384458+0100 ERROR 136634408371904 Error updating Alfred Tennyson row: No row was found when one was required
+2024-10-23T20:46:43.392497+0100 INFO 136634540492480 Successfully fetched the page
+2024-10-23T20:46:43.415116+0100 ERROR 136634450314944 Error updating J.D. Salinger row: No row was found when one was required
+2024-10-23T20:46:43.422451+0100 ERROR 136634540492480 Error updating Terry Pratchett row: No row was found when one was required
+2024-10-23T20:46:43.548007+0100 INFO 136634429343424 Successfully fetched the page
+2024-10-23T20:46:43.564780+0100 ERROR 136634429343424 Error updating George Carlin row: No row was found when one was required
+2024-10-23T20:46:43.705394+0100 INFO 136634397886144 Successfully fetched the page
+2024-10-23T20:46:43.707556+0100 INFO 136634418857664 Successfully fetched the page
+2024-10-23T20:46:43.709378+0100 INFO 136634228016832 Successfully fetched the page
+2024-10-23T20:46:43.711179+0100 INFO 136634530006720 Successfully fetched the page
+2024-10-23T20:46:43.718365+0100 INFO 136634248988352 Successfully fetched the page
+2024-10-23T20:46:43.767016+0100 ERROR 136634397886144 Error updating John Lennon row: No row was found when one was required
+2024-10-23T20:46:43.784450+0100 ERROR 136634418857664 Error updating W.C. Fields row: No row was found when one was required
+2024-10-23T20:46:43.785586+0100 ERROR 136634530006720 Error updating J.M. Barrie row: No row was found when one was required
+2024-10-23T20:46:43.786610+0100 ERROR 136634248988352 Error updating Ayn Rand row: No row was found when one was required
+2024-10-23T20:46:43.788675+0100 ERROR 136634228016832 Error updating Jimi Hendrix row: No row was found when one was required
+2024-10-23T20:46:43.813513+0100 INFO 136634238502592 Successfully fetched the page
+2024-10-23T20:46:43.839892+0100 ERROR 136634238502592 Error updating E.E. Cummings row: No row was found when one was required
+2024-10-23T20:46:43.852029+0100 INFO 136634439829184 Successfully fetched the page
+2024-10-23T20:46:43.870982+0100 ERROR 136634439829184 Error updating Khaled Hosseini row: No row was found when one was required
+2024-10-23T20:46:44.114532+0100 INFO 136634408371904 Successfully fetched the page
+2024-10-23T20:46:44.116773+0100 INFO 136634550978240 Successfully fetched the page
+2024-10-23T20:46:44.154872+0100 ERROR 136634550978240 Error updating Harper Lee row: No row was found when one was required
+2024-10-23T20:46:44.157587+0100 ERROR 136634408371904 Error updating Madeleine L'Engle row: No row was found when one was required
