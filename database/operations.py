@@ -174,18 +174,20 @@ def insertRow(row):
         return
 
     session = Session()
+    # session.autoflush = False
     try:
         session.add(row)
-        # session.commit()
         session.flush()
+        session.commit()
         logger.info(f"Row inserted successfully into {row.__tablename__}.")
+    except exc.IntegrityError as e:
+        session.rollback()
+        logger.error(f"Integrity error (probably normal behaviour): {str(e)}")
+        print("integrity error")
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error inserting row into {row.__tablename__}: {str(e)}")
-        raise
-    except exc.IntegrityError as e:
-        session.rollback()
-        print("integrity error")
+        raise 
 
     finally:
         session.close()
@@ -202,13 +204,14 @@ def updateAuthorRowAboutValue(author: str, about_text: str):
         print("updateD ", author)
         res.about = about_text
         session.flush()
+        session.commit()
         logger.info(f"Row for {author} updated successfully.")
+    # except exc.NoResultFound as e:
+    #     session.rollback()
+    #     print("NoResultFound error for this author: ", author)
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error updating {author} row: {str(e)}")
         raise
-    except exc.NoResultFound as e:
-        session.rollback()
-        print("NoResultFound error for this author: ", author)
     finally:
         session.close()

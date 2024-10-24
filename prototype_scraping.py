@@ -154,8 +154,6 @@ def quote_page_worker(page_url: str):
         quote_row = Quotes(quote_uuid, quote_text, author)
         insertRow(quote_row)
 
-        quote_tag_link_row = QuotesTagsLink(quote_uuid, tag)
-        insertRow(quote_tag_link_row)
 
     #print("end")
     #print("authors: ", authors)
@@ -231,7 +229,9 @@ for result_dict in quotes_map:
     for i in range(len(quotes_tmp)):
         for j in range(len(tags_tmp[i])):
             quote_tag_link.append({"quote_uuid": quotes_tmp[i]["quote_uuid"], "tag": tags_tmp[i][j]})
-        
+            quote_tag_link_row = QuotesTagsLink(quotes_tmp[i]["quote_uuid"], tags_tmp[i][j])
+            insertRow(quote_tag_link_row)
+
         quotes.append(quotes_tmp[i])
 
     tags.update(result_dict["all_tags"])
@@ -252,10 +252,10 @@ for author in authors_map:
     authors.append(author)
 
 
-#print("quotes", len(quotes))
-#print("authors: ", len(authors))
-#print("tags", len(tags))
-#print("quotes_tag_)link", len(quote_tag_link))
+print("quotes", len(quotes))
+print("authors: ", len(authors))
+print("tags", len(tags))
+print("quotes_tag_)link", len(quote_tag_link))
 
 quotes_df = pd.DataFrame(quotes)
 quote_tag_df = pd.DataFrame(quote_tag_link)
