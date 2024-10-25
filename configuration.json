@@ -1,1 +1,17 @@
-{"_comment1": "all paths must not have '/' in the end", "url": "https://quotes.toscrape.com/", "pagesnum": 10, "_comment2": "i.e. data as csv and json output", "save_data_path": "./data", "logs_path": "./logs", "db_path": "./data", "_comment3": ".csv and .json is added automatically. Specify ONLY filename here", "csv_filename": "csv_output", "json_filename": "json_output", "db_filename": "quotes"}
+{
+  "_comment1": "all paths must not have '/' in the end",
+  "url": "https://quotes.toscrape.com/",
+  "pagesnum": 10,
+  "_comment2": "i.e. data as csv and json output",
+  "save_data_path": "./data",
+  "logs_path": "./logs",
+  "db_path": "./data",
+  "_comment3": ".csv and .json is added automatically. Specify ONLY filename here",
+  "csv_filename": "csv_output",
+  "json_filename": "json_output",
+  "db_name": "quotes",
+  "db_username": "root",
+  "db_password": "",
+  "db_ip": "localhost",
+  "db_port": ""
+}

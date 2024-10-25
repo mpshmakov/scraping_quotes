@@ -44,6 +44,10 @@ import json
 # 
 
 configuration = get_configuration()
+print(type(configuration))
+print(type(json.dumps(configuration)))
+logger.info("configuration extracted: ", json.dumps(configuration)) # this line doesn't work
+
 
 def update_pagesnum():    
     url = configuration["url"]
@@ -178,7 +182,7 @@ def authors_worker(author):
     return {"author": author["author"], "about": about_text}
 
 # init db and tables     
-initialize_schema()
+# initialize_schema()
 initDB()
 
 response = fetchPage(configuration["url"])
@@ -261,6 +265,16 @@ quotes_df = pd.DataFrame(quotes)
 quote_tag_df = pd.DataFrame(quote_tag_link)
 tags_df = pd.DataFrame(tags)
 authors_df = pd.DataFrame(authors)
+
+exportToCsv(quotes_df, "quotes.csv")
+exportToCsv(quote_tag_df, "quote_tag_link")
+exportToCsv(tags_df, "tags")
+exportToCsv(authors_df, "authors")
+
+exportToJson(quotes_df, "quotes")
+exportToJson(quote_tag_df, "quote_tag_link")
+exportToJson(tags_df, "tags")
+exportToJson(authors_df, "authors")
 
 #create pk tables first, fk second
 

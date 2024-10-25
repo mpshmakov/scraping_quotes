@@ -4,7 +4,6 @@
 
 import json
 
-
 # url = str()
 # pagesnum = str()
 
@@ -18,7 +17,7 @@ import json
 # db_filename = str()
 
 
-def get_configuration():
+def get_configuration() -> json:
 
     # global url, pagesnum, save_data_path, logs_path, db_path, csv_filename, json_filename, db_filename
 

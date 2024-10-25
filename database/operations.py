@@ -182,7 +182,7 @@ def insertRow(row):
         logger.info(f"Row inserted successfully into {row.__tablename__}.")
     except exc.IntegrityError as e:
         session.rollback()
-        logger.error(f"Integrity error (probably normal behaviour): {str(e)}")
+        logger.warning(f"Integrity error (probably normal behaviour): {str(e)}")
         print("integrity error")
     except SQLAlchemyError as e:
         session.rollback()

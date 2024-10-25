@@ -1,7 +1,7 @@
 from database import initDB, insertRow, Tags
 from database.operations import initialize_schema
 
-initialize_schema()
+# initialize_schema()
 
 initDB()
 

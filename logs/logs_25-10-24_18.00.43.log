@@ -1,0 +1,1238 @@
+2024-10-25T18:00:44.154991+0100 INFO 123486912352384 Created database engine for db quotes, user root, address localhost:
+2024-10-25T18:00:44.175906+0100 INFO 123486912352384 configuration extracted: 
+2024-10-25T18:00:44.196393+0100 INFO 123486912352384 Database schema initialized successfully.
+2024-10-25T18:00:44.201526+0100 INFO 123486912352384 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-25T18:00:44.201825+0100 ERROR 123486912352384 Not all required tables were created.
+2024-10-25T18:00:44.235172+0100 INFO 123486912352384 All tables truncated successfully.
+2024-10-25T18:00:44.242170+0100 INFO 123486912352384 Database initialized successfully with new records.
+2024-10-25T18:00:44.946273+0100 INFO 123486912352384 Successfully fetched the page
+2024-10-25T18:00:45.634031+0100 INFO 123486912352384 Successfully fetched the page
+2024-10-25T18:00:46.415877+0100 INFO 123486316005056 Successfully fetched the page
+2024-10-25T18:00:46.417717+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:46.419675+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:46.439277+0100 INFO 123486326490816 Successfully fetched the page
+2024-10-25T18:00:46.441050+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:46.449433+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:46.462631+0100 INFO 123486446028480 Successfully fetched the page
+2024-10-25T18:00:46.498370+0100 INFO 123486467000000 Successfully fetched the page
+2024-10-25T18:00:46.529755+0100 INFO 123486477485760 Successfully fetched the page
+2024-10-25T18:00:46.540110+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:46.769373+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:46.974081+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:46.982752+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:46.991790+0100 INFO 123486347462336 Row inserted successfully into authors.
+2024-10-25T18:00:47.002786+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.012949+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.037615+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.039627+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.054436+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.056390+0100 INFO 123486326490816 Row inserted successfully into authors.
+2024-10-25T18:00:47.057229+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.057684+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.067918+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.071814+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:47.073849+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.077498+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.085667+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.089394+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.091158+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.093368+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.096898+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:47.102684+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.103506+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.104404+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:47.109502+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.125698+0100 INFO 123486467000000 Row inserted successfully into authors.
+2024-10-25T18:00:47.126814+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.127143+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.130060+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.138128+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:47.144869+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:47.149581+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:47.151855+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:47.151467+0100 INFO 123486347462336 Row inserted successfully into authors.
+2024-10-25T18:00:47.170185+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:47.173412+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.181525+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.183246+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.183529+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:47.184545+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:47.187095+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.187797+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:47.195106+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:47.197336+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.206726+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.212864+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.218441+0100 INFO 123486446028480 Row inserted successfully into authors.
+2024-10-25T18:00:47.219880+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.222704+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.226288+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.227482+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.233631+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.235102+0100 INFO 123486467000000 Row inserted successfully into authors.
+2024-10-25T18:00:47.237804+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.244365+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.253138+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Charles Bukowski' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Charles Bukowski', 'about': '/author/Charles-Bukowski'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.255521+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.256837+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.259064+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.261057+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:47.265109+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:47.273135+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Suzanne Collins' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Suzanne Collins', 'about': '/author/Suzanne-Collins'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.276097+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.278118+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.282480+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.286235+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.291888+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:47.293751+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:47.297484+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:47.306632+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.307363+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.314094+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.317984+0100 INFO 123486477485760 Row inserted successfully into authors.
+2024-10-25T18:00:47.318628+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:47.322088+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.322912+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:47.328590+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.332135+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.334070+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:47.336588+0100 INFO 123486467000000 Row inserted successfully into authors.
+2024-10-25T18:00:47.336900+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.345943+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:47.352157+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.355704+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:47.355995+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.356842+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.361946+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.375559+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.377055+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:47.378857+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:47.379362+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:47.389025+0100 INFO 123486347462336 Row inserted successfully into authors.
+2024-10-25T18:00:47.390547+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.390960+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.407939+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'thinking' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'thinking'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.409790+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.411780+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:47.415760+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.417480+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.429611+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'attributed-no-source' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'attributed-no-source'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.433349+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:47.434178+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.437512+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.439474+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:47.441921+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'courage' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'courage'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.451639+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:47.453987+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.461050+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.469980+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.470848+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:47.477792+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.484879+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.488878+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.490038+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.499873+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.500388+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:47.501689+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:47.502062+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.516583+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:47.517481+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:47.526227+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:47.529957+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.533041+0100 INFO 123486467000000 Row inserted successfully into authors.
+2024-10-25T18:00:47.534245+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.540402+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.544024+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.545832+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.556687+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.562949+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.568619+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.575331+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:47.576135+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.580333+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.581051+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:47.582934+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.586748+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.595956+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.597317+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mother Teresa' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mother Teresa', 'about': '/author/Mother-Teresa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.608289+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.612238+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.612859+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.616324+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.625556+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.631030+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.636965+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.643096+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.667357+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.670260+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.675784+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:47.677626+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.690800+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.693115+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:47.697901+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:47.714143+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:47.722095+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.724212+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'death' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'death'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.727584+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:47.728590+0100 INFO 123486467000000 Row inserted successfully into authors.
+2024-10-25T18:00:47.734251+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:47.746084+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:47.750779+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.756951+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.760875+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.768859+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:47.770415+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.778550+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:47.779891+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.781075+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.797734+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:47.800820+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:47.801895+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.806002+0100 INFO 123486347462336 Row inserted successfully into authors.
+2024-10-25T18:00:47.812906+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.818437+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:47.819373+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:47.840120+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.845833+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.848518+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Bob Marley' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Bob Marley', 'about': '/author/Bob-Marley'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.849160+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.849736+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.852375+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:47.854861+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:47.875286+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.877358+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:47.889589+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.890100+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:47.895058+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:47.910841+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:47.914902+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:47.915573+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:47.919255+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:47.919798+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:47.920394+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.928176+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.933066+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:47.937312+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.940005+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:47.951765+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:47.966648+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.978347+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.979298+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:47.980084+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:47.986616+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.989290+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.989921+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:47.991314+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:47.991624+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:48.004938+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:48.018641+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:48.025986+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:48.039307+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:48.040007+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.044235+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:48.045380+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:48.050600+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:48.053244+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:48.058788+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:48.067073+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:48.087559+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:48.088126+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.090826+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.093555+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'children' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'children'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.100429+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.103253+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.104247+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:48.111762+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:48.115926+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:48.127377+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.131708+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:48.138340+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:48.151152+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:48.159314+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:48.164674+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:48.177563+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:48.182909+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:48.192773+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'writing' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'writing'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.197729+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.198556+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:48.201689+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.204021+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.206281+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:48.212723+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:48.215906+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.228835+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:48.236572+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'writing' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'writing'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.240827+0100 INFO 123486347462336 Row inserted successfully into authors.
+2024-10-25T18:00:48.242291+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:48.243292+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.247010+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.272534+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:48.273653+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:48.274622+0100 INFO 123486477485760 Row inserted successfully into authors.
+2024-10-25T18:00:48.277854+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.283562+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:48.284949+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'simile' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'simile'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.291499+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.302371+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:48.304272+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.306714+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.312536+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:48.333429+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry '' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': ''}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.339942+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:48.343442+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:48.346998+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.350966+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:48.352963+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:48.357427+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.358367+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:48.369665+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'attributed-no-source' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'attributed-no-source'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.379221+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.379872+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.385650+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:48.386438+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:48.403571+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.414146+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.418968+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:48.420246+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:48.420753+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:48.423905+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.426670+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.438292+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.440660+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:48.449058+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:48.456905+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Ralph Waldo Emerson' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Ralph Waldo Emerson', 'about': '/author/Ralph-Waldo-Emerson'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.467814+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.485656+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:48.487361+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:48.490291+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:48.492956+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.494748+0100 INFO 123486316005056 Row inserted successfully into authors.
+2024-10-25T18:00:48.498104+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:48.499825+0100 INFO 123486467000000 Row inserted successfully into tags.
+2024-10-25T18:00:48.504639+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:48.509704+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.510181+0100 INFO 123486446028480 Row inserted successfully into tags.
+2024-10-25T18:00:48.514044+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'death' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'death'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.533140+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.534245+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:48.546563+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.555920+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.556356+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'learning' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'learning'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.568109+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.572345+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:48.581040+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:48.583178+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:48.589946+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.592540+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:48.599173+0100 INFO 123486435542720 Row inserted successfully into tags.
+2024-10-25T18:00:48.604628+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:48.605482+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.613698+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.624902+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:48.637865+0100 INFO 123486446028480 Row inserted successfully into authors.
+2024-10-25T18:00:48.642069+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.656338+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.666787+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Ernest Hemingway' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Ernest Hemingway', 'about': '/author/Ernest-Hemingway'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.670013+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.672230+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'music' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'music'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.674580+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.676184+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.713526+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.729632+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:48.730827+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.741777+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:48.742464+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:48.752551+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:48.759662+0100 INFO 123486456514240 Row inserted successfully into tags.
+2024-10-25T18:00:48.762366+0100 WARNING 123486467000000 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Bob Marley' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Bob Marley', 'about': '/author/Bob-Marley'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.769664+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:48.789700+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:48.791512+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:48.802268+0100 INFO 123486347462336 Row inserted successfully into tags.
+2024-10-25T18:00:48.803757+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.805372+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.808756+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.814989+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'dumbledore' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'dumbledore'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.830620+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.844270+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.851364+0100 INFO 123486467000000 Row inserted successfully into quotes.
+2024-10-25T18:00:48.858033+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:48.861269+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'philosophy' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'philosophy'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.884676+0100 WARNING 123486347462336 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.895858+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:48.896773+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.907836+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.913144+0100 INFO 123486316005056 Row inserted successfully into tags.
+2024-10-25T18:00:48.917697+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:48.921656+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.937743+0100 INFO 123486477485760 Row inserted successfully into authors.
+2024-10-25T18:00:48.938796+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.949597+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:48.965860+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:48.971825+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:48.986987+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:48.992375+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:49.008572+0100 INFO 123486487971520 Row inserted successfully into authors.
+2024-10-25T18:00:49.027707+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.028948+0100 INFO 123486347462336 Row inserted successfully into quotes.
+2024-10-25T18:00:49.029807+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.032295+0100 WARNING 123486316005056 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'George R.R. Martin' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'George R.R. Martin', 'about': '/author/George-R-R-Martin'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.041434+0100 WARNING 123486446028480 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.045746+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.046611+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'hope' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'hope'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.059924+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:49.072440+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.096353+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'library' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'library'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.097270+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:49.117051+0100 INFO 123486446028480 Row inserted successfully into authors.
+2024-10-25T18:00:49.121017+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.122686+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:49.124678+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.129052+0100 INFO 123486316005056 Row inserted successfully into quotes.
+2024-10-25T18:00:49.150400+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:49.159540+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:49.168936+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:49.172972+0100 WARNING 123486435542720 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'yourself' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'yourself'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.179548+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.185523+0100 INFO 123486446028480 Row inserted successfully into quotes.
+2024-10-25T18:00:49.213340+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:49.219108+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:49.220530+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:49.224318+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.227580+0100 INFO 123486435542720 Row inserted successfully into authors.
+2024-10-25T18:00:49.230248+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:49.248594+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.270227+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'religion' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'religion'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.272385+0100 WARNING 123486456514240 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.273010+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:49.274717+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.283782+0100 INFO 123486435542720 Row inserted successfully into quotes.
+2024-10-25T18:00:49.289247+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'paraphrased' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'paraphrased'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.312265+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.317553+0100 INFO 123486456514240 Row inserted successfully into authors.
+2024-10-25T18:00:49.321323+0100 INFO 123486326490816 Row inserted successfully into tags.
+2024-10-25T18:00:49.338837+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.351638+0100 INFO 123486487971520 Row inserted successfully into authors.
+2024-10-25T18:00:49.354446+0100 INFO 123486336976576 Row inserted successfully into tags.
+2024-10-25T18:00:49.357567+0100 WARNING 123486326490816 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.360940+0100 INFO 123486456514240 Row inserted successfully into quotes.
+2024-10-25T18:00:49.382165+0100 INFO 123486477485760 Row inserted successfully into authors.
+2024-10-25T18:00:49.384581+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:49.387869+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:49.389690+0100 INFO 123486326490816 Row inserted successfully into quotes.
+2024-10-25T18:00:49.407354+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:49.415777+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:49.417465+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:49.423996+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.440139+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Eleanor Roosevelt' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Eleanor Roosevelt', 'about': '/author/Eleanor-Roosevelt'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.441599+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry '' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': ''}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.449916+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.467374+0100 INFO 123486336976576 Row inserted successfully into authors.
+2024-10-25T18:00:49.470540+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.471077+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:49.489338+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:49.492635+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.493507+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.511367+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.514230+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.524051+0100 INFO 123486487971520 Row inserted successfully into tags.
+2024-10-25T18:00:49.535924+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'classic' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'classic'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.538907+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.552862+0100 WARNING 123486487971520 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'simile' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'simile'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.558922+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.566778+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:49.576552+0100 WARNING 123486336976576 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.585911+0100 INFO 123486487971520 Row inserted successfully into authors.
+2024-10-25T18:00:49.607016+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.609348+0100 INFO 123486336976576 Row inserted successfully into quotes.
+2024-10-25T18:00:49.618023+0100 INFO 123486487971520 Row inserted successfully into quotes.
+2024-10-25T18:00:49.620950+0100 WARNING 123486477485760 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-25T18:00:49.637159+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.654227+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.668234+0100 INFO 123486477485760 Row inserted successfully into tags.
+2024-10-25T18:00:49.684603+0100 INFO 123486477485760 Row inserted successfully into authors.
+2024-10-25T18:00:49.699944+0100 INFO 123486477485760 Row inserted successfully into quotes.
+2024-10-25T18:00:49.718640+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.735313+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.750941+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.764741+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.779982+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.792967+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.806685+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.820920+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.835853+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.848736+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.861399+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.874708+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.887315+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.900553+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.915992+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.929952+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.945755+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.963752+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.979276+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:49.993749+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.010421+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.029892+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.046695+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.065805+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.090398+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.122016+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.147682+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.168483+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.192383+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.216096+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.244080+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.268146+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.288492+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.299373+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.308899+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.319150+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.328539+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.338207+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.347682+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.356027+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.364448+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.375009+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.387307+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.399109+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.412172+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.424682+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.437702+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.453093+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.466335+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.478879+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.491836+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.504333+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.517362+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.531143+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.544985+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.559041+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.572402+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.585616+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.598141+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.610928+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.623981+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.636564+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.649143+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.661555+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.674695+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.687738+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.701031+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.716229+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.731361+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.745337+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.759541+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.774004+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.787516+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.802256+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.814809+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.827356+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.841820+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.854398+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.867024+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.879822+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.894635+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.907152+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.920075+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.933121+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.949018+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.964486+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.978279+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:50.990934+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.003183+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.016125+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.030598+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.043321+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.056299+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.068916+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.082097+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.094822+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.107580+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.120600+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.133299+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.145991+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.159214+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.173664+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.189311+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.203847+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.219726+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.233960+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.249342+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.263975+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.277996+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.292501+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.306241+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.318673+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.331321+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.343852+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.356058+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.368651+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.381006+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.393803+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.406009+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.418427+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.431174+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.443719+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.459362+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.475432+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.489598+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.503214+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.515614+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.528465+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.541607+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.555901+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.568710+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.582026+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.594981+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.607857+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.621453+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.637041+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.651174+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.666395+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.679252+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.692176+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.705859+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.719730+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.732761+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.745922+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.761056+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.774235+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.787246+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.800286+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.813421+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.826765+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.840844+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.855534+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.868388+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.883649+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.897614+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.909761+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.922454+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.937030+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.952452+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.966400+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.982817+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:51.997673+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.011399+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.026544+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.040539+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.056396+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.070550+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.085617+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.099781+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.112240+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.126567+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.140359+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.154617+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.168704+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.184581+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.199365+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.213938+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.229022+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.243276+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.258379+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.274277+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.289975+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.304401+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.319374+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.333931+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.349053+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.364301+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.381007+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.396374+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.410655+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.426375+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.441012+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.456267+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.470740+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.485311+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.500082+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.515513+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.530733+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.545414+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.559587+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.574726+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.588935+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.604444+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.619347+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.634602+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.648957+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.664968+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.679846+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.693956+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.717948+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.735269+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.749746+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.773136+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.787652+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.801995+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.818863+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.833432+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.847353+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.863144+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.877219+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.892855+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.905863+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.921404+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.937278+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.953127+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.966397+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.979460+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:52.996450+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.011066+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.026691+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.042066+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.057563+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.072801+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.091417+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.108276+0100 INFO 123486912352384 Row inserted successfully into quotes_tags_link.
+2024-10-25T18:00:53.872644+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:53.883287+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:53.885058+0100 INFO 123486146135744 Successfully fetched the page
+2024-10-25T18:00:53.887152+0100 INFO 123486316005056 Successfully fetched the page
+2024-10-25T18:00:53.888839+0100 INFO 123486446028480 Successfully fetched the page
+2024-10-25T18:00:53.890328+0100 INFO 123486295033536 Successfully fetched the page
+2024-10-25T18:00:53.891670+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:53.893746+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:53.895668+0100 INFO 123486477485760 Successfully fetched the page
+2024-10-25T18:00:53.899340+0100 INFO 123486305519296 Successfully fetched the page
+2024-10-25T18:00:53.906805+0100 INFO 123486326490816 Successfully fetched the page
+2024-10-25T18:00:53.930604+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:54.033453+0100 INFO 123486347462336 Row for Steve Martin updated successfully.
+2024-10-25T18:00:54.041522+0100 INFO 123486146135744 Row for Elie Wiesel updated successfully.
+2024-10-25T18:00:54.044292+0100 INFO 123486435542720 Row for Eleanor Roosevelt updated successfully.
+2024-10-25T18:00:54.053886+0100 INFO 123486446028480 Row for Thomas A. Edison updated successfully.
+2024-10-25T18:00:54.064730+0100 INFO 123486316005056 Row for Bob Marley updated successfully.
+2024-10-25T18:00:54.138005+0100 INFO 123486305519296 Row for Dr. Seuss updated successfully.
+2024-10-25T18:00:54.164421+0100 INFO 123486295033536 Row for Douglas Adams updated successfully.
+2024-10-25T18:00:54.178440+0100 INFO 123486477485760 Row for Albert Einstein updated successfully.
+2024-10-25T18:00:54.197496+0100 INFO 123486326490816 Row for Marilyn Monroe updated successfully.
+2024-10-25T18:00:54.209163+0100 INFO 123486336976576 Row for Jane Austen updated successfully.
+2024-10-25T18:00:54.215090+0100 INFO 123486487971520 Row for J.K. Rowling updated successfully.
+2024-10-25T18:00:54.219738+0100 INFO 123486456514240 Row for André Gide updated successfully.
+2024-10-25T18:00:54.719031+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:54.728102+0100 INFO 123486146135744 Successfully fetched the page
+2024-10-25T18:00:54.735423+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:54.763827+0100 INFO 123486477485760 Successfully fetched the page
+2024-10-25T18:00:54.770070+0100 INFO 123486316005056 Successfully fetched the page
+2024-10-25T18:00:54.771411+0100 INFO 123486146135744 Row for Mark Twain updated successfully.
+2024-10-25T18:00:54.780282+0100 INFO 123486446028480 Successfully fetched the page
+2024-10-25T18:00:54.790024+0100 INFO 123486305519296 Successfully fetched the page
+2024-10-25T18:00:54.790700+0100 INFO 123486347462336 Row for Friedrich Nietzsche updated successfully.
+2024-10-25T18:00:54.793978+0100 INFO 123486295033536 Successfully fetched the page
+2024-10-25T18:00:54.809477+0100 INFO 123486435542720 Row for Allen Saunders updated successfully.
+2024-10-25T18:00:54.813002+0100 INFO 123486326490816 Successfully fetched the page
+2024-10-25T18:00:54.814957+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:54.822977+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:54.829712+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:54.903175+0100 INFO 123486446028480 Row for Pablo Neruda updated successfully.
+2024-10-25T18:00:54.909561+0100 INFO 123486477485760 Row for Jim Henson updated successfully.
+2024-10-25T18:00:54.917365+0100 INFO 123486316005056 Row for Ralph Waldo Emerson updated successfully.
+2024-10-25T18:00:54.999142+0100 INFO 123486295033536 Row for Garrison Keillor updated successfully.
+2024-10-25T18:00:55.003483+0100 INFO 123486305519296 Row for Mother Teresa updated successfully.
+2024-10-25T18:00:55.009837+0100 INFO 123486487971520 Row for Jorge Luis Borges updated successfully.
+2024-10-25T18:00:55.020366+0100 INFO 123486326490816 Row for Charles M. Schulz updated successfully.
+2024-10-25T18:00:55.026760+0100 INFO 123486336976576 Row for William Nicholson updated successfully.
+2024-10-25T18:00:55.046450+0100 INFO 123486456514240 Row for George Eliot updated successfully.
+2024-10-25T18:00:55.656827+0100 INFO 123486146135744 Successfully fetched the page
+2024-10-25T18:00:55.687089+0100 INFO 123486146135744 Row for George R.R. Martin updated successfully.
+2024-10-25T18:00:55.777665+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:55.780416+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:55.781676+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:55.829078+0100 INFO 123486336976576 Row for Charles Bukowski updated successfully.
+2024-10-25T18:00:55.840635+0100 INFO 123486456514240 Row for Suzanne Collins updated successfully.
+2024-10-25T18:00:55.846365+0100 INFO 123486487971520 Row for Helen Keller updated successfully.
+2024-10-25T18:00:55.848150+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:55.853122+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:55.896922+0100 INFO 123486347462336 Row for C.S. Lewis updated successfully.
+2024-10-25T18:00:55.901661+0100 INFO 123486435542720 Row for Martin Luther King Jr. updated successfully.
+2024-10-25T18:00:56.347425+0100 INFO 123486146135744 Successfully fetched the page
+2024-10-25T18:00:56.372331+0100 INFO 123486146135744 Row for J.R.R. Tolkien updated successfully.
+2024-10-25T18:00:56.432042+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:56.433894+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:56.449288+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:56.488056+0100 INFO 123486487971520 Row for J.D. Salinger updated successfully.
+2024-10-25T18:00:56.493473+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:56.495184+0100 INFO 123486456514240 Row for Terry Pratchett updated successfully.
+2024-10-25T18:00:56.503072+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:56.503806+0100 INFO 123486336976576 Row for Alfred Tennyson updated successfully.
+2024-10-25T18:00:56.547219+0100 INFO 123486347462336 Row for George Carlin updated successfully.
+2024-10-25T18:00:56.553175+0100 INFO 123486435542720 Row for John Lennon updated successfully.
+2024-10-25T18:00:56.612506+0100 INFO 123486316005056 Successfully fetched the page
+2024-10-25T18:00:56.614221+0100 INFO 123486295033536 Successfully fetched the page
+2024-10-25T18:00:56.633740+0100 INFO 123486305519296 Successfully fetched the page
+2024-10-25T18:00:56.669292+0100 INFO 123486316005056 Row for Alexandre Dumas fils updated successfully.
+2024-10-25T18:00:56.677049+0100 INFO 123486326490816 Successfully fetched the page
+2024-10-25T18:00:56.680588+0100 INFO 123486295033536 Row for Stephenie Meyer updated successfully.
+2024-10-25T18:00:56.682836+0100 INFO 123486305519296 Row for Ernest Hemingway updated successfully.
+2024-10-25T18:00:56.699648+0100 INFO 123486477485760 Successfully fetched the page
+2024-10-25T18:00:56.724308+0100 INFO 123486446028480 Successfully fetched the page
+2024-10-25T18:00:56.726744+0100 INFO 123486326490816 Row for George Bernard Shaw updated successfully.
+2024-10-25T18:00:56.738968+0100 INFO 123486477485760 Row for Haruki Murakami updated successfully.
+2024-10-25T18:00:56.763827+0100 INFO 123486446028480 Row for James Baldwin updated successfully.
+2024-10-25T18:00:56.993155+0100 INFO 123486146135744 Successfully fetched the page
+2024-10-25T18:00:57.020224+0100 INFO 123486146135744 Row for W.C. Fields updated successfully.
+2024-10-25T18:00:57.113276+0100 INFO 123486456514240 Successfully fetched the page
+2024-10-25T18:00:57.120553+0100 INFO 123486487971520 Successfully fetched the page
+2024-10-25T18:00:57.122238+0100 INFO 123486336976576 Successfully fetched the page
+2024-10-25T18:00:57.160105+0100 INFO 123486347462336 Successfully fetched the page
+2024-10-25T18:00:57.169470+0100 INFO 123486435542720 Successfully fetched the page
+2024-10-25T18:00:57.171462+0100 INFO 123486336976576 Row for J.M. Barrie updated successfully.
+2024-10-25T18:00:57.178623+0100 INFO 123486456514240 Row for Jimi Hendrix updated successfully.
+2024-10-25T18:00:57.190957+0100 INFO 123486487971520 Row for Ayn Rand updated successfully.
+2024-10-25T18:00:57.214958+0100 INFO 123486347462336 Row for E.E. Cummings updated successfully.
+2024-10-25T18:00:57.221476+0100 INFO 123486435542720 Row for Khaled Hosseini updated successfully.
+2024-10-25T18:00:57.276833+0100 INFO 123486316005056 Successfully fetched the page
+2024-10-25T18:00:57.279685+0100 INFO 123486295033536 Successfully fetched the page
+2024-10-25T18:00:57.312023+0100 INFO 123486316005056 Row for Harper Lee updated successfully.
+2024-10-25T18:00:57.318819+0100 INFO 123486295033536 Row for Madeleine L'Engle updated successfully.
+2024-10-25T18:00:57.336683+0100 INFO 123486912352384 Data exported to quotes
+2024-10-25T18:00:57.341475+0100 INFO 123486912352384 Data exported to quote_tag_link
+2024-10-25T18:00:57.345019+0100 INFO 123486912352384 Data exported to tags
+2024-10-25T18:00:57.360588+0100 INFO 123486912352384 Data exported to authors
+2024-10-25T18:00:57.370376+0100 INFO 123486912352384 Data exported to quotes
+2024-10-25T18:00:57.382816+0100 INFO 123486912352384 Data exported to quote_tag_link
+2024-10-25T18:00:57.388067+0100 INFO 123486912352384 Data exported to tags
+2024-10-25T18:00:57.396622+0100 INFO 123486912352384 Data exported to authors
