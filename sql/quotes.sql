@@ -21,3 +21,9 @@ CREATE TABLE quotes_tags_link (
     FOREIGN KEY (quote_id) REFERENCES quotes(id),
     FOREIGN KEY (tag) REFERENCES tags(tag)
 );
+
+-- only insert changes when pages change
+CREATE TABLE pagesnum_changes (
+    pagesnum INTEGER,
+    time_stamp DATE
+)

@@ -20,7 +20,7 @@ logger.remove()  # so that the logs aren't being output in the terminal (necessa
 Create logs directory in the project root and set up logging
 """
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-logs_path = os.path.join(project_root, 'logs')
+logs_path = os.path.join(project_root, configuration["logs_path"])
 os.makedirs(logs_path, exist_ok=True)
 log_file = os.path.join(logs_path, "logs_{time:DD-MM-YY_HH.mm.ss}.log")
 logger.add(

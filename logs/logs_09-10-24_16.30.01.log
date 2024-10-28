@@ -1,4 +1,0 @@
-2024-10-09T16:30:02.086055+0100 INFO 22084 Ensured data directory exists at C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes\data
-2024-10-09T16:30:02.101688+0100 INFO 22084 Created database engine for C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes\data\scraping_quotes.db
-2024-10-09T16:30:02.544270+0100 INFO 22084 Successfully fetched the page
-2024-10-09T16:30:02.544270+0100 INFO 22084 Created the soup.

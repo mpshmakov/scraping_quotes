@@ -1,8 +1,0 @@
-2024-10-14T23:46:40.078229+0100 INFO 140704526501504 Ensured data directory exists at /Users/finn/Downloads/_DEV/scraping_quotes
-2024-10-14T23:46:40.215555+0100 INFO 140704526501504 Created database engine for /Users/finn/Downloads/_DEV/scraping_quotes/.db
-2024-10-14T23:46:40.258248+0100 INFO 140704526501504 Database schema initialized successfully.
-2024-10-14T23:46:40.258805+0100 INFO 140704526501504 Tables in the database: ['TestTable', 'books']
-2024-10-14T23:46:40.258891+0100 INFO 140704526501504 All required tables have been created successfully.
-2024-10-14T23:46:40.262269+0100 ERROR 140704526501504 Failed to fetch the page - No internet connection.
-2024-10-14T23:46:40.262399+0100 ERROR 140704526501504 Error scraping quotes: Failed to fetch the page - No internet connection.
-2024-10-14T23:46:40.262468+0100 ERROR 140704526501504 An unexpected error occurred: Failed to fetch the page - No internet connection.

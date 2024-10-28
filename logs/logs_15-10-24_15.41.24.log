@@ -1,3 +1,0 @@
-2024-10-15T15:41:25.025898+0100 INFO 13792 Ensured data directory exists at C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes
-2024-10-15T15:41:25.042880+0100 INFO 13792 Created database engine for C:\Users\qqeer\Desktop\code\scraping quotes\scraping_quotes\.db
-2024-10-15T15:41:25.042880+0100 ERROR 13792 Failed to fetch the page - No internet connection.
