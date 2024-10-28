@@ -1,0 +1,942 @@
+[
+  {
+    "quote_uuid": "6a81f867-2bf9-4648-939f-2794972c13fa",
+    "tag": "change"
+  },
+  {
+    "quote_uuid": "6a81f867-2bf9-4648-939f-2794972c13fa",
+    "tag": "deep-thoughts"
+  },
+  {
+    "quote_uuid": "6a81f867-2bf9-4648-939f-2794972c13fa",
+    "tag": "thinking"
+  },
+  {
+    "quote_uuid": "6a81f867-2bf9-4648-939f-2794972c13fa",
+    "tag": "world"
+  },
+  {
+    "quote_uuid": "023107f8-e533-4af2-ad5c-1fb0dc337ee4",
+    "tag": "abilities"
+  },
+  {
+    "quote_uuid": "023107f8-e533-4af2-ad5c-1fb0dc337ee4",
+    "tag": "choices"
+  },
+  {
+    "quote_uuid": "fae0a9ec-0367-4349-bf27-a5f136e648a4",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "fae0a9ec-0367-4349-bf27-a5f136e648a4",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "fae0a9ec-0367-4349-bf27-a5f136e648a4",
+    "tag": "live"
+  },
+  {
+    "quote_uuid": "fae0a9ec-0367-4349-bf27-a5f136e648a4",
+    "tag": "miracle"
+  },
+  {
+    "quote_uuid": "fae0a9ec-0367-4349-bf27-a5f136e648a4",
+    "tag": "miracles"
+  },
+  {
+    "quote_uuid": "ec818e9b-253b-4d0d-8258-d4a055e4eb64",
+    "tag": "aliteracy"
+  },
+  {
+    "quote_uuid": "ec818e9b-253b-4d0d-8258-d4a055e4eb64",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "ec818e9b-253b-4d0d-8258-d4a055e4eb64",
+    "tag": "classic"
+  },
+  {
+    "quote_uuid": "ec818e9b-253b-4d0d-8258-d4a055e4eb64",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "c16881af-91fc-422e-838a-006cd96f485d",
+    "tag": "be-yourself"
+  },
+  {
+    "quote_uuid": "c16881af-91fc-422e-838a-006cd96f485d",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "2944dbe5-81b4-4bc5-a045-085a4a180c57",
+    "tag": "adulthood"
+  },
+  {
+    "quote_uuid": "2944dbe5-81b4-4bc5-a045-085a4a180c57",
+    "tag": "success"
+  },
+  {
+    "quote_uuid": "2944dbe5-81b4-4bc5-a045-085a4a180c57",
+    "tag": "value"
+  },
+  {
+    "quote_uuid": "29aefafd-684f-494b-aa7a-c5e6260f0f3b",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "29aefafd-684f-494b-aa7a-c5e6260f0f3b",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "feaaccac-288c-4579-baac-54d83fad566f",
+    "tag": "edison"
+  },
+  {
+    "quote_uuid": "feaaccac-288c-4579-baac-54d83fad566f",
+    "tag": "failure"
+  },
+  {
+    "quote_uuid": "feaaccac-288c-4579-baac-54d83fad566f",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "feaaccac-288c-4579-baac-54d83fad566f",
+    "tag": "paraphrased"
+  },
+  {
+    "quote_uuid": "2a4ae139-5748-42ee-be76-529c1ec2bce6",
+    "tag": "misattributed-eleanor-roosevelt"
+  },
+  {
+    "quote_uuid": "073cad89-9dea-41bc-bb02-2a5a5c613fd6",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "073cad89-9dea-41bc-bb02-2a5a5c613fd6",
+    "tag": "obvious"
+  },
+  {
+    "quote_uuid": "073cad89-9dea-41bc-bb02-2a5a5c613fd6",
+    "tag": "simile"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "friends"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "heartbreak"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "fc0cdf78-a9aa-40bc-8e35-cf0096fc26a5",
+    "tag": "sisters"
+  },
+  {
+    "quote_uuid": "949c5ef1-9f87-43d7-a055-05d9f17ff16e",
+    "tag": "courage"
+  },
+  {
+    "quote_uuid": "949c5ef1-9f87-43d7-a055-05d9f17ff16e",
+    "tag": "friends"
+  },
+  {
+    "quote_uuid": "17df9034-fc64-450a-8e87-14ad2251b7e0",
+    "tag": "simplicity"
+  },
+  {
+    "quote_uuid": "17df9034-fc64-450a-8e87-14ad2251b7e0",
+    "tag": "understand"
+  },
+  {
+    "quote_uuid": "4866e1bc-390a-44f8-b1eb-084c72d0bbae",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "dcc34f49-7860-4538-bddf-00371214c42b",
+    "tag": "fantasy"
+  },
+  {
+    "quote_uuid": "0849d8d6-59e1-46df-8e78-5363983e4300",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "0849d8d6-59e1-46df-8e78-5363983e4300",
+    "tag": "navigation"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "activism"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "apathy"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "hate"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "indifference"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "opposite"
+  },
+  {
+    "quote_uuid": "ec7e35e0-548c-419c-bc54-948bc0d29a2f",
+    "tag": "philosophy"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "friendship"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "lack-of-friendship"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "lack-of-love"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "marriage"
+  },
+  {
+    "quote_uuid": "f35415d1-0274-4625-a79b-bc2090731411",
+    "tag": "unhappy-marriage"
+  },
+  {
+    "quote_uuid": "eb8a2d1f-de20-45e5-9717-c8eaf555bd28",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "eb8a2d1f-de20-45e5-9717-c8eaf555bd28",
+    "tag": "contentment"
+  },
+  {
+    "quote_uuid": "eb8a2d1f-de20-45e5-9717-c8eaf555bd28",
+    "tag": "friends"
+  },
+  {
+    "quote_uuid": "eb8a2d1f-de20-45e5-9717-c8eaf555bd28",
+    "tag": "friendship"
+  },
+  {
+    "quote_uuid": "eb8a2d1f-de20-45e5-9717-c8eaf555bd28",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "c8061e26-50bb-4df1-9d31-7852a8af138a",
+    "tag": "fate"
+  },
+  {
+    "quote_uuid": "c8061e26-50bb-4df1-9d31-7852a8af138a",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "c8061e26-50bb-4df1-9d31-7852a8af138a",
+    "tag": "misattributed-john-lennon"
+  },
+  {
+    "quote_uuid": "c8061e26-50bb-4df1-9d31-7852a8af138a",
+    "tag": "planning"
+  },
+  {
+    "quote_uuid": "c8061e26-50bb-4df1-9d31-7852a8af138a",
+    "tag": "plans"
+  },
+  {
+    "quote_uuid": "e4ff2052-7c09-4006-8c32-066d2dffa7a3",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "e4ff2052-7c09-4006-8c32-066d2dffa7a3",
+    "tag": "poetry"
+  },
+  {
+    "quote_uuid": "e8f25e89-d974-4582-ba6a-b7b0a3c569a8",
+    "tag": "happiness"
+  },
+  {
+    "quote_uuid": "25535bdb-3b26-450a-bef0-a4e80c755db0",
+    "tag": "attributed-no-source"
+  },
+  {
+    "quote_uuid": "6ee8d07f-277b-483a-887b-ec50fba3bcae",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "6ee8d07f-277b-483a-887b-ec50fba3bcae",
+    "tag": "religion"
+  },
+  {
+    "quote_uuid": "3da7fd45-a040-4c80-962e-36287847d8ae",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "3d1c1533-659c-424b-bea5-371105336e3e",
+    "tag": "comedy"
+  },
+  {
+    "quote_uuid": "3d1c1533-659c-424b-bea5-371105336e3e",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "3d1c1533-659c-424b-bea5-371105336e3e",
+    "tag": "yourself"
+  },
+  {
+    "quote_uuid": "85671006-6a52-48d8-bd59-f78913a131aa",
+    "tag": "children"
+  },
+  {
+    "quote_uuid": "85671006-6a52-48d8-bd59-f78913a131aa",
+    "tag": "fairy-tales"
+  },
+  {
+    "quote_uuid": "9feb9baa-3799-4649-89df-a6b59f9efeb1",
+    "tag": ""
+  },
+  {
+    "quote_uuid": "f55e8c87-d328-49b2-8728-1fbbcdf220a1",
+    "tag": "imagination"
+  },
+  {
+    "quote_uuid": "d24e9cf0-1cb4-46fe-93c1-55989f5fd8fa",
+    "tag": "music"
+  },
+  {
+    "quote_uuid": "84d1e812-a415-455a-b7ca-27dc24453fd8",
+    "tag": "learning"
+  },
+  {
+    "quote_uuid": "84d1e812-a415-455a-b7ca-27dc24453fd8",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "84d1e812-a415-455a-b7ca-27dc24453fd8",
+    "tag": "seuss"
+  },
+  {
+    "quote_uuid": "2ce7b0b6-2960-4060-9e73-ad764ba6bafe",
+    "tag": "dumbledore"
+  },
+  {
+    "quote_uuid": "a5c8ea76-74e3-455f-aaa5-a1f090b19ccf",
+    "tag": "friendship"
+  },
+  {
+    "quote_uuid": "1bd3d97f-63f7-4cd3-b08b-f87df3c359e5",
+    "tag": "misattributed-to-mother-teresa"
+  },
+  {
+    "quote_uuid": "1bd3d97f-63f7-4cd3-b08b-f87df3c359e5",
+    "tag": "paraphrased"
+  },
+  {
+    "quote_uuid": "2e4c1f50-c113-4ab5-a68e-23420cb1a276",
+    "tag": "death"
+  },
+  {
+    "quote_uuid": "2e4c1f50-c113-4ab5-a68e-23420cb1a276",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "e3187026-c35f-4be4-961f-1f861405d18c",
+    "tag": "chocolate"
+  },
+  {
+    "quote_uuid": "e3187026-c35f-4be4-961f-1f861405d18c",
+    "tag": "food"
+  },
+  {
+    "quote_uuid": "e3187026-c35f-4be4-961f-1f861405d18c",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "38caba74-f260-4fb6-8de1-3cc7c1ca4d5b",
+    "tag": "misattributed-to-c-s-lewis"
+  },
+  {
+    "quote_uuid": "38caba74-f260-4fb6-8de1-3cc7c1ca4d5b",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "9efc080c-a5d4-445f-8b8d-540c906025ea",
+    "tag": "knowledge"
+  },
+  {
+    "quote_uuid": "9efc080c-a5d4-445f-8b8d-540c906025ea",
+    "tag": "learning"
+  },
+  {
+    "quote_uuid": "9efc080c-a5d4-445f-8b8d-540c906025ea",
+    "tag": "understanding"
+  },
+  {
+    "quote_uuid": "9efc080c-a5d4-445f-8b8d-540c906025ea",
+    "tag": "wisdom"
+  },
+  {
+    "quote_uuid": "b9d4ff95-b821-49d0-9b09-e7cb5fa9a9b6",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "b9d4ff95-b821-49d0-9b09-e7cb5fa9a9b6",
+    "tag": "library"
+  },
+  {
+    "quote_uuid": "35cac86b-af69-40b9-b830-8b7ffc6588ce",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "45a8bdf2-8ae2-4aaa-82ec-a1503e9aed77",
+    "tag": "read"
+  },
+  {
+    "quote_uuid": "45a8bdf2-8ae2-4aaa-82ec-a1503e9aed77",
+    "tag": "readers"
+  },
+  {
+    "quote_uuid": "45a8bdf2-8ae2-4aaa-82ec-a1503e9aed77",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "45a8bdf2-8ae2-4aaa-82ec-a1503e9aed77",
+    "tag": "reading-books"
+  },
+  {
+    "quote_uuid": "1bb63eb7-73e5-454b-aaa1-65675633ec94",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "1bb63eb7-73e5-454b-aaa1-65675633ec94",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "1bb63eb7-73e5-454b-aaa1-65675633ec94",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "1bb63eb7-73e5-454b-aaa1-65675633ec94",
+    "tag": "tea"
+  },
+  {
+    "quote_uuid": "d62ba86d-c359-4533-a1c8-f7ef113726a9",
+    "tag": ""
+  },
+  {
+    "quote_uuid": "f2bfe454-0944-45f6-b1f5-916d0bf94368",
+    "tag": "girls"
+  },
+  {
+    "quote_uuid": "f2bfe454-0944-45f6-b1f5-916d0bf94368",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "b153c259-f814-43af-8347-8571dedad21c",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "b153c259-f814-43af-8347-8571dedad21c",
+    "tag": "simile"
+  },
+  {
+    "quote_uuid": "390c70eb-a5c5-4390-81ca-5ee730dc90d3",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "f9726b06-38b2-473b-be6d-97f1efbd8614",
+    "tag": "attributed-no-source"
+  },
+  {
+    "quote_uuid": "40c1b485-d5b7-4604-a88f-173f69ea5c8f",
+    "tag": "hope"
+  },
+  {
+    "quote_uuid": "40c1b485-d5b7-4604-a88f-173f69ea5c8f",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "1416178d-50d0-426f-9bb4-168f2f81947a",
+    "tag": "dumbledore"
+  },
+  {
+    "quote_uuid": "6c77e8ca-059b-403e-abd4-1427fca8bd3a",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "7bb1a7c1-44af-4123-990c-ab839c415cb2",
+    "tag": "friendship"
+  },
+  {
+    "quote_uuid": "7bb1a7c1-44af-4123-990c-ab839c415cb2",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "c43bf378-ce19-44c6-bf38-9cc49e1cadc9",
+    "tag": "attributed"
+  },
+  {
+    "quote_uuid": "c43bf378-ce19-44c6-bf38-9cc49e1cadc9",
+    "tag": "fear"
+  },
+  {
+    "quote_uuid": "c43bf378-ce19-44c6-bf38-9cc49e1cadc9",
+    "tag": "inspiration"
+  },
+  {
+    "quote_uuid": "4122b74b-54a9-4b3d-9568-e8a75bbdaffa",
+    "tag": "attributed-no-source"
+  },
+  {
+    "quote_uuid": "e92543af-ac45-42fa-a2df-f99563dc8d0c",
+    "tag": "music"
+  },
+  {
+    "quote_uuid": "f943799d-ced8-43ea-a04e-fd8d7b8cf5eb",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "f943799d-ced8-43ea-a04e-fd8d7b8cf5eb",
+    "tag": "thought"
+  },
+  {
+    "quote_uuid": "ea2e2ae6-3582-4a51-98b0-16ff2c686539",
+    "tag": "misattributed-to-einstein"
+  },
+  {
+    "quote_uuid": "03560265-849d-4c3a-906f-8c504540d4db",
+    "tag": "drug"
+  },
+  {
+    "quote_uuid": "03560265-849d-4c3a-906f-8c504540d4db",
+    "tag": "romance"
+  },
+  {
+    "quote_uuid": "03560265-849d-4c3a-906f-8c504540d4db",
+    "tag": "simile"
+  },
+  {
+    "quote_uuid": "4de47212-6b69-45c1-8345-57304e1e501b",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "4de47212-6b69-45c1-8345-57304e1e501b",
+    "tag": "friends"
+  },
+  {
+    "quote_uuid": "4de47212-6b69-45c1-8345-57304e1e501b",
+    "tag": "novelist-quotes"
+  },
+  {
+    "quote_uuid": "69ab1679-66c6-4ba3-825b-d23d6ad1ec2e",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "34d92db0-cb32-41f9-9b50-798b4e4d6d5c",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "34d92db0-cb32-41f9-9b50-798b4e4d6d5c",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "34d92db0-cb32-41f9-9b50-798b4e4d6d5c",
+    "tag": "yourself"
+  },
+  {
+    "quote_uuid": "35287c12-5c23-46cc-b210-3c7049fe5591",
+    "tag": "alcohol"
+  },
+  {
+    "quote_uuid": "bfb017e7-9113-468a-a182-93f79a3b6248",
+    "tag": "the-hunger-games"
+  },
+  {
+    "quote_uuid": "ba2e7e64-2fd3-4d5c-a2dc-69c12408cf8c",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "02785c58-71c5-4998-b651-77df9d27cf58",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "bilbo"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "journey"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "lost"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "quest"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "travel"
+  },
+  {
+    "quote_uuid": "7b092c93-9b30-448f-b282-a0bd5e90ff5b",
+    "tag": "wander"
+  },
+  {
+    "quote_uuid": "e321d85b-b10a-4af8-b984-8c9037bc72af",
+    "tag": "live-death-love"
+  },
+  {
+    "quote_uuid": "c8e847ca-9308-4786-b2dd-9971469f6e45",
+    "tag": "good"
+  },
+  {
+    "quote_uuid": "c8e847ca-9308-4786-b2dd-9971469f6e45",
+    "tag": "writing"
+  },
+  {
+    "quote_uuid": "2b8e8ba5-1a56-4497-b72f-40396095764b",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "2b8e8ba5-1a56-4497-b72f-40396095764b",
+    "tag": "regrets"
+  },
+  {
+    "quote_uuid": "c8cc50a6-f0e4-4701-a879-d1decb58a420",
+    "tag": "education"
+  },
+  {
+    "quote_uuid": "fe216c09-9af0-450d-bcfb-f57c46a0704b",
+    "tag": "troubles"
+  },
+  {
+    "quote_uuid": "bd707141-3d5c-4f18-a60c-7174b2326584",
+    "tag": "friendship"
+  },
+  {
+    "quote_uuid": "bd707141-3d5c-4f18-a60c-7174b2326584",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "3160181c-3950-4848-b47c-717c2f37d277",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "11a6bbd8-3fa4-4b0e-857d-e014309b55b8",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "11a6bbd8-3fa4-4b0e-857d-e014309b55b8",
+    "tag": "open-mind"
+  },
+  {
+    "quote_uuid": "11a6bbd8-3fa4-4b0e-857d-e014309b55b8",
+    "tag": "thinking"
+  },
+  {
+    "quote_uuid": "95c0af22-f459-46d5-8d94-ca3ddb17e5cc",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "95c0af22-f459-46d5-8d94-ca3ddb17e5cc",
+    "tag": "philosophy"
+  },
+  {
+    "quote_uuid": "7e072ef0-5cbe-40d5-8ff8-8721f4b8cb21",
+    "tag": "authors"
+  },
+  {
+    "quote_uuid": "7e072ef0-5cbe-40d5-8ff8-8721f4b8cb21",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "7e072ef0-5cbe-40d5-8ff8-8721f4b8cb21",
+    "tag": "literature"
+  },
+  {
+    "quote_uuid": "7e072ef0-5cbe-40d5-8ff8-8721f4b8cb21",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "7e072ef0-5cbe-40d5-8ff8-8721f4b8cb21",
+    "tag": "writing"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "insanity"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "lies"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "lying"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "self-indulgence"
+  },
+  {
+    "quote_uuid": "8446908f-90d9-41f8-9520-462fe052f16e",
+    "tag": "truth"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "beatles"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "connection"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "dreamers"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "dreaming"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "dreams"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "hope"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "6beea587-f4ae-495e-843b-5b1ed7e723a9",
+    "tag": "peace"
+  },
+  {
+    "quote_uuid": "f6e2d938-a9de-4457-ad5a-d12e34975801",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "f6e2d938-a9de-4457-ad5a-d12e34975801",
+    "tag": "sinister"
+  },
+  {
+    "quote_uuid": "412417b5-573a-41ea-ac27-d7c0d01e24ed",
+    "tag": ""
+  },
+  {
+    "quote_uuid": "6bba4c74-6b90-4b75-999a-68e87860ed3e",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "6bba4c74-6b90-4b75-999a-68e87860ed3e",
+    "tag": "classic"
+  },
+  {
+    "quote_uuid": "6bba4c74-6b90-4b75-999a-68e87860ed3e",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "77f6aff4-96ea-40f5-8bba-ec363a239a72",
+    "tag": "mistakes"
+  },
+  {
+    "quote_uuid": "a5db27cf-d494-47c0-9c1a-6d84c9663cfd",
+    "tag": "humor"
+  },
+  {
+    "quote_uuid": "a5db27cf-d494-47c0-9c1a-6d84c9663cfd",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "a5db27cf-d494-47c0-9c1a-6d84c9663cfd",
+    "tag": "romantic"
+  },
+  {
+    "quote_uuid": "a5db27cf-d494-47c0-9c1a-6d84c9663cfd",
+    "tag": "women"
+  },
+  {
+    "quote_uuid": "e3d28d5f-66be-48b1-ac44-dde4784beea5",
+    "tag": "integrity"
+  },
+  {
+    "quote_uuid": "8106aed4-9667-4c85-900f-744c33f84416",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "8106aed4-9667-4c85-900f-744c33f84416",
+    "tag": "library"
+  },
+  {
+    "quote_uuid": "8106aed4-9667-4c85-900f-744c33f84416",
+    "tag": "reading"
+  },
+  {
+    "quote_uuid": "7d2eeafc-4d9e-4a14-9c52-01ba8fa0e629",
+    "tag": "elizabeth-bennet"
+  },
+  {
+    "quote_uuid": "7d2eeafc-4d9e-4a14-9c52-01ba8fa0e629",
+    "tag": "jane-austen"
+  },
+  {
+    "quote_uuid": "b674b95b-779a-4a02-a79b-9ec985007e61",
+    "tag": "age"
+  },
+  {
+    "quote_uuid": "b674b95b-779a-4a02-a79b-9ec985007e61",
+    "tag": "fairytales"
+  },
+  {
+    "quote_uuid": "b674b95b-779a-4a02-a79b-9ec985007e61",
+    "tag": "growing-up"
+  },
+  {
+    "quote_uuid": "80e26e76-4008-4751-b0a5-3af9dfde976d",
+    "tag": "god"
+  },
+  {
+    "quote_uuid": "cae279a6-f196-4f22-9b2c-571d82749977",
+    "tag": "death"
+  },
+  {
+    "quote_uuid": "cae279a6-f196-4f22-9b2c-571d82749977",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "9cc60458-adeb-4175-bd4d-3df07decae85",
+    "tag": "misattributed-mark-twain"
+  },
+  {
+    "quote_uuid": "9cc60458-adeb-4175-bd4d-3df07decae85",
+    "tag": "truth"
+  },
+  {
+    "quote_uuid": "d96298f5-3e6c-40d9-97c8-d951940186e9",
+    "tag": "christianity"
+  },
+  {
+    "quote_uuid": "d96298f5-3e6c-40d9-97c8-d951940186e9",
+    "tag": "faith"
+  },
+  {
+    "quote_uuid": "d96298f5-3e6c-40d9-97c8-d951940186e9",
+    "tag": "religion"
+  },
+  {
+    "quote_uuid": "d96298f5-3e6c-40d9-97c8-d951940186e9",
+    "tag": "sun"
+  },
+  {
+    "quote_uuid": "3aef2c41-7a59-4757-bf3d-3ef11bf1aec5",
+    "tag": "truth"
+  },
+  {
+    "quote_uuid": "222a5359-abe2-461f-9636-68b06961f075",
+    "tag": "death"
+  },
+  {
+    "quote_uuid": "222a5359-abe2-461f-9636-68b06961f075",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "8d9e6d88-7b5e-476f-a244-337435c43aef",
+    "tag": "adventure"
+  },
+  {
+    "quote_uuid": "8d9e6d88-7b5e-476f-a244-337435c43aef",
+    "tag": "love"
+  },
+  {
+    "quote_uuid": "063111cc-8fc7-4adb-8b37-087843aedf19",
+    "tag": "courage"
+  },
+  {
+    "quote_uuid": "b8ff8058-31ff-4fd0-b3fd-461388803151",
+    "tag": "life"
+  },
+  {
+    "quote_uuid": "c55871fc-cec4-4bb5-9423-1cf449e94caf",
+    "tag": "better-life-empathy"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "children"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "difficult"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "grown-ups"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "write"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "writers"
+  },
+  {
+    "quote_uuid": "1fbfed74-b8da-4040-b432-9da218c305f8",
+    "tag": "writing"
+  },
+  {
+    "quote_uuid": "3d521423-4294-47f7-ab43-8b68a8ffb6a3",
+    "tag": "truth"
+  },
+  {
+    "quote_uuid": "33693caa-e6fd-4d4d-8093-274fb0b0e81a",
+    "tag": "inspirational"
+  },
+  {
+    "quote_uuid": "a576b755-fd07-43c5-8953-c479c4d4f5c7",
+    "tag": "books"
+  },
+  {
+    "quote_uuid": "a576b755-fd07-43c5-8953-c479c4d4f5c7",
+    "tag": "mind"
+  }
+]

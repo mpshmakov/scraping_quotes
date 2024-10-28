@@ -12,14 +12,12 @@ from .utils import create_data_folder, logger, uuid_to_str
 
 configuration = get_configuration()
 csv_filename = configuration["csv_filename"]
-json_filename = configuration["json_filename"]
+json_filename = configuration["json_filename"] # TODO: add filenames for all tables
 save_data_path = configuration["save_data_path"]
 
-result_csv_path = save_data_path + "/" + csv_filename + ".csv"
-result_json_path = save_data_path + "/" + json_filename + ".json"
 
 
-def exportToCsv(df, filename=result_csv_path):
+def exportToCsv(df, csv_filename=csv_filename):
     """
     Export a DataFrame to a CSV file.
 
@@ -28,12 +26,13 @@ def exportToCsv(df, filename=result_csv_path):
         filename (str, optional): The path to the output CSV file.
                                   Defaults to './data/output.csv'.
     """
+    filename = save_data_path + "/" + csv_filename + ".csv"
     create_data_folder(filename)
     df.to_csv(filename, index=False)
     logger.info(f"Data exported to {filename}")
 
 
-def exportToJson(df, filename=result_json_path):
+def exportToJson(df, json_filename=json_filename):
     """
     Export a DataFrame to a JSON file, handling UUID conversion.
 
@@ -42,6 +41,7 @@ def exportToJson(df, filename=result_json_path):
         filename (str, optional): The path to the output JSON file.
                                   Defaults to './data/output.json'.
     """
+    filename = save_data_path + "/" + json_filename + ".json"
     create_data_folder(filename)
     # Convert DataFrame to dict, handling UUID conversion
     json_data = df.to_dict(orient="records")

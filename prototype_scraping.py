@@ -5,8 +5,8 @@ import uuid
 import pandas as pd
 from bs4 import Tag
 from configuration import get_configuration
-from database import Books, Session, TestTable, initDB, insertRow
-from database.operations import check_tables_exist, initialize_schema
+from database import initDB, insertRow, Authors, Tags, Quotes, QuotesTagsLink, TestTable
+from database.operations import check_tables_exist, initialize_schema, updateAuthorRowAboutValue
 from sbooks import BeautifulSoup as bs
 from sbooks import fetchPage, logger, requests
 from sbooks.export_functions import exportToCsv, exportToJson
@@ -21,6 +21,8 @@ import json
 # insert all tables into 1 json
 # 4 csv files for each table
 # insert data into db while parsing it
+
+# can't seem to handle sqlalchemy.exc.IntegrityError exceptions so i insert authors and tags outside of quotes_worker
 
 #*
 # quote_page_worker:
@@ -42,6 +44,10 @@ import json
 # 
 
 configuration = get_configuration()
+print(type(configuration))
+print(type(json.dumps(configuration)))
+logger.info("configuration extracted: ", json.dumps(configuration)) # this line doesn't work
+
 
 def update_pagesnum():    
     url = configuration["url"]
@@ -123,43 +129,62 @@ def quote_page_worker(page_url: str):
         author_span_tag = div_quote_tag.find_all("span")[1] # less robust approach but i think it should be faster
         author = author_span_tag.find(class_="author").get_text()
         author_about_link = author_span_tag.find("a")["href"].strip()
-        print("author", author)
-        print("about_link" , author_about_link)
+        #print("author", author)
+        #print("about_link" , author_about_link)
 
         quote_uuid = str(uuid.uuid4()) 
         quote_text = div_quote_tag.find(class_="text").get_text().strip()
         quote = {"quote_uuid": quote_uuid ,"quote_text": quote_text, "author": author}
-        print("quote: ",id, quote)
+        #print("quote: ",id, quote)
         
 
         # an example of what i meant in whatsapp
         div_quote_tag = div_quote_tag.find_all()
         tags = div_quote_tag[5]["content"].split(",")
-        print("tags",id, tags)
-        print("\n\n")
+        #print("tags",id, tags)
+        #print("\n\n")
 
         quotes.append(quote)
         authors[author] = author_about_link
         tags_relative_to_quotes.append(tags)
         for tag in tags:
             all_tags.add(tag)
+            tag_row = Tags(tag=tag)
+            insertRow(tag_row)
+        
+        author_row = Authors(author, author_about_link) #need to insert data into authors table before quotes because of FK. update about info later
+        insertRow(author_row)
+
+        quote_row = Quotes(quote_uuid, quote_text, author)
+        insertRow(quote_row)
+
+
+    #print("end")
+    #print("authors: ", authors)
+    #print("all_tags: ", all_tags)
+    #print("tags_relative_to_quotes: ", id, len(tags_relative_to_quotes))
+    #print("quotes: ",id, len(quotes))
+
     
-    print("end")
-    print("authors: ", authors)
-    print("all_tags: ", all_tags)
-    print("tags_relative_to_quotes: ", id, len(tags_relative_to_quotes))
-    print("quotes: ",id, len(quotes))
+
+
+    print("inserted for page ", page_url)
 
     return {"authors": authors, "all_tags": all_tags, "tags_relative_to_quotes": tags_relative_to_quotes, "quotes": quotes}
 
 # basically changes about from url to the description text of the author (done separately from quote worker to potentially save execution time)
 def authors_worker(author):
     about_url = url + author["about"].split("/", 1)[1]
-    print("about_url", about_url)
+    #print("about_url", about_url)
     about_page = bs(fetchPage(about_url).content, features="html.parser")
     about_text = about_page.find(class_="author-details").get_text()
-    return {"author": author, "about": about_text}
-        
+    updateAuthorRowAboutValue(author["author"], about_text)
+    return {"author": author["author"], "about": about_text}
+
+# init db and tables     
+# initialize_schema()
+initDB()
+
 response = fetchPage(configuration["url"])
 if response is None:
     raise Exception("Failed to fetch the Quotes page")
@@ -179,7 +204,7 @@ for i in range(pagesnum):
     next_page_url = url + "page/" + str(i+1)
     quotes_pages_urls.append(next_page_url)
 
-print("len(quotes_pages)", len(quotes_pages_urls))
+#print("len(quotes_pages)", len(quotes_pages_urls))
     
 with concurrent.futures.ThreadPoolExecutor() as executor:
     quotes_map = executor.map(quote_page_worker, quotes_pages_urls)
@@ -208,7 +233,9 @@ for result_dict in quotes_map:
     for i in range(len(quotes_tmp)):
         for j in range(len(tags_tmp[i])):
             quote_tag_link.append({"quote_uuid": quotes_tmp[i]["quote_uuid"], "tag": tags_tmp[i][j]})
-        
+            quote_tag_link_row = QuotesTagsLink(quotes_tmp[i]["quote_uuid"], tags_tmp[i][j])
+            insertRow(quote_tag_link_row)
+
         quotes.append(quotes_tmp[i])
 
     tags.update(result_dict["all_tags"])
@@ -239,9 +266,19 @@ quote_tag_df = pd.DataFrame(quote_tag_link)
 tags_df = pd.DataFrame(tags)
 authors_df = pd.DataFrame(authors)
 
+exportToCsv(quotes_df, "quotes.csv")
+exportToCsv(quote_tag_df, "quote_tag_link")
+exportToCsv(tags_df, "tags")
+exportToCsv(authors_df, "authors")
+
+exportToJson(quotes_df, "quotes")
+exportToJson(quote_tag_df, "quote_tag_link")
+exportToJson(tags_df, "tags")
+exportToJson(authors_df, "authors")
+
 #create pk tables first, fk second
 
-print(quotes_df.head())
-print(quote_tag_df.head())
-print(tags_df.head())
-print(authors_df.head())
+#print(quotes_df.head())
+#print(quote_tag_df.head())
+#print(tags_df.head())
+#print(authors_df.head())

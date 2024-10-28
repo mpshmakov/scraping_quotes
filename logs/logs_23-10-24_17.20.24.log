@@ -1,0 +1,9 @@
+2024-10-23T17:20:25.313918+0100 INFO 124430090162304 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
+2024-10-23T17:20:25.343575+0100 INFO 124430090162304 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/quotes.db
+2024-10-23T17:20:25.366880+0100 INFO 124430090162304 Database schema initialized successfully.
+2024-10-23T17:20:25.368646+0100 INFO 124430090162304 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:20:25.368781+0100 ERROR 124430090162304 Not all required tables were created.
+2024-10-23T17:20:25.375998+0100 INFO 124430090162304 Database schema initialized successfully.
+2024-10-23T17:20:25.377464+0100 INFO 124430090162304 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-10-23T17:20:25.377570+0100 ERROR 124430090162304 Not all required tables were created.
+2024-10-23T17:20:25.379012+0100 ERROR 124430090162304 Tables were not created successfully.
