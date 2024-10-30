@@ -32,7 +32,7 @@ def exportToCsv(df, csv_filename=csv_filename):
     logger.info(f"Data exported to {filename}")
 
 
-def exportToJson(df, json_filename=json_filename):
+def exportDfToJson(df, json_filename=json_filename):
     """
     Export a DataFrame to a JSON file, handling UUID conversion.
 
@@ -45,8 +45,23 @@ def exportToJson(df, json_filename=json_filename):
     create_data_folder(filename)
     # Convert DataFrame to dict, handling UUID conversion
     json_data = df.to_dict(orient="records")
-    json_data = [{k: uuid_to_str(v) for k, v in record.items()} for record in json_data]
+    # json_data = [{k: uuid_to_str(v) for k, v in record.items()} for record in json_data]
 
     with open(filename, "w") as f:
         json.dump(json_data, f, indent=2)
     logger.info(f"Data exported to {filename}")
+
+def exportMultipleDfsToOneJson(df_arr, df_names_arr, json_filename=json_filename):
+    filename = save_data_path + "/" + json_filename + ".json"
+    create_data_folder(filename)
+
+    json_data = {}
+
+    for i in range(len(df_arr)):
+        json_data[df_names_arr[i]] = df_arr[i].to_dict(orient="records")
+    # json_data = [{k: uuid_to_str(v) for k, v in record.items()} for record in json_data]
+
+    with open(filename, "w") as f:
+        json.dump(json_data, f, indent=2)
+    logger.info(f"Data exported to {filename}")
+

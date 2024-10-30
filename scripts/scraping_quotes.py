@@ -1,8 +1,3 @@
-"""Books to Scrape scraper and database population script.
-This script scrapes book data from the Books to Scrape website,
-stores it in a database, and exports it to CSV and JSON formats.
-"""
-
 import concurrent.futures
 import threading
 import uuid
@@ -10,227 +5,305 @@ import uuid
 import pandas as pd
 from bs4 import Tag
 from configuration import get_configuration
-from database import Books, Session, TestTable, initDB, insertRow
-from database.operations import check_tables_exist, initialize_schema
+from database import initDB, insertRow, Authors, Tags, Quotes, QuotesTagsLink, TestTable
+from database.operations import check_tables_exist, initialize_schema, updateAuthorRowAboutValue
 from sbooks import BeautifulSoup as bs
 from sbooks import fetchPage, logger, requests
-from sbooks.export_functions import exportToCsv, exportToJson
+from sbooks.export_functions import exportMultipleDfsToOneJson, exportToCsv
 from sbooks.utils import clean_numeric
 from sqlalchemy.exc import SQLAlchemyError
 from tqdm import tqdm
-
-# 1) extract links of categories
-#     1. extract number of pages for this category
-#       1. extract links of books
-#         1. add book to the dataframe with the respective category
+import json
 
 
-pbar_quotes = None
+# reminder:
+# create 4 dataframes
+# insert all tables into 1 json
+# 4 csv files for each table
+# insert data into db while parsing it
+
+# can't seem to handle sqlalchemy.exc.IntegrityError exceptions so i insert authors and tags outside of quotes_worker
+
+#*
+# quote_page_worker:
+#
+# 1. get all quotes on page
+#   1. add quote to quotes_list
+#   2. if author is not in authors_list -> append author + about
+#   3. if tag is not in tags_list -> append tag
+#   4. add quote + tag to quotes_tags_link_list
+# 
+# *#
+
+# questions for the meeting: there will be 4 csv files generated each time. is that fine?
+
+# create a dict for all links of authors' abouts and parse them after quotes (should save time)
+
+# after workers finish:
+# 1. append quotes lists to each other
+# 
+
+pbar_quotes = tqdm(total=100, desc="quotes")
+pbar_tags = tqdm(total=138, desc="tags")
+pbar_authors = tqdm(total=50, desc="authors")
+pbar_quote_tag_link = tqdm(total=235, desc="quotes_tags_links")
+
+configuration = get_configuration()
+#print(type(configuration))
+#print(type(json.dumps(configuration)))
+logger.info("configuration extracted: ", json.dumps(configuration)) # this line doesn't work
 
 
-def category_worker(category):
+def update_pagesnum():    
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
 
-    quotes = []
+    addendant = 2
+    next_page_url = url + "page/" + str(pagesnum + 1)
+    quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
 
-    a_tag = category.find("a")
+    while True:
+        try:
+            main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+            next_page = main_div.find("nav").find("li", class_="next").find("a")["href"]
 
-    category_url = a_tag.get("href")
-    category_name = a_tag.string.strip()
-    logger.info("category name: " + category_name)
+        except AttributeError:
+            next_page = None
 
-    category_page = bs(fetchPage(url + category_url).content, features="html.parser")
+        if next_page != None:
+            next_page_url = url + "page/" + str(pagesnum + addendant)
+            quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
+            addendant = addendant + 1
+        else:
+            #update configuration.json pagesnum value
+            with open("configuration.json", "r") as jsonFile:
+                data = json.load(jsonFile)
+                data["pagesnum"] = pagesnum + (addendant-1)
+                jsonFile.close()
 
-    num_pages = 1
-    num_pages_tag = category_page.find(class_="current")
-
-    if num_pages_tag is not None:
-        logger.info("num_pages is not None")
-        num_pages = int(num_pages_tag.text.split("of ", 1)[1])
-    logger.info("pages: " + str(num_pages))
-
-    new_page_url = category_url
-    for i in range(num_pages):
-        iterator = i + 1
-
-        # page n is just page-n.html instead of index.html
-        if iterator != 1:
-            new_page_url = category_url.replace("index", "page-" + str(iterator))
-        logger.info("current category page url: " + url + new_page_url)
-        current_page = bs(fetchPage(url + new_page_url).content, features="html.parser")
-
-        # get links of books
-        books_tag = current_page.find("ol")
-        books_a_tags = books_tag.find_all("a", title=True)
-
-        for book_a in books_a_tags:
-            book_url = book_a.get("href").split("/", 3)[3]
-            logger.info("current book url: " + book_url)
-
-            # soup of the book -> parse the details into a dict
-            book_page = bs(
-                fetchPage(url + "catalogue/" + book_url).content,
-                features="html.parser",
-            )
-            main_div_tag = book_page.find(class_="col-sm-6 product_main")
-
-            id = str(uuid.uuid4())
-            logger.info("uuid: " + id)
-
-            title = get_title(main_div_tag)
-            logger.info("title: " + title)
-
-            price = get_price(main_div_tag)
-            logger.info("price: " + str(price))
-
-            availability = get_availability(main_div_tag)
-            logger.info("availability: " + str(availability))
-
-            rating = get_rating(main_div_tag)
-            logger.info("rating: " + str(rating))
-
-            the_category = category_name
-            logger.info("category: " + category_name)
-            quotes.append([id, title, price, availability, rating, the_category])
-            pbar_quotes.update(1)
-
-    pbar_category.update(1)
-    return quotes
+            with open("configuration.json", "w") as jsonFile:
+                json.dump(data, jsonFile)
+                jsonFile.close()
+            break
 
 
-def init_pbars(soup, categories_list):
-    global pbar_category
-    global pbar_quotes
-    num_of_books = get_num_of_books(soup)
-    pbar_quotes = tqdm(total=num_of_books, desc="books")
-    pbar_category = tqdm(total=len(categories_list), desc="categories")
-
-
-def get_num_of_books(soup: bs):
-    num_of_books_str = (
-        soup.find(class_="col-sm-8 col-md-9").find("form").find("strong").get_text()
-    )
-    return int(num_of_books_str)
-
-
-# functions to get each of the books' parameters (i believe it is easier to debug and maintain the code this way because the parsing of the page may get very complicated)
-def get_title(main_div_tag):
-    title = main_div_tag.find("h1").text.strip()
-    return title
-
-
-def get_price(main_div_tag):
-    price = float(main_div_tag.find(class_="price_color").text.strip().split("£", 1)[1])
-    return price
-
-
-def get_availability(main_div_tag):
-    tmp_availability = (
-        main_div_tag.find(class_="instock availability").text.strip().split("(", 1)[1]
-    )
-    availability = int(tmp_availability.split("available", 1)[0])
-    return availability
-
-
-def get_rating(main_div_tag):
-    tmp_star_rating = main_div_tag.find(class_="star-rating").get("class")[1]
-    star_rating = word_number_to_int(tmp_star_rating)
-    return star_rating
-
-
-def scrape_quotes():
+def check_for_new_pages_and_update_pagesnum():
     """
-    Scrape books data from https://books.toscrape.com/.
+    Checks if pagesnum + 1 from configuration.json exists. If they do, updates pagesnum in configuration.json
+
     Returns:
-    list: A list of tuples containing books data (id, title, how many in stock, rating, category).
-    Raises:
-    Exception: If the page structure has changed and data cannot be scraped.
+        True or False. True if new pages exist, False if they don't. 
     """
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
 
+    next_page_url = url + "page/" + str(pagesnum)
+    quote_page = bs(fetchPage(next_page_url).content, features="html.parser")
+    try:
+        main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+        next_page = main_div.find("nav").find("li", class_="next").find("a")["href"]
+
+    except AttributeError:
+        return False
+    
+    update_pagesnum()
+    return True
+
+
+def quote_page_worker(page_url: str):
+    quote_page = bs(fetchPage(page_url).content, features="html.parser")
+    main_div = quote_page.find_all(class_="row")[1].find(class_="col-md-8")
+
+    div_quote_tags = main_div.find_all(class_="quote")
+
+    id = str(uuid.uuid4()) # for debugging
+    # uuid, quote, author
     quotes = []
 
-    try:
-        response = fetchPage(url)
-        if response is None:
-            raise Exception("Failed to fetch the Quotes page")
+    # list in list (for tags_quotes_link table)
+    tags_relative_to_quotes = []
 
-        quote_page = bs(response.content, features="html.parser")
-        logger.info("Created the soup.")
+    # set which will be merged after all workers finish
+    all_tags = set()
 
-        quotes_pages = []
+    # author : about link (to union all authors from workers afterwards (for authors table))
+    authors = {}
 
-        while True:
-            quotes_pages.append(quote_page)
-            next_page = quote_page.find(class_="col-md-8").find("nav").find("a")["href"]
-            
+    for div_quote_tag in div_quote_tags:
+        
 
-        # init_pbars(soup, categories_list)
+        author_span_tag = div_quote_tag.find_all("span")[1] # less robust approach but i think it should be faster
+        author = author_span_tag.find(class_="author").get_text()
+        author_about_link = author_span_tag.find("a")["href"].strip()
+        ##print("author", author)
+        ##print("about_link" , author_about_link)
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            quotes_map = executor.map(category_worker, categories_list)
-            logger.debug("max workers: " + str(executor._max_workers))
-        pbar_category.close()
+        quote_uuid = str(uuid.uuid4()) 
+        quote_text = div_quote_tag.find(class_="text").get_text().strip()
+        quote = {"quote_uuid": quote_uuid ,"quote_text": quote_text, "author": author}
+        ##print("quote: ",id, quote)
+        
 
-        for book in quotes_map:
-            if book != None:
-                for j in range(len(book)):
-                    quotes.append(book[j])
+        # an example of what i meant in whatsapp
+        div_quote_tag = div_quote_tag.find_all()
+        tags = div_quote_tag[5]["content"].split(",")
+        ##print("tags",id, tags)
+        ##print("\n\n")
 
-        return quotes
-    except Exception as e:
-        logger.error(f"Error scraping quotes: {str(e)}")
-        raise
+        quotes.append(quote)
+        authors[author] = author_about_link
+        tags_relative_to_quotes.append(tags)
+        for tag in tags:
+            all_tags.add(tag)
+            tag_row = Tags(tag=tag)
+            insertRow(tag_row)
+        
+        author_row = Authors(author, author_about_link) #need to insert data into authors table before quotes because of FK. update about info later
+        insertRow(author_row)
+
+        quote_row = Quotes(quote_uuid, quote_text, author)
+        insertRow(quote_row)
+        pbar_quotes.update(1)
+
+
+    ##print("end")
+    ##print("authors: ", authors)
+    ##print("all_tags: ", all_tags)
+    ##print("tags_relative_to_quotes: ", id, len(tags_relative_to_quotes))
+    ##print("quotes: ",id, len(quotes))
+
+    
+
+
+    #print("inserted for page ", page_url)
+
+    return {"authors": authors, "all_tags": all_tags, "tags_relative_to_quotes": tags_relative_to_quotes, "quotes": quotes}
+
+# basically changes about from url to the description text of the author (done separately from quote worker to potentially save execution time)
+def authors_worker(author):
+    about_url = configuration["url"] + author["about"].split("/", 1)[1]
+    ##print("about_url", about_url)
+    about_page = bs(fetchPage(about_url).content, features="html.parser")
+    about_text = about_page.find(class_="author-details").get_text()
+    updateAuthorRowAboutValue(author["author"], about_text)
+    return {"author": author["author"], "about": about_text}
+
+
+def check_structure_changes(response):
+    response_soup = bs(response.content, features="html.parser")
+    structure_check = response_soup.find_all(class_="col-md-8")[1].find(class_="quote")
+    # #print(structure_check)
+    if structure_check is None:
+        raise Exception("Page structure has changed.")
 
 
 def main():
-    """
-    Main function to orchestrate the scraping, database population, and data export process.
-    """
-    try:
-        # Initialize the database schema
-        initialize_schema()
-        # Verify tables exist
-        if not check_tables_exist():
-            logger.error("Tables do not exist after schema initialization. Exiting.")
-            return
+    initDB()
+    global configuration
 
-        quotes_data = scrape_quotes()
+    response = fetchPage(configuration["url"])
+    if response is None:
+        raise Exception("Failed to fetch the Quotes page")
 
-        # Create AcademyAwardWinningFilms objects
-        quotes = [Books(*book) for book in quotes_data]
+    check_structure_changes(response)
+    
+    quotes_pages_urls = []
 
-        # Initialize the database and insert all movies
-        initDB(quotes)
+    # 10 pages exist for sure.
+    # create a function which checks if 11th page exists. if true, iterate and change pages number in configuration.json
 
-        # Verify tables exist again
-        if not check_tables_exist():
-            logger.error("Tables do not exist after initDB. Exiting.")
-            return
+    check_for_new_pages_and_update_pagesnum()
+    configuration = get_configuration()
 
-        # Test inserting individual rows
-        new_quotes = Books(str(uuid.uuid4()), "Test Book", 22.0, 1, 5, "category")
-        new_test = TestTable(1, 43, 6)
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
 
-        insertRow(new_quotes)
-        # print("Inserted new film.")
-        insertRow(new_test)
+    for i in range(pagesnum):
+        next_page_url = url + "page/" + str(i+1)
+        quotes_pages_urls.append(next_page_url)
 
-        # another_test = TestTable(2, 'text', 1.1)
-        # insertRow(another_test)
-        # print("Inserted test entry.")
+    ##print("len(quotes_pages)", len(quotes_pages_urls))
+        
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        quotes_map = executor.map(quote_page_worker, quotes_pages_urls)
 
-        # Create DataFrame for CSV and JSON export
-        df = pd.DataFrame(
-            quotes_data,
-            columns=["id", "title", "price", "availability", "star_rating", "category"],
-        )
-        exportToCsv(df)
-        exportToJson(df)
 
-    except SQLAlchemyError as e:
-        logger.error(f"A database error occurred: {str(e)}")
-    except Exception as e:
-        logger.error(f"An unexpected error occurred: {str(e)}")
+    quotes = []
+    authors = {}
+    tags = set()
 
+    quote_tag_link = []
+
+    #quotes and tags_quote_link
+    for result_dict in quotes_map:
+
+        quotes_tmp = result_dict["quotes"]
+        tags_tmp = result_dict["tags_relative_to_quotes"]
+
+        for i in range(len(quotes_tmp)):
+            for j in range(len(tags_tmp[i])):
+                quote_tag_link.append({"quote_uuid": quotes_tmp[i]["quote_uuid"], "tag": tags_tmp[i][j]})
+                quote_tag_link_row = QuotesTagsLink(quotes_tmp[i]["quote_uuid"], tags_tmp[i][j])
+                pbar_quote_tag_link.update(1)
+                insertRow(quote_tag_link_row)
+
+            quotes.append(quotes_tmp[i])
+
+        tags.update(result_dict["all_tags"])
+        pbar_tags.reset()
+        pbar_tags.update(len(tags))
+        pbar_tags.refresh()
+        authors.update(result_dict["authors"])
+        pbar_authors.reset()
+        pbar_authors.update(len(authors))
+        pbar_authors.refresh()
+
+    tags = list(tags)
+
+    authors_list = []
+    for author in authors:
+        authors_list.append({"author":author, "about":authors[author]})
+
+    # authors
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        authors_map = executor.map(authors_worker, authors_list)
+
+    authors = []
+    for author in authors_map:
+        authors.append(author)
+
+
+    #print("quotes", len(quotes))
+    #print("authors: ", len(authors))
+    #print("tags", len(tags))
+    #print("quotes_tag_)link", len(quote_tag_link))
+
+    quotes_df = pd.DataFrame(quotes)
+    quote_tag_df = pd.DataFrame(quote_tag_link)
+    tags_df = pd.DataFrame(tags)
+    authors_df = pd.DataFrame(authors)
+
+    exportToCsv(quotes_df, "quotes.csv")
+    exportToCsv(quote_tag_df, "quote_tag_link")
+    exportToCsv(tags_df, "tags")
+    exportToCsv(authors_df, "authors")
+
+    df_arr = [quotes_df, quote_tag_df, tags_df, authors_df]
+    df_names_arr = ["quotes", "quotes_tags_link", "tags", "authors"]
+
+    exportMultipleDfsToOneJson(df_arr=df_arr, df_names_arr=df_names_arr)
+
+    # exportToJson(quotes_df, "quotes")
+    # exportToJson(quote_tag_df, "quote_tag_link")
+    # exportToJson(tags_df, "tags")
+    # exportToJson(authors_df, "authors")
+
+    #create pk tables first, fk second
+
+    ##print(quotes_df.head())
+    ##print(quote_tag_df.head())
+    ##print(tags_df.head())
+    ##print(authors_df.head())
 
 if __name__ == "__main__":
     main()

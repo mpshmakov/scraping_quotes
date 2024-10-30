@@ -15,7 +15,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from .export_functions import exportToCsv, exportToJson
+from .export_functions import exportToCsv, exportDfToJson, exportMultipleDfsToOneJson
 
 # Local imports
 from .utils import create_data_folder, logger, uuid_to_str
@@ -60,9 +60,10 @@ __all__ = [
     "requests",
     "uuid",
     "exportToCsv",
-    "exportToJson",
+    "exportDfToJson",
     "create_data_folder",
     "uuid_to_str",
     "fetchPage",
     "logger",
+    "exportMultipleDfsToOneJson"
 ]

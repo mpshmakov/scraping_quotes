@@ -40,8 +40,7 @@ def initialize_schema():
         tables = inspector.get_table_names()
         logger.info(f"Tables in the database: {tables}")
 
-        # TODO: change
-        if "books" in tables and "TestTable" in tables:
+        if "quotes" in tables and "authors" in tables and "quotes_tags_link" in tables and "tags" in tables and  "TestTable" in tables:
             logger.info("All required tables have been created successfully.")
         else:
             logger.error("Not all required tables were created.")
@@ -183,7 +182,7 @@ def insertRow(row):
     except exc.IntegrityError as e:
         session.rollback()
         logger.warning(f"Integrity error (probably normal behaviour): {str(e)}")
-        print("integrity error")
+        #print("integrity error")
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error inserting row into {row.__tablename__}: {str(e)}")
@@ -199,16 +198,16 @@ def updateAuthorRowAboutValue(author: str, about_text: str):
 
     session = Session()
     try:
-        print("updating ", author)
+        #print("updating ", author)
         res =  session.execute(select(Authors).filter_by(author=author)).scalar_one() 
-        print("updateD ", author)
+        #print("updateD ", author)
         res.about = about_text
         session.flush()
         session.commit()
         logger.info(f"Row for {author} updated successfully.")
     # except exc.NoResultFound as e:
     #     session.rollback()
-    #     print("NoResultFound error for this author: ", author)
+    #     #print("NoResultFound error for this author: ", author)
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error updating {author} row: {str(e)}")

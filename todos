@@ -1,10 +1,24 @@
 configuration for mysql - done
 
 error handling for new db function - done
-error handling for the script
+error handling for the script - done
 
-convert to json and csv
+convert to json and csv - done
+4 jsons into 1 json - done
 
-check that new configuration works everywhere
+check that new configuration works everywhere - done
 
-add filenames for all tables in configuration
+
+fk's don't work
+
+move script to main script file - done
+
+add pbar(s) - done
+
+make pbar(s) dynamic based on previous runs
+
+add configuration to disable db integrations 
+
+implement logging everywhere
+
+update requirements.txt - done (needs testing)

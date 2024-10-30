@@ -6,3 +6,4 @@ requests
 sqlalchemy
 loguru
 tqdm
+pymysql
