@@ -17,8 +17,16 @@ add pbar(s) - done
 
 make pbar(s) dynamic based on previous runs
 
-add configuration to disable db integrations 
+add configuration to disable db integrations - done
 
-implement logging everywhere
+implement logging everywhere - done
 
 update requirements.txt - done (needs testing)
+
+cli args - done
+
+tests
+
+specify number of quotes to scrape
+
+fast api for db

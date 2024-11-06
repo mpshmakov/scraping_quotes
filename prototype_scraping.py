@@ -7,10 +7,10 @@ from bs4 import Tag
 from configuration import get_configuration
 from database import initDB, insertRow, Authors, Tags, Quotes, QuotesTagsLink, TestTable
 from database.operations import check_tables_exist, initialize_schema, updateAuthorRowAboutValue
-from sbooks import BeautifulSoup as bs
-from sbooks import fetchPage, logger, requests
-from sbooks.export_functions import exportMultipleDfsToOneJson, exportToCsv
-from sbooks.utils import clean_numeric
+from squotes import BeautifulSoup as bs
+from squotes import fetchPage, logger, requests
+from squotes.export_functions import exportMultipleDfsToOneJson, exportToCsv
+from squotes.utils import clean_numeric
 from sqlalchemy.exc import SQLAlchemyError
 from tqdm import tqdm
 import json

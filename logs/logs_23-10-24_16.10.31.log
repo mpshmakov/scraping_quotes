@@ -1,4 +1,0 @@
-2024-10-23T16:10:31.413358+0100 INFO 129290475503744 Ensured data directory exists at /home/daxo/code/scraping_quotes/scraping_quotes/data
-2024-10-23T16:10:31.442143+0100 INFO 129290475503744 Created database engine for /home/daxo/code/scraping_quotes/scraping_quotes/data/scraping_quotes.db
-2024-10-23T16:10:31.451921+0100 ERROR 129290475503744 Error initializing database schema: (pymysql.err.OperationalError) (1059, "Identifier name '/home/daxo/code/scraping_quotes/scraping_quotes/data/scraping_quotes.db' is too long")
-(Background on this error at: https://sqlalche.me/e/20/e3q8)

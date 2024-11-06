@@ -16,9 +16,9 @@ from database.operations import (
     insertRow,
 )
 from database.schema import Books, TestTable
-from sbooks import BeautifulSoup, fetchPage
-from sbooks.export_functions import exportToCsv, exportToJson
-from sbooks.utils import clean_numeric, create_data_folder, uuid_to_str
+from squotes import BeautifulSoup, fetchPage
+from squotes.export_functions import exportToCsv, exportToJson
+from squotes.utils import clean_numeric, create_data_folder, uuid_to_str
 from scripts.scraping_quotes import main, scrape_books
 from sqlalchemy.exc import SQLAlchemyError
 

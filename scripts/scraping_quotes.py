@@ -7,10 +7,10 @@ from bs4 import Tag
 from configuration import get_configuration
 from database import initDB, insertRow, Authors, Tags, Quotes, QuotesTagsLink, TestTable
 from database.operations import check_tables_exist, initialize_schema, updateAuthorRowAboutValue
-from sbooks import BeautifulSoup as bs
-from sbooks import fetchPage, logger, requests
-from sbooks.export_functions import exportMultipleDfsToOneJson, exportToCsv
-from sbooks.utils import clean_numeric
+from squotes import BeautifulSoup as bs
+from squotes import fetchPage, logger, requests
+from squotes.export_functions import exportMultipleDfsToOneJson, exportToCsv
+from squotes.utils import clean_numeric
 from sqlalchemy.exc import SQLAlchemyError
 from tqdm import tqdm
 import json
@@ -50,8 +50,8 @@ pbar_quote_tag_link = tqdm(total=235, desc="quotes_tags_links")
 
 configuration = get_configuration()
 #print(type(configuration))
-#print(type(json.dumps(configuration)))
-logger.info("configuration extracted: ", json.dumps(configuration)) # this line doesn't work
+# print((json.dumps(configuration)))
+logger.info("configuration extracted: " + str(configuration)) # this line doesn't work
 
 
 def update_pagesnum():    
@@ -106,7 +106,9 @@ def check_for_new_pages_and_update_pagesnum():
     except AttributeError:
         return False
     
+    logger.info("more pages of quotes detected.")
     update_pagesnum()
+    logger.info("updated pagesnum in configuration.")
     return True
 
 
@@ -165,6 +167,8 @@ def quote_page_worker(page_url: str):
         insertRow(quote_row)
         pbar_quotes.update(1)
 
+        logger.info("scraped: quote: " + str(quote) + "; author: "+ author + "; tags: "+ str(tags))
+
 
     ##print("end")
     ##print("authors: ", authors)
@@ -186,6 +190,8 @@ def authors_worker(author):
     about_page = bs(fetchPage(about_url).content, features="html.parser")
     about_text = about_page.find(class_="author-details").get_text()
     updateAuthorRowAboutValue(author["author"], about_text)
+
+    logger.info(f"parsed {author["author"]}'s about page")
     return {"author": author["author"], "about": about_text}
 
 
@@ -195,10 +201,10 @@ def check_structure_changes(response):
     # #print(structure_check)
     if structure_check is None:
         raise Exception("Page structure has changed.")
+    logger.info("page structure hasn't changed.")
 
 
 def main():
-    initDB()
     global configuration
 
     response = fetchPage(configuration["url"])
@@ -223,6 +229,8 @@ def main():
         quotes_pages_urls.append(next_page_url)
 
     ##print("len(quotes_pages)", len(quotes_pages_urls))
+    
+    initDB()
         
     with concurrent.futures.ThreadPoolExecutor() as executor:
         quotes_map = executor.map(quote_page_worker, quotes_pages_urls)

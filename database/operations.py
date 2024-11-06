@@ -4,15 +4,17 @@ This module provides functions for initializing the database schema,
 checking table existence, inserting records into the database, and truncating tables.
 """
 
-from sbooks import logger
+from configuration import get_configuration
+from squotes import logger
 from sqlalchemy import MetaData, Table, inspect, select, update, exc
 from sqlalchemy.exc import SQLAlchemyError
 
-from . import Base, Session, engine
+from . import db_enable
+if db_enable == 1:
+    from . import Base, Session, engine
 from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags
 
-# from sqlalchemy.orm import Session
-
+import inspect
 
 def initialize_schema():
     """
@@ -21,6 +23,10 @@ def initialize_schema():
     Raises:
         SQLAlchemyError: If there's an error during schema initialization.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     try:
         metadata = MetaData()
         # Explicitly define tables
@@ -59,6 +65,10 @@ def check_tables_exist():
     Raises:
         SQLAlchemyError: If there's an error during inspecting engine.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     try:
         inspector = inspect(engine)
         existing_tables = inspector.get_table_names()
@@ -80,6 +90,10 @@ def truncate_tables(session):
     Raises:
         SQLAlchemyError: If there's an error during table truncation.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     for table in [Quotes, Authors, Tags, QuotesTagsLink, TestTable]:
         try:
             session.query(table).delete()
@@ -103,6 +117,10 @@ def insert_records(session, records, commit=True):
     Raises:
         SQLAlchemyError: If there's an error during record insertion.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     try:
         session.add_all(records)
         if commit:
@@ -125,6 +143,10 @@ def initDB():
     Raises:
         Exception: If an unexpected error occurs during database initialization.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     try:
         # Initialize the schema first
         initialize_schema()
@@ -168,6 +190,10 @@ def insertRow(row):
     Raises:
         SQLAlchemyError: If there's an error during row insertion.
     """
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+
     if not check_tables_exist():
         logger.error("Tables do not exist. Cannot insert row.")
         return
@@ -192,6 +218,10 @@ def insertRow(row):
         session.close()
 
 def updateAuthorRowAboutValue(author: str, about_text: str):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        return
+    
     if not check_tables_exist():
         logger.error("Tables do not exist. Cannot insert row.")
         return

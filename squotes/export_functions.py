@@ -32,7 +32,7 @@ def exportToCsv(df, csv_filename=csv_filename):
     logger.info(f"Data exported to {filename}")
 
 
-def exportDfToJson(df, json_filename=json_filename):
+def exportDfToJson(df, json_filename):
     """
     Export a DataFrame to a JSON file, handling UUID conversion.
 

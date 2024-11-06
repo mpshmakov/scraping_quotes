@@ -1,7 +1,11 @@
-from bs4 import BeautifulSoup as bs
+import argparse
+from dbt import rate
 
-from sbooks import fetchPage
 
-about_page = bs(fetchPage("https://quotes.toscrape.com/author/J-K-Rowling/").content, features="html.parser")
-about_text = about_page.find(class_="container").get_text()
-print(about_text)
+# parser = argparse.ArgumentParser()
+# parser.add_argument('--product_id', dest='product_id', type=str, help='Add product_id')
+# args = parser.parse_args()
+
+# print (args.product_id)
+
+rate()
