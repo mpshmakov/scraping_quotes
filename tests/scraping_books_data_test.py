@@ -9,15 +9,14 @@ import pytest
 import requests
 from database.operations import (
     check_tables_exist,
-    engine,
     initDB,
     initialize_schema,
     insert_records,
     insertRow,
 )
-from database.schema import Books, TestTable
+from database.schema import TestTable, Authors, Tags, Quotes, QuotesTagsLink
 from squotes import BeautifulSoup, fetchPage
-from squotes.export_functions import exportToCsv, exportToJson
+from squotes.export_functions import exportToCsv, exportDfToJson
 from squotes.utils import clean_numeric, create_data_folder, uuid_to_str
 from scripts.scraping_quotes import main, scrape_books
 from sqlalchemy.exc import SQLAlchemyError
@@ -28,7 +27,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 # from tttt import bs, main2
 
 
-class sbooksFilmDataTestResult(unittest.TextTestResult):
+class squotesFilmDataTestResult(unittest.TextTestResult):
     def __init__(self, stream, descriptions, verbosity):
         super().__init__(stream, descriptions, verbosity)
         self.output_dir = os.path.join(os.path.dirname(__file__), "..", "test_results")
@@ -51,7 +50,7 @@ class sbooksFilmDataTestResult(unittest.TextTestResult):
         self.output_file.close()
 
 
-class TestsbooksFunctions(unittest.TestCase):
+class TestsquotesFunctions(unittest.TestCase):
     @patch("requests.get")
     def test_fetchPage(self, mock_get):
         mock_response = MagicMock()
@@ -82,7 +81,7 @@ class TestExportFunctions(unittest.TestCase):
         mock_to_csv.assert_called_once_with("test.csv", index=False)
 
     @patch("json.dump")
-    def test_exportToJson(self, mock_json_dump):
+    def test_exportDfToJson(self, mock_json_dump):
         data = {
             "id": ["test-id"],
             "name": ["Test Movie"],
@@ -91,7 +90,7 @@ class TestExportFunctions(unittest.TestCase):
             "nominations": [3],
         }
         df = pd.DataFrame(data)
-        exportToJson(df, "test.json")
+        exportDfToJson(df, "test.json")
         mock_json_dump.assert_called_once()
 
 
@@ -246,7 +245,7 @@ class TestDatabaseSchema(unittest.TestCase):
         self.assertEqual(test_entry.text, "Test Entry")
         self.assertEqual(test_entry.numbers, 5)
 
-    # class Testsbooks(unittest.TestCase):
+    # class Testsquotes(unittest.TestCase):
     #     @patch("tttt.bs")
     #     def test_scrape_books_page_structure_exception(self, mock_bs):
     #         # mock_soup = MagicMock()
@@ -257,9 +256,9 @@ class TestDatabaseSchema(unittest.TestCase):
     #         with self.assertRaises(Exception):
     #             main2()
 
-    @patch("sbooks.fetchPage")
+    @patch("squotes.fetchPage")
     @patch("bs4.BeautifulSoup")
-    def test_scraping_books(self, mock_bs, mock_fetchPage):
+    def test_scraping_quotes(self, mock_bs, mock_fetchPage):
         # these lines don't seem to do anything (the test works correctly without)
         # mock_response = MagicMock()
         # mock_fetchPage.return_value = mock_response
@@ -282,8 +281,8 @@ class TestDatabaseSchema(unittest.TestCase):
             len(results[0]), 6
         )  # id, title, price, availability, star_rating, category
 
-    @patch("scripts.scraping_books.fetchPage")
-    def test_scraping_books_fetch_exception(self, mock_fetchPage):
+    @patch("scripts.scraping_quotes.fetchPage")
+    def test_scraping_quotes_fetch_exception(self, mock_fetchPage):
         mock_fetchPage.return_value = None
         with self.assertRaises(Exception) as context:
             scrape_books()
@@ -293,7 +292,7 @@ class TestDatabaseSchema(unittest.TestCase):
                 in str(context.exception)
             )
 
-    @patch("scripts.scraping_books.bs")
+    @patch("scripts.scraping_quotes.bs")
     def test_scrape_books_page_structure_exception(self, mock_bs):
         mock_soup = BeautifulSoup(
             fetchPage("https://www.google.com/").content, features="html.parser"
@@ -303,14 +302,14 @@ class TestDatabaseSchema(unittest.TestCase):
         with self.assertRaises(Exception):
             scrape_books()
 
-    @patch("scripts.scraping_books.scrape_books")
-    @patch("scripts.scraping_books.initDB")
-    @patch("scripts.scraping_books.insertRow")
-    @patch("scripts.scraping_books.exportToCsv")
-    @patch("scripts.scraping_books.exportToJson")
+    @patch("scripts.scraping_quotes.scrape_books")
+    @patch("scripts.scraping_quotes.initDB")
+    @patch("scripts.scraping_quotes.insertRow")
+    @patch("scripts.scraping_quotes.exportToCsv")
+    @patch("scripts.scraping_quotes.exportDfToJson")
     def test_main(
         self,
-        mock_exportToJson,
+        mock_exportDfToJson,
         mock_exportToCsv,
         mock_insertRow,
         mock_initDB,
@@ -328,10 +327,10 @@ class TestDatabaseSchema(unittest.TestCase):
         mock_initDB.assert_called_once()
         self.assertEqual(mock_insertRow.call_count, 2)
         mock_exportToCsv.assert_called_once()
-        mock_exportToJson.assert_called_once()
+        mock_exportDfToJson.assert_called_once()
 
 
 if __name__ == "__main__":
     unittest.main(
-        testRunner=unittest.TextTestRunner(resultclass=sbooksFilmDataTestResult)
+        testRunner=unittest.TextTestRunner(resultclass=squotesFilmDataTestResult)
     )

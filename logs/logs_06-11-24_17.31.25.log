@@ -1,0 +1,936 @@
+2024-11-06T17:31:26.089703+0000 INFO 135935321018496 db is disabled in configuration. database __init__.py's db initialization parts of code ingnored.
+2024-11-06T17:31:26.107039+0000 INFO 135935321018496 configuration extracted: {'_comment1': "all paths must not have '/' in the end", 'url': 'https://quotes.toscrape.com/', 'pagesnum': 10, '_comment2': 'i.e. data as csv and json output', 'save_data_path': './data', 'logs_path': './logs', '_comment3': '.csv and .json is added automatically. Specify ONLY filename here', 'csv_filename': 'csv_output', 'json_filename': 'json_output', 'db_name': 'quotes', 'db_username': 'root', 'db_password': '', 'db_ip': 'localhost', 'db_port': '', 'db_enable': 0}
+2024-11-06T17:31:26.784550+0000 INFO 135935321018496 Successfully fetched the page
+2024-11-06T17:31:26.812936+0000 INFO 135935321018496 page structure hasn't changed.
+2024-11-06T17:31:27.452532+0000 INFO 135935321018496 Successfully fetched the page
+2024-11-06T17:31:27.620428+0000 INFO 135935321018496 db is disabled in configuration. initDB ignored.
+2024-11-06T17:31:28.378744+0000 INFO 135934731355840 Successfully fetched the page
+2024-11-06T17:31:28.380610+0000 INFO 135934752327360 Successfully fetched the page
+2024-11-06T17:31:28.399131+0000 INFO 135934762813120 Successfully fetched the page
+2024-11-06T17:31:28.407162+0000 INFO 135934720870080 Successfully fetched the page
+2024-11-06T17:31:28.408619+0000 INFO 135934857184960 Successfully fetched the page
+2024-11-06T17:31:28.410442+0000 INFO 135934773298880 Successfully fetched the page
+2024-11-06T17:31:28.417686+0000 INFO 135934741841600 Successfully fetched the page
+2024-11-06T17:31:28.524290+0000 INFO 135934888642240 Successfully fetched the page
+2024-11-06T17:31:28.534509+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:28.561557+0000 INFO 135934878156480 Successfully fetched the page
+2024-11-06T17:31:28.738497+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.740196+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.741830+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.742704+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': 'e83cc2a3-15cc-46dc-94b8-eac4b5e2f11b', 'quote_text': '“Anyone who has never made a mistake has never tried anything new.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['mistakes']
+2024-11-06T17:31:28.744940+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.746443+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.752170+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.753677+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.756505+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.757570+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.758145+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.759836+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.761788+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.763546+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.764453+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.765591+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.767856+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.770097+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.771635+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.773594+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.775116+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.778080+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.780053+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.782220+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.783949+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.785687+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.787342+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.789055+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.790825+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.792816+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.794799+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '1a69e3f9-8873-41da-9590-73d0d2365987', 'quote_text': '“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate that when I fall asleep your eyes close.”', 'author': 'Pablo Neruda'}; author: Pablo Neruda; tags: ['love', 'poetry']
+2024-11-06T17:31:28.795272+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.797020+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.798594+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.800229+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.802099+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.803837+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.805812+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.807587+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.809054+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.812463+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.812892+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': 'b8afcc7f-569e-4190-b364-b82af4346698', 'quote_text': "“That's the problem with drinking, I thought, as I poured myself a drink. If something bad happens you drink in an attempt to forget; if something good happens you drink in order to celebrate; and if nothing happens you drink to make something happen.”", 'author': 'Charles Bukowski'}; author: Charles Bukowski; tags: ['alcohol']
+2024-11-06T17:31:28.813310+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.814957+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.816685+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.817136+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '4361254d-ba67-4e72-b318-d8b90fb23a69', 'quote_text': '“The truth." Dumbledore sighed. "It is a beautiful and terrible thing, and should therefore be treated with great caution.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['truth']
+2024-11-06T17:31:28.817610+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '9d7ed067-71f1-42dd-b7bd-2bbebaec7e27', 'quote_text': '“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['friendship', 'love']
+2024-11-06T17:31:28.819240+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.821137+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.823269+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.823580+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '89ce1887-91a1-4a13-bb3e-fda540ba4419', 'quote_text': "“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”", 'author': 'Jane Austen'}; author: Jane Austen; tags: ['humor', 'love', 'romantic', 'women']
+2024-11-06T17:31:28.825688+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.827581+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.829088+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.829516+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '01288828-a3ae-4e58-ace4-b3592dd5b0c7', 'quote_text': '“If I had a flower for every time I thought of you...I could walk through my garden forever.”', 'author': 'Alfred Tennyson'}; author: Alfred Tennyson; tags: ['friendship', 'love']
+2024-11-06T17:31:28.831673+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.833869+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.835447+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.837432+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.837823+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': '22135cd7-c8d1-4327-a220-8af1ccc1c1b6', 'quote_text': "“The more that you read, the more things you will know. The more that you learn, the more places you'll go.”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['learning', 'reading', 'seuss']
+2024-11-06T17:31:28.839801+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.841425+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.843439+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.846846+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.847274+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.848866+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.850583+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.852170+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.854118+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.856546+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.858111+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.859701+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.860655+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '1ea678c6-8ad9-413a-93fd-86353165a6c4', 'quote_text': '“For every minute you are angry you lose sixty seconds of happiness.”', 'author': 'Ralph Waldo Emerson'}; author: Ralph Waldo Emerson; tags: ['happiness']
+2024-11-06T17:31:28.862473+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.862940+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '90267085-03ee-4550-a8c6-650d342827a0', 'quote_text': '“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.”', 'author': 'George R.R. Martin'}; author: George R.R. Martin; tags: ['read', 'readers', 'reading', 'reading-books']
+2024-11-06T17:31:28.865398+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.865852+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': 'cde446de-66b8-4d68-82a1-e2c758e36dbe', 'quote_text': '“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['change', 'deep-thoughts', 'thinking', 'world']
+2024-11-06T17:31:28.867008+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.869371+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.871128+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.873735+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.874273+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '44a7f1e2-c98f-468c-bba7-a158839c06f0', 'quote_text': '“You don’t forget the face of the person who was your last hope.”', 'author': 'Suzanne Collins'}; author: Suzanne Collins; tags: ['the-hunger-games']
+2024-11-06T17:31:28.876551+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.879387+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.882103+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.884618+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.887147+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.889140+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.890831+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.892717+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.893110+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': 'f45d3f16-7bbd-42d2-8d39-3df3b927f3ad', 'quote_text': '“Remember, if the time should come when you have to make a choice between what is right and what is easy, remember what happened to a boy who was good, and kind, and brave, because he strayed across the path of Lord Voldemort. Remember Cedric Diggory.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['integrity']
+2024-11-06T17:31:28.896334+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.898510+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.899020+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '68bd08c4-ae25-4d2b-a34e-d2f854fe5d15', 'quote_text': '“Some people never go crazy. What truly horrible lives they must lead.”', 'author': 'Charles Bukowski'}; author: Charles Bukowski; tags: ['humor']
+2024-11-06T17:31:28.900834+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.902766+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.904603+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.905100+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': 'fd24c6d3-5974-4caf-9d5d-98b63e7d092b', 'quote_text': "“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”", 'author': 'Jimi Hendrix'}; author: Jimi Hendrix; tags: ['death', 'life']
+2024-11-06T17:31:28.905657+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '7f6de46e-f5cb-4f6d-b25f-74e64b109174', 'quote_text': "“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['friends', 'heartbreak', 'inspirational', 'life', 'love', 'sisters']
+2024-11-06T17:31:28.906135+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': '8e583640-27ae-4615-bf80-8b7c903e73c8', 'quote_text': '“Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['dumbledore']
+2024-11-06T17:31:28.908602+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.910802+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.912553+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.914673+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.916297+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.916718+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '7634f0b8-c13f-46e4-b50d-adb22dc5953b', 'quote_text': '“Do one thing every day that scares you.”', 'author': 'Eleanor Roosevelt'}; author: Eleanor Roosevelt; tags: ['attributed', 'fear', 'inspiration']
+2024-11-06T17:31:28.918517+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.920550+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.923022+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.925094+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.926653+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.928376+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.928742+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '7513c907-4f51-4880-8347-30867d7faca9', 'quote_text': '“If you judge people, you have no time to love them.”', 'author': 'Mother Teresa'}; author: Mother Teresa; tags: ['attributed-no-source']
+2024-11-06T17:31:28.930387+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.931989+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.934041+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.935723+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.937248+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.938853+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.940536+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.942416+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.942843+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '29df8884-6f02-4016-852f-77008404679f', 'quote_text': "“Remember, we're madly in love, so it's all right to kiss me anytime you feel like it.”", 'author': 'Suzanne Collins'}; author: Suzanne Collins; tags: ['humor']
+2024-11-06T17:31:28.945061+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.946747+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.949726+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.950160+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': 'd1a9b699-035e-4010-829e-6e5cb1aab5c3', 'quote_text': '“It is our choices, Harry, that show what we truly are, far more than our abilities.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['abilities', 'choices']
+2024-11-06T17:31:28.950593+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.952356+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.955392+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.955866+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.957464+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.962473+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.964298+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.966063+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.968086+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.968483+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.970189+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.971825+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.972751+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': 'c9310ebc-cb8e-4ff3-9a38-8d8fdfc70dfd', 'quote_text': '“The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.”', 'author': 'Bob Marley'}; author: Bob Marley; tags: ['friendship']
+2024-11-06T17:31:28.974539+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.976547+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.978059+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.980024+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.980467+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '26faa13f-64e9-4c26-9038-ac5101c68e9a', 'quote_text': '“I am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['attributed-no-source']
+2024-11-06T17:31:28.982319+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.984243+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.984666+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': 'fca8706a-9581-4344-83ad-0d6ccce75cc1', 'quote_text': '“You can never get a cup of tea large enough or a book long enough to suit me.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['books', 'inspirational', 'reading', 'tea']
+2024-11-06T17:31:28.985152+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': 'f7525edb-789a-47bf-a2ad-9a4bb0653622', 'quote_text': '“To die will be an awfully big adventure.”', 'author': 'J.M. Barrie'}; author: J.M. Barrie; tags: ['adventure', 'love']
+2024-11-06T17:31:28.987701+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.988124+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '5dfaad3e-1ef8-45a3-acdf-a1f685ec8712', 'quote_text': '“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['courage', 'friends']
+2024-11-06T17:31:28.988550+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '65210f94-8b7f-4679-b4f0-41b4e58643ea', 'quote_text': '“I declare after all there is no enjoyment like reading! How much sooner one tires of any thing than of a book! -- When I have a house of my own, I shall be miserable if I have not an excellent library.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['books', 'library', 'reading']
+2024-11-06T17:31:28.990786+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.991364+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '461da94a-f502-481d-a554-552512767d59', 'quote_text': '“The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.”', 'author': 'Terry Pratchett'}; author: Terry Pratchett; tags: ['humor', 'open-mind', 'thinking']
+2024-11-06T17:31:28.993533+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.995961+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:28.998086+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.000680+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.003117+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.004882+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.007023+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.009183+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.009624+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '1c4845d2-9557-4434-bbcf-fb380de0c40a', 'quote_text': '“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping it intact you must give it to no one, not even an animal. Wrap it carefully round with hobbies and little luxuries; avoid all entanglements. Lock it up safe in the casket or coffin of your selfishness. But in that casket, safe, dark, motionless, airless, it will change. It will not be broken; it will become unbreakable, impenetrable, irredeemable. To love is to be vulnerable.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['love']
+2024-11-06T17:31:29.012946+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.015053+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.016690+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.017154+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '2d96674d-63fc-4dfa-926d-524085e529ed', 'quote_text': '“Anyone who thinks sitting in church can make you a Christian must also think that sitting in a garage can make you a car.”', 'author': 'Garrison Keillor'}; author: Garrison Keillor; tags: ['humor', 'religion']
+2024-11-06T17:31:29.018970+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.020821+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.022544+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.024158+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.025884+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.028034+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.029841+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.031607+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.035160+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.035553+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.037367+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.038981+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.040781+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.042378+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.044087+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.045661+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.047235+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.047704+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '769a27d8-44aa-46b6-b373-2d2f4def674c', 'quote_text': '“If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['music']
+2024-11-06T17:31:29.049745+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.051276+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.051618+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '61bc80bf-a2da-4d49-9e15-9027c7a5545b', 'quote_text': '“You believe lies so you eventually learn to trust no one but yourself.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['']
+2024-11-06T17:31:29.052068+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '371dc9e5-4d30-4f8c-b091-23ab6179232c', 'quote_text': '“It takes courage to grow up and become who you really are.”', 'author': 'E.E. Cummings'}; author: E.E. Cummings; tags: ['courage']
+2024-11-06T17:31:29.052537+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': 'cfa0f60a-2977-46d2-964c-ff0a3a4664a7', 'quote_text': '“Not all of us can do great things. But we can do small things with great love.”', 'author': 'Mother Teresa'}; author: Mother Teresa; tags: ['misattributed-to-mother-teresa', 'paraphrased']
+2024-11-06T17:31:29.054228+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.055922+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.057515+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.059183+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.062460+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.063994+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.066080+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.066980+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.069009+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.071189+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.071583+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '2885e24a-0f56-4441-850a-091b2a701326', 'quote_text': "“If you can't explain it to a six year old, you don't understand it yourself.”", 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['simplicity', 'understand']
+2024-11-06T17:31:29.072035+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '9888f82c-76c4-460e-97f6-e691cbd995f4', 'quote_text': '“There are few people whom I really love, and still fewer of whom I think well. The more I see of the world, the more am I dissatisfied with it; and every day confirms my belief of the inconsistency of all human characters, and of the little dependence that can be placed on the appearance of merit or sense.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['elizabeth-bennet', 'jane-austen']
+2024-11-06T17:31:29.073653+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.074523+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '8da99d66-d05f-41a6-b908-3099b00e2ace', 'quote_text': '“Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['humor', 'philosophy']
+2024-11-06T17:31:29.075043+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': 'c19e1177-664f-4bb2-a443-e518312b378e', 'quote_text': '“Beauty is in the eye of the beholder and it may be necessary from time to time to give a stupid or misinformed beholder a black eye.”', 'author': 'Jim Henson'}; author: Jim Henson; tags: ['humor']
+2024-11-06T17:31:29.075432+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': '9a0bcca5-5bb4-476b-8982-e1faa3fc57ea', 'quote_text': '“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['inspirational', 'life', 'live', 'miracle', 'miracles']
+2024-11-06T17:31:29.077186+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.078951+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.081096+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.082801+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.085840+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.088454+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.093317+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.094079+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.097669+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.100093+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.102035+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.103604+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.105325+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.107300+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.109097+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.110671+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.113300+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.115220+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.116808+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.118394+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.120419+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.121986+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.122396+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '185277a6-544e-4212-a98b-31903350399c', 'quote_text': '“But better to get hurt by the truth than comforted with a lie.”', 'author': 'Khaled Hosseini'}; author: Khaled Hosseini; tags: ['life']
+2024-11-06T17:31:29.124053+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.125680+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.127470+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.129960+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.131627+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.133630+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.135370+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.135757+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '093c624b-671a-4ac8-b3d5-01ea8ccb3156', 'quote_text': '“If you can make a woman laugh, you can make her do anything.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['girls', 'love']
+2024-11-06T17:31:29.136254+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '2e4f59bc-bc26-4a3c-8d57-6d89f15689c1', 'quote_text': '“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”', 'author': 'Haruki Murakami'}; author: Haruki Murakami; tags: ['books', 'thought']
+2024-11-06T17:31:29.138439+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.138870+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': '48178271-97ff-4ad2-895e-3203c72e5773', 'quote_text': '“To the well-organized mind, death is but the next great adventure.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['death', 'inspirational']
+2024-11-06T17:31:29.139391+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': 'a2efba44-b06e-4fe2-abb8-daec29f94e4e', 'quote_text': "“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's not perfect—you aren't either, and the two of you may never be perfect together but if she can make you laugh, cause you to think twice, and admit to being human and making mistakes, hold onto her and give her the most you can. She may not be thinking about you every second of the day, but she will give you a part of her that she knows you can break—her heart. So don't hurt her, don't change her, don't analyze and don't expect more than she can give. Smile when she makes you happy, let her know when she makes you mad, and miss her when she's not there.”", 'author': 'Bob Marley'}; author: Bob Marley; tags: ['love']
+2024-11-06T17:31:29.141241+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.143024+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.144655+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.146785+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.148670+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.150868+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.152945+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.156433+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.156831+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.158875+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.160546+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.161031+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '8f81eebb-c88e-45d9-ba23-fbac050d0542', 'quote_text': '“Not all those who wander are lost.”', 'author': 'J.R.R. Tolkien'}; author: J.R.R. Tolkien; tags: ['bilbo', 'journey', 'lost', 'quest', 'travel', 'wander']
+2024-11-06T17:31:29.162726+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.164314+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.166004+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.167572+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.169266+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.170850+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.172681+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.174441+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.174846+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '8c8a9c13-e16e-4a2b-b32e-897093bd4543', 'quote_text': '“Some day you will be old enough to start reading fairy tales again.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['age', 'fairytales', 'growing-up']
+2024-11-06T17:31:29.177464+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.177933+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '578d10d2-08aa-4205-98e4-b2a4ec555994', 'quote_text': '“Today you are You, that is truer than true. There is no one alive who is Youer than You.”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['comedy', 'life', 'yourself']
+2024-11-06T17:31:29.179589+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.181336+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.183112+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.184786+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.186434+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.187507+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '3c78206c-7b76-42aa-a2b8-c26690ce10f8', 'quote_text': '“You never really understand a person until you consider things from his point of view... Until you climb inside of his skin and walk around in it.”', 'author': 'Harper Lee'}; author: Harper Lee; tags: ['better-life-empathy']
+2024-11-06T17:31:29.189259+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.192280+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.194399+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.196792+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.198264+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': '7472df5d-6f3e-4f48-9f3f-acdb0b770b24', 'quote_text': '“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['aliteracy', 'books', 'classic', 'humor']
+2024-11-06T17:31:29.199634+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.202128+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.202597+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': 'b56d2719-7a6c-4bd4-9ede-47e103914433', 'quote_text': '“The difference between genius and stupidity is: genius has its limits.”', 'author': 'Alexandre Dumas fils'}; author: Alexandre Dumas fils; tags: ['misattributed-to-einstein']
+2024-11-06T17:31:29.204622+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.206720+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.207155+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': 'f084f6f7-f064-4696-9b88-6c45a7a14fd7', 'quote_text': '“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['fantasy']
+2024-11-06T17:31:29.208891+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.211424+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.214178+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.217198+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.217683+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': 'b357f5da-4f52-4996-8aa9-e93750f9f6b6', 'quote_text': "“What really knocks me out is a book that, when you're all done reading it, you wish the author that wrote it was a terrific friend of yours and you could call him up on the phone whenever you felt like it. That doesn't happen much, though.”", 'author': 'J.D. Salinger'}; author: J.D. Salinger; tags: ['authors', 'books', 'literature', 'reading', 'writing']
+2024-11-06T17:31:29.218152+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': 'db7c2f70-c241-41d5-9427-27b048827ba3', 'quote_text': '“Life is like riding a bicycle. To keep your balance, you must keep moving.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['life', 'simile']
+2024-11-06T17:31:29.220465+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.222238+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.223998+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.226506+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.228894+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.229586+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '07e7858c-6cf5-45c4-bdc8-8b0e2576ec8e', 'quote_text': '“Do not pity the dead, Harry. Pity the living, and, above all those who live without love.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['live-death-love']
+2024-11-06T17:31:29.232111+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.233858+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.236086+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.238154+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.239809+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.240205+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': '7317317f-9a50-4aee-84ee-a451363f6800', 'quote_text': "“All you need is love. But a little chocolate now and then doesn't hurt.”", 'author': 'Charles M. Schulz'}; author: Charles M. Schulz; tags: ['chocolate', 'food', 'humor']
+2024-11-06T17:31:29.241941+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.243833+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.244385+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': 'ccf068d9-bd7b-45c6-863a-7a3f8ab20e7a', 'quote_text': '“We are not necessarily doubting that God will do the best for us; we are wondering how painful the best will turn out to be.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['god']
+2024-11-06T17:31:29.246726+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.248377+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.250244+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.251924+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.253542+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.255338+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.257504+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.259113+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.260755+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.262782+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.263622+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '64583c82-b8aa-4378-9d62-e3f0d33ccc91', 'quote_text': '“If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['children', 'fairy-tales']
+2024-11-06T17:31:29.265281+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.266942+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.268628+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.270233+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.272045+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.273614+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.275393+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.277129+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.279101+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.281053+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.282998+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.283448+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': '8a1fad95-71c1-4910-ab1c-884f4c2c8bf9', 'quote_text': "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['be-yourself', 'inspirational']
+2024-11-06T17:31:29.285195+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.285556+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '6416aa2f-1218-444c-a38a-364fc3f48b0c', 'quote_text': '“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['love']
+2024-11-06T17:31:29.287599+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.289194+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.290953+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.291882+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': 'acb890f2-a888-4873-bae8-d0a284f04264', 'quote_text': '“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”', 'author': 'Douglas Adams'}; author: Douglas Adams; tags: ['life', 'navigation']
+2024-11-06T17:31:29.294244+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.295767+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.297776+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.301454+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.304301+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.306236+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.306584+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '83cee757-905d-496b-ac3e-50c1e2e7aa7f', 'quote_text': "“He's like a drug for you, Bella.”", 'author': 'Stephenie Meyer'}; author: Stephenie Meyer; tags: ['drug', 'romance', 'simile']
+2024-11-06T17:31:29.308527+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.310379+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.313156+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.315476+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.317212+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.317662+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': 'a66a44f0-d089-459a-9561-1f0c27153b1d', 'quote_text': '“There is nothing to writing. All you do is sit down at a typewriter and bleed.”', 'author': 'Ernest Hemingway'}; author: Ernest Hemingway; tags: ['good', 'writing']
+2024-11-06T17:31:29.319340+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.321573+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.323624+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.325672+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.326024+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': 'b2667a0c-cf96-46f1-b16b-2273f4c558f3', 'quote_text': "“We read to know we're not alone.”", 'author': 'William Nicholson'}; author: William Nicholson; tags: ['misattributed-to-c-s-lewis', 'reading']
+2024-11-06T17:31:29.328328+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.330222+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.330653+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '3631a7ce-ac72-4e00-8130-f8006f564a70', 'quote_text': '“The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['death', 'life']
+2024-11-06T17:31:29.331092+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '434e5b4b-9ebd-4e48-8a32-0bdf955db7bf', 'quote_text': '“It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['']
+2024-11-06T17:31:29.333552+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.335190+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.336839+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.338827+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.340379+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.342687+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.344493+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.346160+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.348204+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.350386+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.352044+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.353678+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.354076+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '31d09ea9-f84f-4df8-85da-c1962c2e6c74', 'quote_text': "“A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['attributed-no-source']
+2024-11-06T17:31:29.356232+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.357750+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.359696+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.360087+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '2e328580-ab7a-4a96-a6d6-5f1532f1f6b4', 'quote_text': '“You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.”', 'author': "Madeleine L'Engle"}; author: Madeleine L'Engle; tags: ['books', 'children', 'difficult', 'grown-ups', 'write', 'writers', 'writing']
+2024-11-06T17:31:29.361746+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.363455+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.365127+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.366806+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.367249+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '94a21638-474c-4e6e-a4ee-b2f0cc372d4c', 'quote_text': '“The reason I talk to myself is because I’m the only one whose answers I accept.”', 'author': 'George Carlin'}; author: George Carlin; tags: ['humor', 'insanity', 'lies', 'lying', 'self-indulgence', 'truth']
+2024-11-06T17:31:29.369687+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.371625+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.373160+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.374875+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.377016+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.378721+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.380387+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.382138+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.383751+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.385811+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.387593+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.388054+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': 'd11f0159-0535-4a88-9d07-652495c678d8', 'quote_text': '“Try not to become a man of success. Rather become a man of value.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['adulthood', 'success', 'value']
+2024-11-06T17:31:29.389709+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.391461+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.393098+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.394715+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.396396+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.396810+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '11d00c15-e781-4cd8-8f0a-f470e4f08aec', 'quote_text': '“Logic will get you from A to Z; imagination will get you everywhere.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['imagination']
+2024-11-06T17:31:29.397802+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': 'd55aef89-40f9-40d8-ad70-4782a21ccfc6', 'quote_text': '“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.”', 'author': 'Ralph Waldo Emerson'}; author: Ralph Waldo Emerson; tags: ['life', 'regrets']
+2024-11-06T17:31:29.399575+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.401371+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.403806+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.404226+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '44c7a8a8-548d-4ccd-8c1b-a0bccd9510da', 'quote_text': '“There is no friend as loyal as a book.”', 'author': 'Ernest Hemingway'}; author: Ernest Hemingway; tags: ['books', 'friends', 'novelist-quotes']
+2024-11-06T17:31:29.406187+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.408116+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.409825+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.410366+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '2c7b80c5-9a70-4aff-9fa0-d7f3fd5ccb97', 'quote_text': '“A lie can travel half way around the world while the truth is putting on its shoes.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['misattributed-mark-twain', 'truth']
+2024-11-06T17:31:29.413160+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.415762+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.417771+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.419719+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.421727+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.423378+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.425278+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.425677+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': 'a5337070-b2a7-4e3d-8c9e-684bee5a9e04', 'quote_text': '“Never tell the truth to people who are not worthy of it.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['truth']
+2024-11-06T17:31:29.428095+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.430886+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.433662+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.435342+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.435751+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '3745e3f6-1eda-4fc4-b4c1-7454e5fd8410', 'quote_text': '“Only in the darkness can you see the stars.”', 'author': 'Martin Luther King Jr.'}; author: Martin Luther King Jr.; tags: ['hope', 'inspirational']
+2024-11-06T17:31:29.437774+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.439344+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.441300+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.441682+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': 'd4e240bb-b975-4512-913f-8fd01fedaa89', 'quote_text': '“Any fool can know. The point is to understand.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['knowledge', 'learning', 'understanding', 'wisdom']
+2024-11-06T17:31:29.443802+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.446347+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.448110+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.449718+0000 INFO 135934867670720 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.451482+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.453528+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.455596+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.457593+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.459596+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.461580+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.463636+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.465160+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.466816+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.467248+0000 INFO 135934867670720 scraped: quote: {'quote_uuid': '4eee60ae-e695-4a66-8d6b-8ed8848156f1', 'quote_text': '“One good thing about music, when it hits you, you feel no pain.”', 'author': 'Bob Marley'}; author: Bob Marley; tags: ['music']
+2024-11-06T17:31:29.468995+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.470648+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.471103+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': 'e1a5bad0-5d16-47de-a03d-6e46aa85b362', 'quote_text': '“It is better to be hated for what you are than to be loved for what you are not.”', 'author': 'André Gide'}; author: André Gide; tags: ['life', 'love']
+2024-11-06T17:31:29.471472+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '58c72c1b-2e2f-4a8c-8b40-d81ed2ba603f', 'quote_text': '“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”', 'author': 'Helen Keller'}; author: Helen Keller; tags: ['inspirational']
+2024-11-06T17:31:29.471925+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': '38e3a683-5298-4ee2-9680-1478eb6deebf', 'quote_text': '“I have never let my schooling interfere with my education.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['education']
+2024-11-06T17:31:29.474483+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.474868+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '32ae5e52-b016-4765-b0ea-de73a030877c', 'quote_text': "“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”", 'author': 'Elie Wiesel'}; author: Elie Wiesel; tags: ['activism', 'apathy', 'hate', 'indifference', 'inspirational', 'love', 'opposite', 'philosophy']
+2024-11-06T17:31:29.476072+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.477565+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.479772+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.481521+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.484282+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.486255+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.488432+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.488812+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '24d31e64-e6cb-40d7-9934-b628e01b525a', 'quote_text': "“A person's a person, no matter how small.”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['inspirational']
+2024-11-06T17:31:29.490871+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.492735+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.494455+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.496225+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.496639+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '68221232-89fd-40e8-a95a-0c0d3e27b928', 'quote_text': '“It matters not what someone is born, but what they grow to be.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['dumbledore']
+2024-11-06T17:31:29.498607+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.500125+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.501719+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.504256+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.505812+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.507439+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.509211+0000 INFO 135934731355840 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.510997+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.513053+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.514955+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.516486+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.518166+0000 INFO 135934752327360 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.520134+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.521987+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.522951+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': '7c77f92c-f9b5-4d6a-a123-1d97502f9c6d', 'quote_text': '“I have always imagined that Paradise will be a kind of library.”', 'author': 'Jorge Luis Borges'}; author: Jorge Luis Borges; tags: ['books', 'library']
+2024-11-06T17:31:29.523413+0000 INFO 135934731355840 scraped: quote: {'quote_uuid': '35502141-5a0c-4131-bba2-57989c8ef08b', 'quote_text': '“I believe in Christianity as I believe that the sun has risen: not only because I see it, but because by it I see everything else.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['christianity', 'faith', 'religion', 'sun']
+2024-11-06T17:31:29.526213+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.527066+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.529062+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.531111+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.531634+0000 INFO 135934752327360 scraped: quote: {'quote_uuid': 'cf39e442-f635-4f3e-9a75-805fbb61e2bd', 'quote_text': "“I have heard there are troubles of more than one kind. Some come from ahead and some come from behind. But I've bought a big bat. I'm all ready you see. Now my troubles are going to have troubles with me!”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['troubles']
+2024-11-06T17:31:29.533512+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.536004+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.538468+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.539346+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '4fccc312-9a1c-4409-ab4c-3cf77f7564f1', 'quote_text': "“You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.”", 'author': 'John Lennon'}; author: John Lennon; tags: ['beatles', 'connection', 'dreamers', 'dreaming', 'dreams', 'hope', 'inspirational', 'peace']
+2024-11-06T17:31:29.541213+0000 INFO 135934773298880 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.542876+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.545243+0000 INFO 135934762813120 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.548383+0000 INFO 135934720870080 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.550454+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.553113+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.555452+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.555925+0000 INFO 135934773298880 scraped: quote: {'quote_uuid': '0c737676-345f-4f3e-b838-693749298828', 'quote_text': '“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”', 'author': 'James Baldwin'}; author: James Baldwin; tags: ['love']
+2024-11-06T17:31:29.558038+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.558406+0000 INFO 135934762813120 scraped: quote: {'quote_uuid': '5f2bef33-fb91-4ae1-95bf-63a4ee355794', 'quote_text': "“Life isn't about finding yourself. Life is about creating yourself.”", 'author': 'George Bernard Shaw'}; author: George Bernard Shaw; tags: ['inspirational', 'life', 'yourself']
+2024-11-06T17:31:29.558797+0000 INFO 135934720870080 scraped: quote: {'quote_uuid': '05f4f4b3-3169-4995-8e93-798709ea16be', 'quote_text': '“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.”', 'author': 'George R.R. Martin'}; author: George R.R. Martin; tags: ['books', 'mind']
+2024-11-06T17:31:29.560974+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.562966+0000 INFO 135934857184960 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.565073+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.565874+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': '0014ab92-d50d-46eb-b6ff-84eec4baa60f', 'quote_text': "“I have not failed. I've just found 10,000 ways that won't work.”", 'author': 'Thomas A. Edison'}; author: Thomas A. Edison; tags: ['edison', 'failure', 'inspirational', 'paraphrased']
+2024-11-06T17:31:29.568456+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.568866+0000 INFO 135934857184960 scraped: quote: {'quote_uuid': 'c1d309ac-f53d-4330-854c-b8d4311520b2', 'quote_text': '“It is never too late to be what you might have been.”', 'author': 'George Eliot'}; author: George Eliot; tags: ['inspirational']
+2024-11-06T17:31:29.570854+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.572942+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.574776+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.577088+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.578804+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.579289+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '6115e775-1020-4fe8-ac84-1ca5d24c291b', 'quote_text': '“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”', 'author': 'Friedrich Nietzsche'}; author: Friedrich Nietzsche; tags: ['friendship', 'lack-of-friendship', 'lack-of-love', 'love', 'marriage', 'unhappy-marriage']
+2024-11-06T17:31:29.579783+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': 'c4d062b7-c9c7-495d-b093-6bd3f97f1131', 'quote_text': '“I am free of all prejudice. I hate everyone equally. ”', 'author': 'W.C. Fields'}; author: W.C. Fields; tags: ['humor', 'sinister']
+2024-11-06T17:31:29.581695+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.583964+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.586377+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.586759+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': '8369136a-f688-4135-b12a-ec73e81205f8', 'quote_text': "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”", 'author': 'Eleanor Roosevelt'}; author: Eleanor Roosevelt; tags: ['misattributed-eleanor-roosevelt']
+2024-11-06T17:31:29.588604+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.590280+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.592381+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.595113+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.596799+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.597267+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': '02a5a24c-3e5a-438c-a784-0085b0e6c99c', 'quote_text': "“The question isn't who is going to let me; it's who is going to stop me.”", 'author': 'Ayn Rand'}; author: Ayn Rand; tags: ['']
+2024-11-06T17:31:29.598234+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.599887+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.602013+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.603749+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.605422+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.607114+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.608877+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.610610+0000 INFO 135934888642240 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.612266+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.614034+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.614449+0000 INFO 135934888642240 scraped: quote: {'quote_uuid': 'b10350fb-ab09-4179-b857-6d312a4e4efb', 'quote_text': '“A day without sunshine is like, you know, night.”', 'author': 'Steve Martin'}; author: Steve Martin; tags: ['humor', 'obvious', 'simile']
+2024-11-06T17:31:29.616385+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.618205+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.620244+0000 INFO 135934741841600 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.620686+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '2a609a97-9ba7-470a-a0ca-2d36a765a086', 'quote_text': '“Good friends, good books, and a sleepy conscience: this is the ideal life.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['books', 'contentment', 'friends', 'friendship', 'life']
+2024-11-06T17:31:29.621179+0000 INFO 135934741841600 scraped: quote: {'quote_uuid': 'edd332f7-e0cd-4692-b80a-355812bff2e9', 'quote_text': "“′Classic′ - a book which people praise and don't read.”", 'author': 'Mark Twain'}; author: Mark Twain; tags: ['books', 'classic', 'reading']
+2024-11-06T17:31:29.623395+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.625510+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.627074+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.628567+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.630086+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.631600+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.633141+0000 INFO 135934878156480 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.634159+0000 INFO 135934878156480 scraped: quote: {'quote_uuid': '1956c2b4-27e5-4030-9f49-3852197c6205', 'quote_text': '“Life is what happens to us while we are making other plans.”', 'author': 'Allen Saunders'}; author: Allen Saunders; tags: ['fate', 'life', 'misattributed-john-lennon', 'planning', 'plans']
+2024-11-06T17:31:29.643926+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.655077+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.667006+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.675660+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.685502+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.695097+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.704080+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.712336+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.719930+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.727291+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.734588+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.740596+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.747617+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.752687+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.756120+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.759333+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.765650+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.769258+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.772628+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.776049+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.782323+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.785954+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.789304+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.792834+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.796246+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.799465+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.802635+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.805684+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.808712+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.811756+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.815517+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.818643+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.822235+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.827115+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.832881+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.836529+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.840251+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.844442+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.850886+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.854593+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.858063+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.863009+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.867939+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.871729+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.875239+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.880396+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.884004+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.887464+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.890804+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.894342+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.897536+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.900644+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.903672+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.906684+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.909706+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.912733+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.915755+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.918792+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.921819+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.924850+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.927876+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.930891+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.933895+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.936917+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.940213+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.943498+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.948058+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.952591+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.956420+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.959838+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.966835+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.970614+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.973972+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.978295+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.983491+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.987274+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.990687+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.995269+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:29.999531+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.002965+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.006284+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.009549+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.012869+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.016732+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.020175+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.023269+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.026615+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.030802+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.034287+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.037487+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.040772+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.046799+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.052019+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.055427+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.058753+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.064735+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.068868+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.072496+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.075922+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.081219+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.084751+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.088089+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.091387+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.094854+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.098723+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.102115+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.106404+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.113649+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.118059+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.121736+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.125257+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.130359+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.133960+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.137350+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.140602+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.144179+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.147553+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.150664+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.154060+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.157116+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.160298+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.165704+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.169198+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.173124+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.179000+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.184947+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.188608+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.192024+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.199235+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.203303+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.206846+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.210613+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.215257+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.218726+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.222103+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.225404+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.228726+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.231807+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.234911+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.237944+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.240973+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.244254+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.247350+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.253255+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.257236+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.263214+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.268005+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.271493+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.274919+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.280336+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.284758+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.288240+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.291581+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.296397+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.300450+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.303800+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.307393+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.310838+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.314000+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.317107+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.320916+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.324317+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.328473+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.334230+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.337579+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.340759+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.345743+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.350482+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.354282+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.357686+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.363581+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.368408+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.372078+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.375460+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.381752+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.385624+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.389172+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.392538+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.398242+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.401852+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.405583+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.409097+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.412438+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.415485+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.418622+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.421669+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.424683+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.427704+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.430729+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.433745+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.436753+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.439761+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.442787+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.446568+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.451270+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.456560+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.460894+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.466950+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.470367+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.473552+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.477322+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.481792+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.485128+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.488283+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.491572+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.494680+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.497732+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.500978+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.504023+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.507040+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.510150+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.513171+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.516182+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.519219+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.522241+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.525268+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.529032+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.533272+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.538659+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.542121+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.547719+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.552156+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.556031+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.559451+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.566119+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.570548+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.573941+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.578917+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.583447+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.587053+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.590482+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.594073+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.598851+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.602321+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:30.605774+0000 INFO 135935321018496 db is disabled in configuration. insertRow ignored.
+2024-11-06T17:31:31.465432+0000 INFO 135934878156480 Successfully fetched the page
+2024-11-06T17:31:31.473230+0000 INFO 135934878156480 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.473512+0000 INFO 135934878156480 parsed Albert Einstein's about page
+2024-11-06T17:31:31.476763+0000 INFO 135934720870080 Successfully fetched the page
+2024-11-06T17:31:31.478301+0000 INFO 135934773298880 Successfully fetched the page
+2024-11-06T17:31:31.479775+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:31.493165+0000 INFO 135934752327360 Successfully fetched the page
+2024-11-06T17:31:31.494654+0000 INFO 135934762813120 Successfully fetched the page
+2024-11-06T17:31:31.496020+0000 INFO 135934857184960 Successfully fetched the page
+2024-11-06T17:31:31.497512+0000 INFO 135934867670720 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.497786+0000 INFO 135934867670720 parsed André Gide's about page
+2024-11-06T17:31:31.501885+0000 INFO 135934571972288 Successfully fetched the page
+2024-11-06T17:31:31.503644+0000 INFO 135934888642240 Successfully fetched the page
+2024-11-06T17:31:31.515010+0000 INFO 135934571972288 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.515263+0000 INFO 135934571972288 parsed Douglas Adams's about page
+2024-11-06T17:31:31.523529+0000 INFO 135934888642240 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.523780+0000 INFO 135934888642240 parsed Jane Austen's about page
+2024-11-06T17:31:31.531349+0000 INFO 135934731355840 Successfully fetched the page
+2024-11-06T17:31:31.532053+0000 INFO 135934561486528 Successfully fetched the page
+2024-11-06T17:31:31.532737+0000 INFO 135934741841600 Successfully fetched the page
+2024-11-06T17:31:31.533774+0000 INFO 135934857184960 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.534083+0000 INFO 135934857184960 parsed Marilyn Monroe's about page
+2024-11-06T17:31:31.537453+0000 INFO 135934720870080 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.537698+0000 INFO 135934720870080 parsed Dr. Seuss's about page
+2024-11-06T17:31:31.541438+0000 INFO 135934752327360 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.541686+0000 INFO 135934752327360 parsed Steve Martin's about page
+2024-11-06T17:31:31.549868+0000 INFO 135934741841600 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.556567+0000 INFO 135934762813120 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.557217+0000 INFO 135934741841600 parsed J.K. Rowling's about page
+2024-11-06T17:31:31.565858+0000 INFO 135934773298880 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.571050+0000 INFO 135934762813120 parsed Eleanor Roosevelt's about page
+2024-11-06T17:31:31.577379+0000 INFO 135934561486528 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.578576+0000 INFO 135934731355840 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:31.581474+0000 INFO 135934773298880 parsed Thomas A. Edison's about page
+2024-11-06T17:31:31.582279+0000 INFO 135934561486528 parsed Elie Wiesel's about page
+2024-11-06T17:31:31.584104+0000 INFO 135934731355840 parsed Bob Marley's about page
+2024-11-06T17:31:32.104234+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:32.112058+0000 INFO 135934571972288 Successfully fetched the page
+2024-11-06T17:31:32.113275+0000 INFO 135934867670720 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.118752+0000 INFO 135934867670720 parsed Mark Twain's about page
+2024-11-06T17:31:32.122512+0000 INFO 135934571972288 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.122798+0000 INFO 135934571972288 parsed Allen Saunders's about page
+2024-11-06T17:31:32.130871+0000 INFO 135934857184960 Successfully fetched the page
+2024-11-06T17:31:32.139261+0000 INFO 135934857184960 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.140189+0000 INFO 135934878156480 Successfully fetched the page
+2024-11-06T17:31:32.140610+0000 INFO 135934857184960 parsed Ralph Waldo Emerson's about page
+2024-11-06T17:31:32.144993+0000 INFO 135934720870080 Successfully fetched the page
+2024-11-06T17:31:32.146982+0000 INFO 135934888642240 Successfully fetched the page
+2024-11-06T17:31:32.160007+0000 INFO 135934878156480 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.161373+0000 INFO 135934720870080 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.161984+0000 INFO 135934878156480 parsed Friedrich Nietzsche's about page
+2024-11-06T17:31:32.168855+0000 INFO 135934720870080 parsed Mother Teresa's about page
+2024-11-06T17:31:32.177142+0000 INFO 135934752327360 Successfully fetched the page
+2024-11-06T17:31:32.178806+0000 INFO 135934888642240 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.180144+0000 INFO 135934741841600 Successfully fetched the page
+2024-11-06T17:31:32.180501+0000 INFO 135934888642240 parsed Pablo Neruda's about page
+2024-11-06T17:31:32.188677+0000 INFO 135934561486528 Successfully fetched the page
+2024-11-06T17:31:32.189241+0000 INFO 135934762813120 Successfully fetched the page
+2024-11-06T17:31:32.194047+0000 INFO 135934752327360 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.195731+0000 INFO 135934731355840 Successfully fetched the page
+2024-11-06T17:31:32.209259+0000 INFO 135934741841600 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.210884+0000 INFO 135934773298880 Successfully fetched the page
+2024-11-06T17:31:32.212570+0000 INFO 135934561486528 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.221430+0000 INFO 135934762813120 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.221764+0000 INFO 135934752327360 parsed Garrison Keillor's about page
+2024-11-06T17:31:32.222381+0000 INFO 135934741841600 parsed Jim Henson's about page
+2024-11-06T17:31:32.229963+0000 INFO 135934731355840 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.230365+0000 INFO 135934561486528 parsed Jorge Luis Borges's about page
+2024-11-06T17:31:32.236021+0000 INFO 135934762813120 parsed Charles M. Schulz's about page
+2024-11-06T17:31:32.236959+0000 INFO 135934773298880 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.240617+0000 INFO 135934731355840 parsed George Eliot's about page
+2024-11-06T17:31:32.244274+0000 INFO 135934773298880 parsed William Nicholson's about page
+2024-11-06T17:31:32.713601+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:32.723894+0000 INFO 135934867670720 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.724265+0000 INFO 135934867670720 parsed George R.R. Martin's about page
+2024-11-06T17:31:32.728402+0000 INFO 135934571972288 Successfully fetched the page
+2024-11-06T17:31:32.735741+0000 INFO 135934571972288 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.736080+0000 INFO 135934571972288 parsed C.S. Lewis's about page
+2024-11-06T17:31:32.776615+0000 INFO 135934720870080 Successfully fetched the page
+2024-11-06T17:31:32.778257+0000 INFO 135934857184960 Successfully fetched the page
+2024-11-06T17:31:32.796668+0000 INFO 135934857184960 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.796982+0000 INFO 135934857184960 parsed Martin Luther King Jr.'s about page
+2024-11-06T17:31:32.801682+0000 INFO 135934720870080 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.803066+0000 INFO 135934888642240 Successfully fetched the page
+2024-11-06T17:31:32.803361+0000 INFO 135934720870080 parsed Haruki Murakami's about page
+2024-11-06T17:31:32.804647+0000 INFO 135934878156480 Successfully fetched the page
+2024-11-06T17:31:32.814085+0000 INFO 135934888642240 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.814362+0000 INFO 135934888642240 parsed Alexandre Dumas fils's about page
+2024-11-06T17:31:32.823385+0000 INFO 135934878156480 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.823670+0000 INFO 135934878156480 parsed James Baldwin's about page
+2024-11-06T17:31:32.855045+0000 INFO 135934752327360 Successfully fetched the page
+2024-11-06T17:31:32.856533+0000 INFO 135934731355840 Successfully fetched the page
+2024-11-06T17:31:32.857881+0000 INFO 135934741841600 Successfully fetched the page
+2024-11-06T17:31:32.865260+0000 INFO 135934731355840 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.865539+0000 INFO 135934731355840 parsed Charles Bukowski's about page
+2024-11-06T17:31:32.882415+0000 INFO 135934741841600 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.883526+0000 INFO 135934741841600 parsed Ernest Hemingway's about page
+2024-11-06T17:31:32.884363+0000 INFO 135934752327360 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.886725+0000 INFO 135934752327360 parsed Stephenie Meyer's about page
+2024-11-06T17:31:32.901014+0000 INFO 135934561486528 Successfully fetched the page
+2024-11-06T17:31:32.902735+0000 INFO 135934762813120 Successfully fetched the page
+2024-11-06T17:31:32.904129+0000 INFO 135934773298880 Successfully fetched the page
+2024-11-06T17:31:32.911522+0000 INFO 135934762813120 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.912493+0000 INFO 135934762813120 parsed George Bernard Shaw's about page
+2024-11-06T17:31:32.918862+0000 INFO 135934773298880 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.925872+0000 INFO 135934561486528 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:32.928397+0000 INFO 135934773298880 parsed Suzanne Collins's about page
+2024-11-06T17:31:32.928869+0000 INFO 135934561486528 parsed Helen Keller's about page
+2024-11-06T17:31:33.531870+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:33.539078+0000 INFO 135934571972288 Successfully fetched the page
+2024-11-06T17:31:33.546968+0000 INFO 135934867670720 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.547252+0000 INFO 135934867670720 parsed J.R.R. Tolkien's about page
+2024-11-06T17:31:33.551446+0000 INFO 135934571972288 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.551722+0000 INFO 135934571972288 parsed Alfred Tennyson's about page
+2024-11-06T17:31:33.600471+0000 INFO 135934857184960 Successfully fetched the page
+2024-11-06T17:31:33.607780+0000 INFO 135934857184960 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.608071+0000 INFO 135934857184960 parsed Terry Pratchett's about page
+2024-11-06T17:31:33.650980+0000 INFO 135934878156480 Successfully fetched the page
+2024-11-06T17:31:33.652655+0000 INFO 135934731355840 Successfully fetched the page
+2024-11-06T17:31:33.654343+0000 INFO 135934888642240 Successfully fetched the page
+2024-11-06T17:31:33.656581+0000 INFO 135934720870080 Successfully fetched the page
+2024-11-06T17:31:33.669489+0000 INFO 135934731355840 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.669768+0000 INFO 135934731355840 parsed W.C. Fields's about page
+2024-11-06T17:31:33.677256+0000 INFO 135934888642240 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.679807+0000 INFO 135934720870080 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.680297+0000 INFO 135934888642240 parsed George Carlin's about page
+2024-11-06T17:31:33.687786+0000 INFO 135934720870080 parsed J.D. Salinger's about page
+2024-11-06T17:31:33.688202+0000 INFO 135934878156480 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.689084+0000 INFO 135934878156480 parsed John Lennon's about page
+2024-11-06T17:31:33.739501+0000 INFO 135934752327360 Successfully fetched the page
+2024-11-06T17:31:33.747498+0000 INFO 135934752327360 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.747807+0000 INFO 135934752327360 parsed Jimi Hendrix's about page
+2024-11-06T17:31:33.749497+0000 INFO 135934762813120 Successfully fetched the page
+2024-11-06T17:31:33.750937+0000 INFO 135934741841600 Successfully fetched the page
+2024-11-06T17:31:33.763452+0000 INFO 135934773298880 Successfully fetched the page
+2024-11-06T17:31:33.767263+0000 INFO 135934741841600 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.767543+0000 INFO 135934741841600 parsed Ayn Rand's about page
+2024-11-06T17:31:33.770434+0000 INFO 135934762813120 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.770712+0000 INFO 135934762813120 parsed J.M. Barrie's about page
+2024-11-06T17:31:33.778139+0000 INFO 135934773298880 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.778691+0000 INFO 135934561486528 Successfully fetched the page
+2024-11-06T17:31:33.779081+0000 INFO 135934773298880 parsed E.E. Cummings's about page
+2024-11-06T17:31:33.786083+0000 INFO 135934561486528 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:33.786355+0000 INFO 135934561486528 parsed Khaled Hosseini's about page
+2024-11-06T17:31:34.159832+0000 INFO 135934867670720 Successfully fetched the page
+2024-11-06T17:31:34.167081+0000 INFO 135934571972288 Successfully fetched the page
+2024-11-06T17:31:34.169758+0000 INFO 135934867670720 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:34.170114+0000 INFO 135934867670720 parsed Harper Lee's about page
+2024-11-06T17:31:34.177777+0000 INFO 135934571972288 db is disabled in configuration. updateAuthorRowAboutValue ignored.
+2024-11-06T17:31:34.178148+0000 INFO 135934571972288 parsed Madeleine L'Engle's about page

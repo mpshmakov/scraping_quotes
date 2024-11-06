@@ -203,35 +203,8 @@ def check_structure_changes(response):
         raise Exception("Page structure has changed.")
     logger.info("page structure hasn't changed.")
 
-
-def main():
-    global configuration
-
-    response = fetchPage(configuration["url"])
-    if response is None:
-        raise Exception("Failed to fetch the Quotes page")
-
-    check_structure_changes(response)
-    
-    quotes_pages_urls = []
-
-    # 10 pages exist for sure.
-    # create a function which checks if 11th page exists. if true, iterate and change pages number in configuration.json
-
-    check_for_new_pages_and_update_pagesnum()
-    configuration = get_configuration()
-
-    url = configuration["url"]
-    pagesnum = configuration["pagesnum"]
-
-    for i in range(pagesnum):
-        next_page_url = url + "page/" + str(i+1)
-        quotes_pages_urls.append(next_page_url)
-
-    ##print("len(quotes_pages)", len(quotes_pages_urls))
-    
-    initDB()
-        
+def scrape_quotes(quotes_pages_urls):
+            
     with concurrent.futures.ThreadPoolExecutor() as executor:
         quotes_map = executor.map(quote_page_worker, quotes_pages_urls)
 
@@ -280,6 +253,38 @@ def main():
     for author in authors_map:
         authors.append(author)
 
+    return quotes, quote_tag_link, tags, authors
+
+def main():
+    global configuration
+
+    response = fetchPage(configuration["url"])
+    if response is None:
+        raise Exception("Failed to fetch the Quotes page")
+
+    check_structure_changes(response)
+    
+    quotes_pages_urls = []
+
+    # 10 pages exist for sure.
+    # create a function which checks if 11th page exists. if true, iterate and change pages number in configuration.json
+
+    check_for_new_pages_and_update_pagesnum()
+    configuration = get_configuration()
+
+    url = configuration["url"]
+    pagesnum = configuration["pagesnum"]
+
+    for i in range(pagesnum):
+        next_page_url = url + "page/" + str(i+1)
+        quotes_pages_urls.append(next_page_url)
+
+    ##print("len(quotes_pages)", len(quotes_pages_urls))
+    
+    initDB()
+
+    quotes, quote_tag_link, tags, authors = scrape_quotes(quotes_pages_urls)
+    # print(f"{len(quotes)}, {len(quote_tag_link)}, {len(tags)}, {len(authors)}")
 
     #print("quotes", len(quotes))
     #print("authors: ", len(authors))

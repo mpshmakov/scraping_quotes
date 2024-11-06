@@ -1,5 +1,5 @@
 import os
-import inspect
+import inspect as ins
 
 from configuration import get_configuration
 from squotes import logger
@@ -30,7 +30,8 @@ exposed = [
 if db_enable == 0:
     logger.info(f"db is disabled in configuration. database __init__.py's db initialization parts of code ingnored.")
 else:
-    exposed.append("engine","Session")        
+    exposed.append("engine")
+    exposed.append("Session")        
 
     # Create engine with the updated path
     # engine = create_engine(f"sqlite:///{DB_PATH}", echo=True)

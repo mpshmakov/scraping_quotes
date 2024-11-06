@@ -14,7 +14,7 @@ if db_enable == 1:
     from . import Base, Session, engine
 from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags
 
-import inspect
+import inspect as ins
 
 def initialize_schema():
     """
@@ -24,7 +24,7 @@ def initialize_schema():
         SQLAlchemyError: If there's an error during schema initialization.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     try:
@@ -66,7 +66,7 @@ def check_tables_exist():
         SQLAlchemyError: If there's an error during inspecting engine.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     try:
@@ -91,7 +91,7 @@ def truncate_tables(session):
         SQLAlchemyError: If there's an error during table truncation.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     for table in [Quotes, Authors, Tags, QuotesTagsLink, TestTable]:
@@ -118,7 +118,7 @@ def insert_records(session, records, commit=True):
         SQLAlchemyError: If there's an error during record insertion.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     try:
@@ -144,7 +144,7 @@ def initDB():
         Exception: If an unexpected error occurs during database initialization.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     try:
@@ -191,7 +191,7 @@ def insertRow(row):
         SQLAlchemyError: If there's an error during row insertion.
     """
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
     if not check_tables_exist():
@@ -219,7 +219,7 @@ def insertRow(row):
 
 def updateAuthorRowAboutValue(author: str, about_text: str):
     if db_enable == 0:
-        logger.info(f"db is disabled in configuration. {inspect.stack()[0][3]} ignored.")
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
     
     if not check_tables_exist():
