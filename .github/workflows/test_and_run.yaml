@@ -1,0 +1,49 @@
+name: Formatting Check and Fix
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "45 5 * * *"
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+      - name: Install Dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip --version
+            pip install -r requirements.txt
+      - name: Run Tests
+          run: pytest
+
+          
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip --version
+          pip install -r requirements.txt
+      - name: Run Scrape Books Script
+        run: python3 -m scripts.scraping_books
+      - name: Commit and push loguru retention changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: updating logs and data"
+          commit_user_name: loguru
+          commit_user_email: loguru@loguru.dev
