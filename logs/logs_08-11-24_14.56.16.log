@@ -1,0 +1,18 @@
+2024-11-08T14:56:16.736539+0000 INFO 130099888066688 Created database engine for db quotes, user root, address localhost:
+2024-11-08T14:56:16.782127+0000 INFO 130099888066688 configuration extracted: {'_comment1': "all paths must not have '/' in the end", 'url': 'https://quotes.toscrape.com/', 'pagesnum': 10, '_comment2': 'i.e. data as csv and json output', 'save_data_path': './data', 'logs_path': './logs', '_comment3': '.csv and .json is added automatically. Specify ONLY filename here', 'csv_filename': 'csv_output', 'json_filename': 'json_output', 'db_name': 'quotes', 'db_username': 'root', 'db_password': '', 'db_ip': 'localhost', 'db_port': '', 'db_enable': 1}
+2024-11-08T14:56:16.793303+0000 INFO 130099888066688 Successfully fetched the page
+2024-11-08T14:56:16.798639+0000 INFO 130099888066688 Data exported to ./data/test.json.json
+2024-11-08T14:56:16.801128+0000 INFO 130099888066688 Data exported to ./data/test.csv.csv
+2024-11-08T14:56:16.923962+0000 INFO 130099888066688 All tables truncated successfully.
+2024-11-08T14:56:16.924278+0000 INFO 130099888066688 Database initialized successfully with new records.
+2024-11-08T14:56:16.925847+0000 ERROR 130099888066688 Tables were not created successfully.
+2024-11-08T14:56:16.928867+0000 INFO 130099888066688 Database schema initialized successfully.
+2024-11-08T14:56:16.929545+0000 INFO 130099888066688 Tables in the database: <MagicMock name='engine._sa_instance_state.get_table_names()' id='130099459732016'>
+2024-11-08T14:56:16.929762+0000 ERROR 130099888066688 Not all required tables were created.
+2024-11-08T14:56:16.940388+0000 ERROR 130099888066688 Error initializing database schema: ()
+2024-11-08T14:56:16.943661+0000 INFO 130099888066688 Row inserted successfully into test_table.
+2024-11-08T14:56:16.946846+0000 ERROR 130099888066688 Error inserting row into test_table: ()
+2024-11-08T14:56:16.949311+0000 ERROR 130099888066688 Tables do not exist. Cannot insert row.
+2024-11-08T14:56:16.951368+0000 INFO 130099888066688 2 records inserted successfully.
+2024-11-08T14:56:16.953569+0000 ERROR 130099888066688 Error inserting records: ()
+2024-11-08T14:56:17.190322+0000 INFO 130099888066688 Successfully fetched the page

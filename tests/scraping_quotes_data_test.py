@@ -2,11 +2,12 @@ import os
 import sys
 import unittest
 import uuid
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, call, patch
 
 import pandas as pd
 import pytest
 import requests
+from configuration import get_configuration
 from database.operations import (
     check_tables_exist,
     initDB,
@@ -16,12 +17,15 @@ from database.operations import (
 )
 from database.schema import TestTable, Authors, Tags, Quotes, QuotesTagsLink
 from squotes import BeautifulSoup, fetchPage
-from squotes.export_functions import exportToCsv, exportDfToJson
+from squotes.export_functions import exportMultipleDfsToOneJson, exportToCsv, exportDfToJson
 from squotes.utils import clean_numeric, create_data_folder, uuid_to_str
-from scripts.scraping_quotes import main, scrape_books
+from scripts.scraping_quotes import main, scrape_quotes
 from sqlalchemy.exc import SQLAlchemyError
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+configuration = get_configuration()
+save_data_path = configuration["save_data_path"]
 
 
 # from tttt import bs, main2
@@ -77,8 +81,10 @@ class TestExportFunctions(unittest.TestCase):
             "nominations": [3],
         }
         df = pd.DataFrame(data)
-        exportToCsv(df, "test.csv")
-        mock_to_csv.assert_called_once_with("test.csv", index=False)
+        exportToCsv(df, "test")
+        filename = save_data_path + "/" + "test" + ".csv"
+
+        mock_to_csv.assert_called_once_with(filename, index=False)
 
     @patch("json.dump")
     def test_exportDfToJson(self, mock_json_dump):
@@ -90,9 +96,17 @@ class TestExportFunctions(unittest.TestCase):
             "nominations": [3],
         }
         df = pd.DataFrame(data)
-        exportDfToJson(df, "test.json")
+        exportDfToJson(df, "test")
         mock_json_dump.assert_called_once()
 
+    @patch("json.dump")
+    def test_exportMultipleDfsToOneJson(self, mock_json_dump):
+        df_arr = [pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), pd.DataFrame()]
+        df_names = ["name1", "name2", "name3", "name4"]
+        filename = "test"
+
+        exportMultipleDfsToOneJson(df_arr, df_names, filename)
+        mock_json_dump.assert_called_once()
 
 class TestUtils(unittest.TestCase):
     def test_uuid_to_str(self):
@@ -148,12 +162,10 @@ class TestDatabaseOperations(unittest.TestCase):
         mock_session = MagicMock()
         mock_Session.return_value = mock_session
 
-        records = [MagicMock(), MagicMock()]
-        initDB(records)
+        initDB()
 
         mock_initialize_schema.assert_called_once()
         mock_check_tables_exist.assert_called_once()
-        mock_session.add_all.assert_called_once_with(records)
         mock_session.commit.assert_called_once()
 
     @patch("database.operations.initialize_schema")
@@ -163,8 +175,7 @@ class TestDatabaseOperations(unittest.TestCase):
         self, mock_Session, mock_check_tables_exist, mock_initialize_schema
     ):
         mock_check_tables_exist.return_value = False
-        records = [MagicMock(), MagicMock()]
-        initDB(records)
+        initDB()
         mock_initialize_schema.assert_called_once()
         mock_check_tables_exist.assert_called_once()
         mock_Session.assert_not_called()
@@ -214,7 +225,7 @@ class TestDatabaseOperations(unittest.TestCase):
         initialize_schema()
 
         mock_MetaData.assert_called_once()
-        self.assertEqual(mock_Table.call_count, 2)  # Called for both tables
+        self.assertEqual(mock_Table.call_count, 5)  # Called for both tables
         mock_metadata.create_all.assert_called_once_with(mock_engine)
 
     @patch("database.operations.MetaData")
@@ -229,15 +240,28 @@ class TestDatabaseOperations(unittest.TestCase):
 
 
 class TestDatabaseSchema(unittest.TestCase):
-    def test_Books(self):
+    def test_Tags(self):
+        tag = Tags("test-tag")
+        self.assertEqual(tag.tag, "test-tag")
+
+    def test_Authors(self):
+        author = Authors("test-author", "Some information about the author.")
+        self.assertEqual(author.author, "test-author")
+        self.assertEqual(author.about, "Some information about the author.")
+
+    def test_Quotes(self):
         id = str(uuid.uuid4())
-        book = Books(id, "Test Title", 222.2, 1, 5, "category")
-        self.assertEqual(book.id, id)
-        self.assertEqual(book.title, "Test Title")
-        self.assertEqual(book.price, 222.2)
-        self.assertEqual(book.availability, 1)
-        self.assertEqual(book.star_rating, 5)
-        self.assertEqual(book.category, "category")
+        quote = Quotes(id, "This is a test quote.", "test-author")
+        self.assertEqual(quote.id, id)
+        self.assertEqual(quote.text, "This is a test quote.")
+        self.assertEqual(quote.author, "test-author")
+
+    def test_QuotesTagsLink(self):
+        quote_id = str(uuid.uuid4())
+        tag = "test-tag"
+        quotes_tags_link = QuotesTagsLink(quote_id, tag)
+        self.assertEqual(quotes_tags_link.quote_id, quote_id)
+        self.assertEqual(quotes_tags_link.tag, tag)
 
     def test_TestTable(self):
         test_entry = TestTable("test-id", "Test Entry", 5)
@@ -245,47 +269,31 @@ class TestDatabaseSchema(unittest.TestCase):
         self.assertEqual(test_entry.text, "Test Entry")
         self.assertEqual(test_entry.numbers, 5)
 
-    # class Testsquotes(unittest.TestCase):
-    #     @patch("tttt.bs")
-    #     def test_scrape_books_page_structure_exception(self, mock_bs):
-    #         # mock_soup = MagicMock()
-    #         # mock_bs.return_value = mock_soup
-    #         # mock_soup.find.return_value.find.name = "notul"
-    #         # mock_soup.find(class_="nav nav-list").find('ul').name = "notul"
-
-    #         with self.assertRaises(Exception):
-    #             main2()
 
     @patch("squotes.fetchPage")
     @patch("bs4.BeautifulSoup")
     def test_scraping_quotes(self, mock_bs, mock_fetchPage):
-        # these lines don't seem to do anything (the test works correctly without)
-        # mock_response = MagicMock()
-        # mock_fetchPage.return_value = mock_response
-        # mock_soup = MagicMock()
-        # mock_bs.return_value = mock_soup
+        url = configuration["url"]
+        pagesnum = configuration["pagesnum"]
+        quotes_pages_urls = []
+        for i in range(pagesnum):
+            next_page_url = url + "page/" + str(i+1)
+            quotes_pages_urls.append(next_page_url)
 
-        # mock_tr = MagicMock()
-        # mock_tr.find_all.return_value = [
-        #     MagicMock(text="Book"),
-        #     MagicMock(text="222.2"),
-        #     MagicMock(text="1"),
-        #     MagicMock(text="5"),
-        #     MagicMock(text="category")
-        # ]
-        # mock_soup.find.return_value.find.return_value.find_all.return_value = [mock_tr]
-
-        results = scrape_books()
-        self.assertEqual(len(results), 1000)
+        results = scrape_quotes(quotes_pages_urls)
+        self.assertEqual(len(results[0]), 100)
+        self.assertEqual(len(results[1]), 235)
+        self.assertEqual(len(results[2]), 138)
+        self.assertEqual(len(results[3]), 50)
         self.assertEqual(
-            len(results[0]), 6
+            len(results), 4
         )  # id, title, price, availability, star_rating, category
 
     @patch("scripts.scraping_quotes.fetchPage")
     def test_scraping_quotes_fetch_exception(self, mock_fetchPage):
         mock_fetchPage.return_value = None
         with self.assertRaises(Exception) as context:
-            scrape_books()
+            scrape_quotes()
             print("context.exception in fetch_exception ", str(context.exception))
             self.assertTrue(
                 "Failed to fetch the page - No internet connection."
@@ -293,41 +301,35 @@ class TestDatabaseSchema(unittest.TestCase):
             )
 
     @patch("scripts.scraping_quotes.bs")
-    def test_scrape_books_page_structure_exception(self, mock_bs):
+    def test_scrape_quotes_page_structure_exception(self, mock_bs):
         mock_soup = BeautifulSoup(
             fetchPage("https://www.google.com/").content, features="html.parser"
         )
         mock_bs.return_value = mock_soup
 
         with self.assertRaises(Exception):
-            scrape_books()
+            scrape_quotes()
 
-    @patch("scripts.scraping_quotes.scrape_books")
+    @patch("scripts.scraping_quotes.scrape_quotes")
     @patch("scripts.scraping_quotes.initDB")
-    @patch("scripts.scraping_quotes.insertRow")
     @patch("scripts.scraping_quotes.exportToCsv")
-    @patch("scripts.scraping_quotes.exportDfToJson")
+    @patch("scripts.scraping_quotes.exportMultipleDfsToOneJson")
     def test_main(
         self,
-        mock_exportDfToJson,
+        mock_exportMultipleDfsToOneJson,
         mock_exportToCsv,
-        mock_insertRow,
         mock_initDB,
         mock_scrape,
-    ):
-        id1 = str(uuid.uuid4())
-        id2 = str(uuid.uuid4())
-        
-        mock_scrape.return_value = [
-            (id1, "Book 1", 2021.1, 1, 3, "category 1"),
-            (id2, "Book 2", 2022.2, 2, 5, "category 2"),
-        ]
+    ):  
+        mock_scrape.return_value = [MagicMock(), MagicMock(), MagicMock(), MagicMock()]
+
         main()
-        mock_scrape.assert_called_once()
         mock_initDB.assert_called_once()
-        self.assertEqual(mock_insertRow.call_count, 2)
-        mock_exportToCsv.assert_called_once()
-        mock_exportDfToJson.assert_called_once()
+        mock_scrape.assert_called_once()
+        # self.assertEqual(mock_insertRow.call_count, 2)
+        # mock_exportToCsv.assert_has_calls()
+        self.assertEqual(mock_exportToCsv.call_count, 4)
+        mock_exportMultipleDfsToOneJson.assert_called_once()
 
 
 if __name__ == "__main__":

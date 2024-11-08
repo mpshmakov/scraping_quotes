@@ -1,0 +1,1386 @@
+2024-11-08T15:20:22.717596+0000 INFO 133402516074624 Created database engine for db quotes, user root, address localhost:
+2024-11-08T15:20:22.730877+0000 INFO 133402516074624 configuration extracted: {'_comment1': "all paths must not have '/' in the end", 'url': 'https://quotes.toscrape.com/', 'pagesnum': 10, '_comment2': 'i.e. data as csv and json output', 'save_data_path': './data', 'logs_path': './logs', '_comment3': '.csv and .json is added automatically. Specify ONLY filename here', 'csv_filename': 'csv_output', 'json_filename': 'json_output', 'db_name': 'quotes', 'db_username': 'root', 'db_password': '', 'db_ip': 'localhost', 'db_port': '', 'db_enable': 1}
+2024-11-08T15:20:23.805187+0000 INFO 133402516074624 Successfully fetched the page
+2024-11-08T15:20:23.818408+0000 INFO 133402516074624 page structure hasn't changed.
+2024-11-08T15:20:24.523693+0000 INFO 133402516074624 Successfully fetched the page
+2024-11-08T15:20:24.569936+0000 INFO 133402516074624 Database schema initialized successfully.
+2024-11-08T15:20:24.571730+0000 INFO 133402516074624 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
+2024-11-08T15:20:24.571836+0000 INFO 133402516074624 All required tables have been created successfully.
+2024-11-08T15:20:24.588746+0000 INFO 133402516074624 All tables truncated successfully.
+2024-11-08T15:20:24.595909+0000 INFO 133402516074624 Database initialized successfully with new records.
+2024-11-08T15:20:25.189578+0000 INFO 133401919096512 Successfully fetched the page
+2024-11-08T15:20:25.191391+0000 INFO 133401908610752 Successfully fetched the page
+2024-11-08T15:20:25.193196+0000 INFO 133401929582272 Successfully fetched the page
+2024-11-08T15:20:25.200455+0000 INFO 133402080577216 Successfully fetched the page
+2024-11-08T15:20:25.208047+0000 INFO 133402038634176 Successfully fetched the page
+2024-11-08T15:20:25.218819+0000 INFO 133402059605696 Successfully fetched the page
+2024-11-08T15:20:25.225523+0000 INFO 133401940068032 Successfully fetched the page
+2024-11-08T15:20:25.293483+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:25.294311+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:25.309607+0000 INFO 133402070091456 Successfully fetched the page
+2024-11-08T15:20:25.339853+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.443644+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.448060+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.449478+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.453395+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.454620+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.455460+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.455643+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.456025+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.456401+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.463715+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.464541+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.465463+0000 INFO 133401919096512 Row inserted successfully into authors.
+2024-11-08T15:20:25.468847+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.471331+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.471962+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:25.472385+0000 INFO 133401940068032 Row inserted successfully into authors.
+2024-11-08T15:20:25.476315+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.479259+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.481873+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.483120+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.483376+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:25.484192+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.484630+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '621bbb83-f67f-47c3-943e-230d5856081f', 'quote_text': '“The truth." Dumbledore sighed. "It is a beautiful and terrible thing, and should therefore be treated with great caution.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['truth']
+2024-11-08T15:20:25.485749+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.487932+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': 'ed43774c-f39b-4313-9cf8-225faab52727', 'quote_text': '“Anyone who has never made a mistake has never tried anything new.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['mistakes']
+2024-11-08T15:20:25.492586+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.493412+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '39e8469c-a716-421d-baf8-06a1cb5636c9', 'quote_text': '“If I had a flower for every time I thought of you...I could walk through my garden forever.”', 'author': 'Alfred Tennyson'}; author: Alfred Tennyson; tags: ['friendship', 'love']
+2024-11-08T15:20:25.493719+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.496007+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.497826+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': 'ec26e251-8616-46a9-bb51-34dd2ea52f0c', 'quote_text': "“That's the problem with drinking, I thought, as I poured myself a drink. If something bad happens you drink in an attempt to forget; if something good happens you drink in order to celebrate; and if nothing happens you drink to make something happen.”", 'author': 'Charles Bukowski'}; author: Charles Bukowski; tags: ['alcohol']
+2024-11-08T15:20:25.499315+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.499479+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.502986+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.503342+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.504601+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.505971+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.508177+0000 INFO 133402059605696 Row inserted successfully into authors.
+2024-11-08T15:20:25.508648+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.510265+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.510611+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': 'a154b378-720d-443f-849e-3ac5cfe61ad2', 'quote_text': '“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['friendship', 'love']
+2024-11-08T15:20:25.514226+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.517254+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.517425+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.520707+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:25.522507+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Charles Bukowski' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Charles Bukowski', 'about': '/author/Charles-Bukowski'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.523903+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.528007+0000 INFO 133402038634176 Row inserted successfully into authors.
+2024-11-08T15:20:25.532116+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.532797+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.533439+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': 'f389d064-46e3-4fc1-a262-84a51e5d9767', 'quote_text': '“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate that when I fall asleep your eyes close.”', 'author': 'Pablo Neruda'}; author: Pablo Neruda; tags: ['love', 'poetry']
+2024-11-08T15:20:25.535991+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.537435+0000 INFO 133401940068032 Row inserted successfully into authors.
+2024-11-08T15:20:25.538165+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.539263+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.543416+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.543647+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '17bb2e36-b923-4667-ad8b-f3aea20c599c', 'quote_text': '“Some people never go crazy. What truly horrible lives they must lead.”', 'author': 'Charles Bukowski'}; author: Charles Bukowski; tags: ['humor']
+2024-11-08T15:20:25.545327+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': 'e943c2a6-f6b2-468c-8a9b-5afc73692455', 'quote_text': "“The more that you read, the more things you will know. The more that you learn, the more places you'll go.”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['learning', 'reading', 'seuss']
+2024-11-08T15:20:25.546588+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.547249+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '0b9e99d0-70c2-4423-8273-6a754d3cbeb0', 'quote_text': '“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.”', 'author': 'George R.R. Martin'}; author: George R.R. Martin; tags: ['read', 'readers', 'reading', 'reading-books']
+2024-11-08T15:20:25.549296+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.550273+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.552077+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.555698+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:25.555835+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': 'd1f723f3-69fc-4204-b6b0-5a7b397da91f', 'quote_text': '“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['change', 'deep-thoughts', 'thinking', 'world']
+2024-11-08T15:20:25.556184+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.556827+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.557580+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': 'faec9d03-e3a4-42fc-96aa-3b17eb42e616', 'quote_text': '“You don’t forget the face of the person who was your last hope.”', 'author': 'Suzanne Collins'}; author: Suzanne Collins; tags: ['the-hunger-games']
+2024-11-08T15:20:25.557827+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.558209+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.562451+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.563616+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.566481+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.568591+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.568780+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.573228+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.574668+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.575611+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '3f2a63f8-c2e8-43ca-adce-a5c2dcca8286', 'quote_text': "“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”", 'author': 'Jimi Hendrix'}; author: Jimi Hendrix; tags: ['death', 'life']
+2024-11-08T15:20:25.578877+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.579391+0000 INFO 133402059605696 Row inserted successfully into authors.
+2024-11-08T15:20:25.580255+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.581566+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Suzanne Collins' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Suzanne Collins', 'about': '/author/Suzanne-Collins'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.581865+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.582016+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.583424+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.589107+0000 INFO 133402070091456 Row inserted successfully into authors.
+2024-11-08T15:20:25.592430+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.594802+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'thinking' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'thinking'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.595094+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': '174355f5-2dd1-4542-a830-b17485a32f84', 'quote_text': '“Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['dumbledore']
+2024-11-08T15:20:25.595545+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.598275+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.599113+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.599885+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.600208+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '2e730e27-e9c9-4708-b83d-55b78a4050bc', 'quote_text': '“For every minute you are angry you lose sixty seconds of happiness.”', 'author': 'Ralph Waldo Emerson'}; author: Ralph Waldo Emerson; tags: ['happiness']
+2024-11-08T15:20:25.600983+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:25.602879+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.603541+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.607033+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '5c63def0-b5a2-424a-9d98-322040d28c0e', 'quote_text': "“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”", 'author': 'Jane Austen'}; author: Jane Austen; tags: ['humor', 'love', 'romantic', 'women']
+2024-11-08T15:20:25.610334+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.610642+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.611151+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:25.612471+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.613216+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': 'c4d85cc4-a216-4369-b6cb-9a2f8f807ec4', 'quote_text': "“Remember, we're madly in love, so it's all right to kiss me anytime you feel like it.”", 'author': 'Suzanne Collins'}; author: Suzanne Collins; tags: ['humor']
+2024-11-08T15:20:25.613664+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'b5e23b01-2e45-4eec-a70e-f2b0666363b6', 'quote_text': "“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['friends', 'heartbreak', 'inspirational', 'life', 'love', 'sisters']
+2024-11-08T15:20:25.616458+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.620593+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.624681+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.626938+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.627115+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.629440+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:25.630787+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.631520+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': '163319b6-4989-4515-97e0-22a702c8dafe', 'quote_text': '“Do one thing every day that scares you.”', 'author': 'Eleanor Roosevelt'}; author: Eleanor Roosevelt; tags: ['attributed', 'fear', 'inspiration']
+2024-11-08T15:20:25.633561+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.634365+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.634563+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '9cf9b1ed-c5de-4d6c-b854-4956a8b4fd3c', 'quote_text': '“The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.”', 'author': 'Terry Pratchett'}; author: Terry Pratchett; tags: ['humor', 'open-mind', 'thinking']
+2024-11-08T15:20:25.639804+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:25.640435+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.640584+0000 INFO 133402059605696 Row inserted successfully into authors.
+2024-11-08T15:20:25.640876+0000 INFO 133402038634176 Row inserted successfully into authors.
+2024-11-08T15:20:25.642011+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.642709+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '955a5d21-35a8-49b5-9844-538a5f5edb15', 'quote_text': '“It is our choices, Harry, that show what we truly are, far more than our abilities.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['abilities', 'choices']
+2024-11-08T15:20:25.643747+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'attributed-no-source' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'attributed-no-source'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.644940+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.645892+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.646481+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.650597+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.650774+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': 'ca2abccd-eda1-49c9-824c-9be2db3b8a7c', 'quote_text': '“The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.”', 'author': 'Bob Marley'}; author: Bob Marley; tags: ['friendship']
+2024-11-08T15:20:25.653186+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.656719+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': 'f0392ad8-8997-42ba-9306-5bd131fc473b', 'quote_text': '“Remember, if the time should come when you have to make a choice between what is right and what is easy, remember what happened to a boy who was good, and kind, and brave, because he strayed across the path of Lord Voldemort. Remember Cedric Diggory.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['integrity']
+2024-11-08T15:20:25.658024+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.658130+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '44960bfc-bd0d-48d5-aac5-8de2e94283a7', 'quote_text': '“If you judge people, you have no time to love them.”', 'author': 'Mother Teresa'}; author: Mother Teresa; tags: ['attributed-no-source']
+2024-11-08T15:20:25.659432+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.659997+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.660268+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': 'b3dd2f76-d305-42c9-8aff-16e61757fc53', 'quote_text': '“You can never get a cup of tea large enough or a book long enough to suit me.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['books', 'inspirational', 'reading', 'tea']
+2024-11-08T15:20:25.661474+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.664819+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.665229+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.665403+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': '6a0abdab-743b-49e6-96cd-bfc7a4b36767', 'quote_text': '“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping it intact you must give it to no one, not even an animal. Wrap it carefully round with hobbies and little luxuries; avoid all entanglements. Lock it up safe in the casket or coffin of your selfishness. But in that casket, safe, dark, motionless, airless, it will change. It will not be broken; it will become unbreakable, impenetrable, irredeemable. To love is to be vulnerable.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['love']
+2024-11-08T15:20:25.665670+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.667521+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.670675+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.671088+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '6517efba-fb0c-446a-b114-5a6425458ba5', 'quote_text': '“To die will be an awfully big adventure.”', 'author': 'J.M. Barrie'}; author: J.M. Barrie; tags: ['adventure', 'love']
+2024-11-08T15:20:25.673285+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.674601+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.676656+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.678201+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.678891+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.680171+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'courage' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'courage'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.680669+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': '0beb47a6-07ba-4140-8978-6deddab9c3c2', 'quote_text': '“I am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['attributed-no-source']
+2024-11-08T15:20:25.682330+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.684387+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.684987+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.685145+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.685680+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'a28fa4f5-a3c7-4eea-bc38-9101a0855b3b', 'quote_text': '“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['courage', 'friends']
+2024-11-08T15:20:25.686311+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.689465+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.691248+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.695780+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.698546+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.701687+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.702000+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mother Teresa' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mother Teresa', 'about': '/author/Mother-Teresa'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.703174+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.706432+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.707444+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.707599+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.707894+0000 INFO 133402059605696 Row inserted successfully into authors.
+2024-11-08T15:20:25.708048+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.708342+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '2eed83ea-853e-42d3-94ae-23bdba50a49f', 'quote_text': '“Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['humor', 'philosophy']
+2024-11-08T15:20:25.709066+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.709513+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.709780+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.712096+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.712300+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '3aab40f3-2843-44af-82b8-3f22e7eebe93', 'quote_text': '“It takes courage to grow up and become who you really are.”', 'author': 'E.E. Cummings'}; author: E.E. Cummings; tags: ['courage']
+2024-11-08T15:20:25.713560+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '6ed447af-1e9d-4a11-9787-2930d4351374', 'quote_text': '“You believe lies so you eventually learn to trust no one but yourself.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['']
+2024-11-08T15:20:25.715109+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.717006+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.720483+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': 'e53b1e2f-94bd-4efc-bc93-04a96df5cc5c', 'quote_text': '“Not all of us can do great things. But we can do small things with great love.”', 'author': 'Mother Teresa'}; author: Mother Teresa; tags: ['misattributed-to-mother-teresa', 'paraphrased']
+2024-11-08T15:20:25.721224+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.722695+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.726268+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.726628+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.727463+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.728657+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.729244+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': 'b15e0483-83d8-4c9f-a6f6-d6318f8614ce', 'quote_text': '“I declare after all there is no enjoyment like reading! How much sooner one tires of any thing than of a book! -- When I have a house of my own, I shall be miserable if I have not an excellent library.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['books', 'library', 'reading']
+2024-11-08T15:20:25.731003+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': 'ee46f3b3-4d09-4589-8cf9-49b6ce1fb458', 'quote_text': '“Anyone who thinks sitting in church can make you a Christian must also think that sitting in a garage can make you a car.”', 'author': 'Garrison Keillor'}; author: Garrison Keillor; tags: ['humor', 'religion']
+2024-11-08T15:20:25.733296+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.734697+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'death' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'death'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.738371+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.741914+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.743231+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': '7a425054-d379-4788-bab6-8a0e50ce0f1f', 'quote_text': '“If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['music']
+2024-11-08T15:20:25.743404+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.744724+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.744895+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:25.745718+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.747298+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.747993+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '35ae8b1e-fab4-4733-9010-4bcc4e478016', 'quote_text': '“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['inspirational', 'life', 'live', 'miracle', 'miracles']
+2024-11-08T15:20:25.749688+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.751372+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.752563+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.755833+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.758168+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.761001+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.763620+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'bb61f9ac-9dbb-4a29-a0f2-7c69dd0f0f02', 'quote_text': "“If you can't explain it to a six year old, you don't understand it yourself.”", 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['simplicity', 'understand']
+2024-11-08T15:20:25.766614+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.769285+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.770186+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.770530+0000 INFO 133402059605696 Row inserted successfully into authors.
+2024-11-08T15:20:25.770980+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.771374+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.771547+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.774986+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.776508+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.777273+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.777404+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '55da90b2-07da-44a0-9c8c-1351025098fd', 'quote_text': '“But better to get hurt by the truth than comforted with a lie.”', 'author': 'Khaled Hosseini'}; author: Khaled Hosseini; tags: ['life']
+2024-11-08T15:20:25.780158+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.785329+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.785812+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.786056+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.787461+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '240fe69d-0931-4aa6-aa48-c4dbd86a32b3', 'quote_text': '“Beauty is in the eye of the beholder and it may be necessary from time to time to give a stupid or misinformed beholder a black eye.”', 'author': 'Jim Henson'}; author: Jim Henson; tags: ['humor']
+2024-11-08T15:20:25.788345+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Bob Marley' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Bob Marley', 'about': '/author/Bob-Marley'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.791094+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.792118+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.792235+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '5337cd81-2c84-4641-9154-2f31b36bdd28', 'quote_text': '“If you can make a woman laugh, you can make her do anything.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['girls', 'love']
+2024-11-08T15:20:25.792597+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.792843+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.793807+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': '80aeb4da-afa6-4a3e-a553-9b0904863e05', 'quote_text': '“To the well-organized mind, death is but the next great adventure.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['death', 'inspirational']
+2024-11-08T15:20:25.794302+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:25.794702+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.800139+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '94d1f2f6-c9d1-47dc-a36f-537e4cbb8490', 'quote_text': '“There are few people whom I really love, and still fewer of whom I think well. The more I see of the world, the more am I dissatisfied with it; and every day confirms my belief of the inconsistency of all human characters, and of the little dependence that can be placed on the appearance of merit or sense.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['elizabeth-bennet', 'jane-austen']
+2024-11-08T15:20:25.800763+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.801301+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.802924+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.806233+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.808877+0000 INFO 133401940068032 Row inserted successfully into authors.
+2024-11-08T15:20:25.809640+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.810806+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': '70fd3aec-7be3-4c20-826c-3ffac8fc8e6b', 'quote_text': "“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's not perfect—you aren't either, and the two of you may never be perfect together but if she can make you laugh, cause you to think twice, and admit to being human and making mistakes, hold onto her and give her the most you can. She may not be thinking about you every second of the day, but she will give you a part of her that she knows you can break—her heart. So don't hurt her, don't change her, don't analyze and don't expect more than she can give. Smile when she makes you happy, let her know when she makes you mad, and miss her when she's not there.”", 'author': 'Bob Marley'}; author: Bob Marley; tags: ['love']
+2024-11-08T15:20:25.811659+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.812204+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.814353+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.814690+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.815004+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.820093+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:25.823823+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.825125+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.825323+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': '6235beb0-5b56-4af6-b267-5f35dcf92025', 'quote_text': '“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”', 'author': 'Haruki Murakami'}; author: Haruki Murakami; tags: ['books', 'thought']
+2024-11-08T15:20:25.826330+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.826488+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.830537+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': 'b71b0830-1bac-41c0-a261-9559ae2868c7', 'quote_text': '“Not all those who wander are lost.”', 'author': 'J.R.R. Tolkien'}; author: J.R.R. Tolkien; tags: ['bilbo', 'journey', 'lost', 'quest', 'travel', 'wander']
+2024-11-08T15:20:25.832002+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Jane Austen' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Jane Austen', 'about': '/author/Jane-Austen'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.833063+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.834648+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.838531+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.839517+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.840790+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.843017+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '9ff41281-eba8-4fea-9f5c-e6266663703b', 'quote_text': '“You never really understand a person until you consider things from his point of view... Until you climb inside of his skin and walk around in it.”', 'author': 'Harper Lee'}; author: Harper Lee; tags: ['better-life-empathy']
+2024-11-08T15:20:25.844784+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.845881+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.847297+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.848988+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.849936+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': 'b7a2f4c5-2eef-4ac6-945f-c3a555f107df', 'quote_text': "“What really knocks me out is a book that, when you're all done reading it, you wish the author that wrote it was a terrific friend of yours and you could call him up on the phone whenever you felt like it. That doesn't happen much, though.”", 'author': 'J.D. Salinger'}; author: J.D. Salinger; tags: ['authors', 'books', 'literature', 'reading', 'writing']
+2024-11-08T15:20:25.852230+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.854969+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.855428+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:25.855693+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.856172+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.856836+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': 'ba956d7d-59d7-487e-9a6f-3c9d9d0fc83c', 'quote_text': '“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”', 'author': 'Jane Austen'}; author: Jane Austen; tags: ['aliteracy', 'books', 'classic', 'humor']
+2024-11-08T15:20:25.859422+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.860248+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.860383+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': '891caa23-a861-4107-9e0b-82d5bba1d5a8', 'quote_text': '“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['fantasy']
+2024-11-08T15:20:25.860901+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.861768+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '2173077e-dfbb-4429-8a16-f6bc27abc549', 'quote_text': '“Life is like riding a bicycle. To keep your balance, you must keep moving.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['life', 'simile']
+2024-11-08T15:20:25.862942+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.864015+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.865752+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:25.866675+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': 'c8f01304-e4f2-4e1c-ab52-95d244a458eb', 'quote_text': '“Today you are You, that is truer than true. There is no one alive who is Youer than You.”', 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['comedy', 'life', 'yourself']
+2024-11-08T15:20:25.867422+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.870534+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:25.872148+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.874264+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.874841+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.877081+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.877506+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.882734+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'children' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'children'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.883309+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.885340+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.885501+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': 'e8c7b211-fb24-4cbe-a8e7-114e65f77248', 'quote_text': '“Do not pity the dead, Harry. Pity the living, and, above all those who live without love.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['live-death-love']
+2024-11-08T15:20:25.886984+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.887093+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': 'c21b1555-bbaa-47fb-ac45-e7f2bf972400', 'quote_text': '“The difference between genius and stupidity is: genius has its limits.”', 'author': 'Alexandre Dumas fils'}; author: Alexandre Dumas fils; tags: ['misattributed-to-einstein']
+2024-11-08T15:20:25.887441+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.888134+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.889206+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.890658+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.891586+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': '9ba70134-7ceb-40db-bc30-b0ba9e812975', 'quote_text': "“All you need is love. But a little chocolate now and then doesn't hurt.”", 'author': 'Charles M. Schulz'}; author: Charles M. Schulz; tags: ['chocolate', 'food', 'humor']
+2024-11-08T15:20:25.893925+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.899546+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.901196+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.901614+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.901792+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '468b0d90-ed40-4fc2-951c-2ac370418431', 'quote_text': '“Some day you will be old enough to start reading fairy tales again.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['age', 'fairytales', 'growing-up']
+2024-11-08T15:20:25.906343+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.906496+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': 'c262d857-0920-446d-8ba0-6fee2e241483', 'quote_text': '“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”', 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['love']
+2024-11-08T15:20:25.906964+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:25.907593+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.910240+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:25.910811+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.911751+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'attributed-no-source' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'attributed-no-source'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.912234+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.912616+0000 INFO 133402070091456 Row inserted successfully into authors.
+2024-11-08T15:20:25.915567+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:25.915775+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'writing' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'writing'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.919154+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.921030+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '2ae3915f-310d-4749-a207-6202e82e2795', 'quote_text': "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['be-yourself', 'inspirational']
+2024-11-08T15:20:25.921884+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.922261+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:25.922809+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Marilyn Monroe' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Marilyn Monroe', 'about': '/author/Marilyn-Monroe'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.922922+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:25.924847+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.925596+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:25.935092+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:25.935591+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'ba9ca730-95e2-44b5-a829-7ace794d2dcb', 'quote_text': '“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”', 'author': 'Douglas Adams'}; author: Douglas Adams; tags: ['life', 'navigation']
+2024-11-08T15:20:25.936934+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'simile' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'simile'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.938169+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:25.938452+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:25.938770+0000 INFO 133401940068032 Row inserted successfully into authors.
+2024-11-08T15:20:25.940466+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.942647+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.951235+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.951427+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:25.952797+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'writing' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'writing'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.954290+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:25.954503+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '35178f28-e09a-4ddc-9214-b9c38af64f28', 'quote_text': "“A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.”", 'author': 'Marilyn Monroe'}; author: Marilyn Monroe; tags: ['attributed-no-source']
+2024-11-08T15:20:25.957893+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.961980+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:25.964541+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '0fc7936f-7df1-4ebb-8cf0-8268de1d2b61', 'quote_text': '“If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['children', 'fairy-tales']
+2024-11-08T15:20:25.965261+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:25.965383+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': '4d99fb8c-8fe8-48b4-b284-abcee71d7e62', 'quote_text': "“We read to know we're not alone.”", 'author': 'William Nicholson'}; author: William Nicholson; tags: ['misattributed-to-c-s-lewis', 'reading']
+2024-11-08T15:20:25.965529+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:25.965674+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:25.966637+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.966878+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': '6d93933e-cf68-4ab3-8179-fd9d39159883', 'quote_text': '“There is nothing to writing. All you do is sit down at a typewriter and bleed.”', 'author': 'Ernest Hemingway'}; author: Ernest Hemingway; tags: ['good', 'writing']
+2024-11-08T15:20:25.967038+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '2f032529-5c53-4406-964d-a0c87a236459', 'quote_text': '“We are not necessarily doubting that God will do the best for us; we are wondering how painful the best will turn out to be.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['god']
+2024-11-08T15:20:25.971407+0000 INFO 133401908610752 Row inserted successfully into authors.
+2024-11-08T15:20:25.971560+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:25.971782+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.972293+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:25.973192+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.973576+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry '' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': ''}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.976675+0000 INFO 133402038634176 Row inserted successfully into tags.
+2024-11-08T15:20:25.976965+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:25.977126+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': 'd5330152-f6d6-4cb6-9ce1-cb5724c4c512', 'quote_text': "“He's like a drug for you, Bella.”", 'author': 'Stephenie Meyer'}; author: Stephenie Meyer; tags: ['drug', 'romance', 'simile']
+2024-11-08T15:20:25.978113+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'death' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'death'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.984475+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:25.987764+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.988403+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.988572+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'learning' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'learning'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.992386+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:25.992543+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': 'a6067911-3c2c-4ec5-9e12-71c225b58231', 'quote_text': '“The reason I talk to myself is because I’m the only one whose answers I accept.”', 'author': 'George Carlin'}; author: George Carlin; tags: ['humor', 'insanity', 'lies', 'lying', 'self-indulgence', 'truth']
+2024-11-08T15:20:25.992986+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:25.994687+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:25.995856+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:25.996112+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': 'c9c67e7b-8f8b-404f-a0f8-3d28826f3498', 'quote_text': '“You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.”', 'author': "Madeleine L'Engle"}; author: Madeleine L'Engle; tags: ['books', 'children', 'difficult', 'grown-ups', 'write', 'writers', 'writing']
+2024-11-08T15:20:25.996696+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:26.000090+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.002101+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:26.004063+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.004310+0000 INFO 133402038634176 Row inserted successfully into authors.
+2024-11-08T15:20:26.005689+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.006319+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '3e8e304a-3ae6-488e-a32f-c9bdfef049eb', 'quote_text': '“It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['']
+2024-11-08T15:20:26.006729+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:26.008170+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Ralph Waldo Emerson' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Ralph Waldo Emerson', 'about': '/author/Ralph-Waldo-Emerson'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.011047+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:26.011407+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.011853+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.012683+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': 'fa5f03c6-a475-4fe1-97f8-227c2716a732', 'quote_text': '“Try not to become a man of success. Rather become a man of value.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['adulthood', 'success', 'value']
+2024-11-08T15:20:26.015398+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.017630+0000 INFO 133401919096512 Row inserted successfully into authors.
+2024-11-08T15:20:26.020351+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:26.023019+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': 'f15a288b-943b-4410-822e-1c8e0d4d003f', 'quote_text': '“Only in the darkness can you see the stars.”', 'author': 'Martin Luther King Jr.'}; author: Martin Luther King Jr.; tags: ['hope', 'inspirational']
+2024-11-08T15:20:26.025638+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.026067+0000 INFO 133402049119936 Row inserted successfully into tags.
+2024-11-08T15:20:26.027018+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:26.027755+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': '6bbaae3d-d1d2-46f3-8808-ac1b09895e4d', 'quote_text': '“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.”', 'author': 'Ralph Waldo Emerson'}; author: Ralph Waldo Emerson; tags: ['life', 'regrets']
+2024-11-08T15:20:26.028247+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.028786+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.029296+0000 INFO 133402059605696 Row inserted successfully into tags.
+2024-11-08T15:20:26.030512+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.033259+0000 INFO 133401950553792 Row inserted successfully into tags.
+2024-11-08T15:20:26.037917+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:26.039058+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '44d6c9c2-87fe-4dc8-84b5-308e61953e7d', 'quote_text': '“The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['death', 'life']
+2024-11-08T15:20:26.040132+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.041692+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'dumbledore' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'dumbledore'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.045105+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:26.045716+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Albert Einstein' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Albert Einstein', 'about': '/author/Albert-Einstein'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.046470+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.051397+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Ernest Hemingway' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Ernest Hemingway', 'about': '/author/Ernest-Hemingway'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.052562+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.053260+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'J.K. Rowling' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'J.K. Rowling', 'about': '/author/J-K-Rowling'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.054071+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.057900+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:26.058090+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:26.059847+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:26.060384+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '397012c8-ee2d-43fc-afdf-446fe90bc1b3', 'quote_text': '“Never tell the truth to people who are not worthy of it.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['truth']
+2024-11-08T15:20:26.061647+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': 'c0852871-5bec-4acf-b67e-505a6c953725', 'quote_text': '“Any fool can know. The point is to understand.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['knowledge', 'learning', 'understanding', 'wisdom']
+2024-11-08T15:20:26.062619+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.064507+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:26.065690+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '3b642e3b-8562-49dd-bcdc-5ffde0e3adb4', 'quote_text': '“Logic will get you from A to Z; imagination will get you everywhere.”', 'author': 'Albert Einstein'}; author: Albert Einstein; tags: ['imagination']
+2024-11-08T15:20:26.069552+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:26.070409+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.071431+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': 'd17f92cd-a000-45f9-b9de-56f385a4a6e0', 'quote_text': '“There is no friend as loyal as a book.”', 'author': 'Ernest Hemingway'}; author: Ernest Hemingway; tags: ['books', 'friends', 'novelist-quotes']
+2024-11-08T15:20:26.072431+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.073632+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.074803+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'truth' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'truth'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.075329+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'music' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'music'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.076507+0000 INFO 133402080577216 Row inserted successfully into authors.
+2024-11-08T15:20:26.076971+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.080806+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:26.081429+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '3d2d08d2-7d43-47cf-ba1a-09d0979aae1b', 'quote_text': '“It matters not what someone is born, but what they grow to be.”', 'author': 'J.K. Rowling'}; author: J.K. Rowling; tags: ['dumbledore']
+2024-11-08T15:20:26.082589+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:26.083662+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.083826+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'philosophy' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'philosophy'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.084339+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': '78d2d0a4-b0b6-40a0-ad72-05c25350a8c3', 'quote_text': '“I have never let my schooling interfere with my education.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['education']
+2024-11-08T15:20:26.084478+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.085327+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.087207+0000 WARNING 133402059605696 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Bob Marley' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Bob Marley', 'about': '/author/Bob-Marley'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.087739+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'library' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'library'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.091469+0000 WARNING 133402038634176 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.096154+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:26.097877+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '08b20e44-1a37-411c-8809-6e4010bc8e5b', 'quote_text': '“It is better to be hated for what you are than to be loved for what you are not.”', 'author': 'André Gide'}; author: André Gide; tags: ['life', 'love']
+2024-11-08T15:20:26.099761+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.104301+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'hope' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'hope'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.105117+0000 INFO 133402070091456 Row inserted successfully into authors.
+2024-11-08T15:20:26.107349+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.108851+0000 INFO 133401940068032 Row inserted successfully into tags.
+2024-11-08T15:20:26.109239+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:26.109425+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:26.110230+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '1ef3e12f-fae0-4bc5-a457-f0ec7e1863e8', 'quote_text': '“A lie can travel half way around the world while the truth is putting on its shoes.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['misattributed-mark-twain', 'truth']
+2024-11-08T15:20:26.112865+0000 INFO 133402038634176 Row inserted successfully into authors.
+2024-11-08T15:20:26.113555+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:26.113663+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '9c9fc851-4c5d-4f7f-b8b3-98f4bc43a684', 'quote_text': "“A person's a person, no matter how small.”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['inspirational']
+2024-11-08T15:20:26.114197+0000 INFO 133402059605696 Row inserted successfully into quotes.
+2024-11-08T15:20:26.114553+0000 INFO 133402059605696 scraped: quote: {'quote_uuid': '6797f86d-40ff-47a0-bc75-276d5b1a0e0c', 'quote_text': '“One good thing about music, when it hits you, you feel no pain.”', 'author': 'Bob Marley'}; author: Bob Marley; tags: ['music']
+2024-11-08T15:20:26.115009+0000 WARNING 133401940068032 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Dr. Seuss' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Dr. Seuss', 'about': '/author/Dr-Seuss'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.119217+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:26.119370+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:26.120431+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.120993+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.121451+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:26.123632+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'a22c9ac1-0218-4461-8f4e-69752e1e854d', 'quote_text': "“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”", 'author': 'Elie Wiesel'}; author: Elie Wiesel; tags: ['activism', 'apathy', 'hate', 'indifference', 'inspirational', 'love', 'opposite', 'philosophy']
+2024-11-08T15:20:26.128165+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:26.129919+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:26.130119+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.130735+0000 INFO 133402038634176 Row inserted successfully into quotes.
+2024-11-08T15:20:26.130881+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': 'be9e3050-9fa5-47b7-b85a-acb8bd178d85', 'quote_text': '“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”', 'author': 'Helen Keller'}; author: Helen Keller; tags: ['inspirational']
+2024-11-08T15:20:26.131760+0000 INFO 133402038634176 scraped: quote: {'quote_uuid': '6bed903a-3f47-4772-9505-13d14a52626f', 'quote_text': '“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”', 'author': 'James Baldwin'}; author: James Baldwin; tags: ['love']
+2024-11-08T15:20:26.132913+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:26.136574+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:26.136733+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': 'eef61818-a042-4189-b139-55cd7b3822e8', 'quote_text': '“I have always imagined that Paradise will be a kind of library.”', 'author': 'Jorge Luis Borges'}; author: Jorge Luis Borges; tags: ['books', 'library']
+2024-11-08T15:20:26.136858+0000 INFO 133401940068032 Row inserted successfully into quotes.
+2024-11-08T15:20:26.136988+0000 INFO 133401908610752 Row inserted successfully into tags.
+2024-11-08T15:20:26.138808+0000 INFO 133401940068032 scraped: quote: {'quote_uuid': '3ee440a3-dc0e-443d-84d8-b08f4a764317', 'quote_text': "“I have heard there are troubles of more than one kind. Some come from ahead and some come from behind. But I've bought a big bat. I'm all ready you see. Now my troubles are going to have troubles with me!”", 'author': 'Dr. Seuss'}; author: Dr. Seuss; tags: ['troubles']
+2024-11-08T15:20:26.139482+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.142218+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:26.143395+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.143934+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:26.144812+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.146894+0000 WARNING 133402049119936 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'inspirational' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'inspirational'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.153160+0000 WARNING 133401908610752 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'George R.R. Martin' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'George R.R. Martin', 'about': '/author/George-R-R-Martin'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.154388+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.156018+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'religion' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'religion'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.156536+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'paraphrased' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'paraphrased'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.157917+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:26.159322+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '09466846-e483-4e68-9096-8a728675faee', 'quote_text': "“You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.”", 'author': 'John Lennon'}; author: John Lennon; tags: ['beatles', 'connection', 'dreamers', 'dreaming', 'dreams', 'hope', 'inspirational', 'peace']
+2024-11-08T15:20:26.161267+0000 INFO 133402049119936 Row inserted successfully into authors.
+2024-11-08T15:20:26.162515+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.164624+0000 WARNING 133401950553792 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'yourself' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'yourself'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.168747+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.170794+0000 INFO 133401908610752 Row inserted successfully into quotes.
+2024-11-08T15:20:26.172007+0000 INFO 133401908610752 scraped: quote: {'quote_uuid': '0ce62977-568f-452f-b173-1a6592fec4e3', 'quote_text': '“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.”', 'author': 'George R.R. Martin'}; author: George R.R. Martin; tags: ['books', 'mind']
+2024-11-08T15:20:26.173699+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'love' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'love'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.176167+0000 INFO 133402080577216 Row inserted successfully into authors.
+2024-11-08T15:20:26.178522+0000 INFO 133402049119936 Row inserted successfully into quotes.
+2024-11-08T15:20:26.178672+0000 INFO 133401919096512 Row inserted successfully into tags.
+2024-11-08T15:20:26.178784+0000 INFO 133402049119936 scraped: quote: {'quote_uuid': '2e35e9f5-23ad-48ed-a799-90f0d31e98dd', 'quote_text': '“It is never too late to be what you might have been.”', 'author': 'George Eliot'}; author: George Eliot; tags: ['inspirational']
+2024-11-08T15:20:26.181766+0000 WARNING 133401919096512 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'C.S. Lewis' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'C.S. Lewis', 'about': '/author/C-S-Lewis'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.183811+0000 INFO 133401929582272 Row inserted successfully into tags.
+2024-11-08T15:20:26.184460+0000 INFO 133401950553792 Row inserted successfully into authors.
+2024-11-08T15:20:26.185444+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.185598+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:26.185927+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '8de40356-1fad-4782-ba98-10527d598739', 'quote_text': "“I have not failed. I've just found 10,000 ways that won't work.”", 'author': 'Thomas A. Edison'}; author: Thomas A. Edison; tags: ['edison', 'failure', 'inspirational', 'paraphrased']
+2024-11-08T15:20:26.190059+0000 INFO 133401919096512 Row inserted successfully into quotes.
+2024-11-08T15:20:26.190204+0000 INFO 133401919096512 scraped: quote: {'quote_uuid': '196ff8ce-f9bc-4b8b-8aeb-8e4cd0d32255', 'quote_text': '“I believe in Christianity as I believe that the sun has risen: not only because I see it, but because by it I see everything else.”', 'author': 'C.S. Lewis'}; author: C.S. Lewis; tags: ['christianity', 'faith', 'religion', 'sun']
+2024-11-08T15:20:26.194812+0000 INFO 133401950553792 Row inserted successfully into quotes.
+2024-11-08T15:20:26.194933+0000 INFO 133401950553792 scraped: quote: {'quote_uuid': '6b02330b-9a34-4e7c-8a57-8a3fe4ef5406', 'quote_text': "“Life isn't about finding yourself. Life is about creating yourself.”", 'author': 'George Bernard Shaw'}; author: George Bernard Shaw; tags: ['inspirational', 'life', 'yourself']
+2024-11-08T15:20:26.198467+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:26.199234+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.201688+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:26.215430+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Eleanor Roosevelt' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Eleanor Roosevelt', 'about': '/author/Eleanor-Roosevelt'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.218247+0000 INFO 133402070091456 Row inserted successfully into authors.
+2024-11-08T15:20:26.221368+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:26.221871+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': 'd07de7dc-4e73-4818-a83a-1a60b5b93ca1', 'quote_text': '“I am free of all prejudice. I hate everyone equally. ”', 'author': 'W.C. Fields'}; author: W.C. Fields; tags: ['humor', 'sinister']
+2024-11-08T15:20:26.234011+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:26.234423+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '0c4e2099-bc13-4b72-ae57-47a1669f6bb3', 'quote_text': "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”", 'author': 'Eleanor Roosevelt'}; author: Eleanor Roosevelt; tags: ['misattributed-eleanor-roosevelt']
+2024-11-08T15:20:26.237016+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry '' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': ''}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.238477+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:26.240585+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': '4fcc6d7f-6040-4484-999a-81819a124b76', 'quote_text': '“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”', 'author': 'Friedrich Nietzsche'}; author: Friedrich Nietzsche; tags: ['friendship', 'lack-of-friendship', 'lack-of-love', 'love', 'marriage', 'unhappy-marriage']
+2024-11-08T15:20:26.252514+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'humor' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'humor'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.258647+0000 INFO 133401929582272 Row inserted successfully into authors.
+2024-11-08T15:20:26.259183+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.273674+0000 INFO 133402080577216 Row inserted successfully into tags.
+2024-11-08T15:20:26.278500+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:26.280306+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '1830b26c-d331-4114-90e2-4fc4981d8804', 'quote_text': "“The question isn't who is going to let me; it's who is going to stop me.”", 'author': 'Ayn Rand'}; author: Ayn Rand; tags: ['']
+2024-11-08T15:20:26.281664+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.289722+0000 WARNING 133402080577216 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'simile' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'simile'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.295775+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friends' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friends'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.299840+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'books' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'books'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.311427+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'friendship' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'friendship'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.313081+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'classic' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'classic'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.314554+0000 INFO 133402080577216 Row inserted successfully into authors.
+2024-11-08T15:20:26.325550+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.328800+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'reading' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'reading'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.335878+0000 INFO 133402080577216 Row inserted successfully into quotes.
+2024-11-08T15:20:26.336368+0000 INFO 133402080577216 scraped: quote: {'quote_uuid': '9f0c5402-b732-469e-830e-eacd156747a8', 'quote_text': '“A day without sunshine is like, you know, night.”', 'author': 'Steve Martin'}; author: Steve Martin; tags: ['humor', 'obvious', 'simile']
+2024-11-08T15:20:26.337645+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.339423+0000 WARNING 133401929582272 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'Mark Twain' for key 'authors.PRIMARY'")
+[SQL: INSERT INTO authors (author, about) VALUES (%(author)s, %(about)s)]
+[parameters: {'author': 'Mark Twain', 'about': '/author/Mark-Twain'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.353483+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:26.353784+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'd4165496-8fc1-49f2-b191-3525b110f7a2', 'quote_text': '“Good friends, good books, and a sleepy conscience: this is the ideal life.”', 'author': 'Mark Twain'}; author: Mark Twain; tags: ['books', 'contentment', 'friends', 'friendship', 'life']
+2024-11-08T15:20:26.355445+0000 INFO 133401929582272 Row inserted successfully into quotes.
+2024-11-08T15:20:26.355823+0000 INFO 133401929582272 scraped: quote: {'quote_uuid': '04a72c99-93c5-469c-a371-ddf92756971c', 'quote_text': "“′Classic′ - a book which people praise and don't read.”", 'author': 'Mark Twain'}; author: Mark Twain; tags: ['books', 'classic', 'reading']
+2024-11-08T15:20:26.364770+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.369971+0000 WARNING 133402070091456 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'life' for key 'tags.PRIMARY'")
+[SQL: INSERT INTO tags (tag) VALUES (%(tag)s)]
+[parameters: {'tag': 'life'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-08T15:20:26.382287+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.393048+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.403488+0000 INFO 133402070091456 Row inserted successfully into tags.
+2024-11-08T15:20:26.413246+0000 INFO 133402070091456 Row inserted successfully into authors.
+2024-11-08T15:20:26.423236+0000 INFO 133402070091456 Row inserted successfully into quotes.
+2024-11-08T15:20:26.423502+0000 INFO 133402070091456 scraped: quote: {'quote_uuid': 'c32800fa-6565-4bdd-92cd-670ad6cb7acc', 'quote_text': '“Life is what happens to us while we are making other plans.”', 'author': 'Allen Saunders'}; author: Allen Saunders; tags: ['fate', 'life', 'misattributed-john-lennon', 'planning', 'plans']
+2024-11-08T15:20:26.435839+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.448905+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.459382+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.469684+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.479713+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.490304+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.500236+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.510429+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.520824+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.530722+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.542365+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.553557+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.566439+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.577243+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.588211+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.599269+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.612063+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.624143+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.637041+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.652346+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.667179+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.681783+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.696707+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.710070+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.723089+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.735784+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.748612+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.763831+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.782214+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.797396+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.814572+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.826800+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.836316+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.847044+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.855636+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.865429+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.875008+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.884576+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.895089+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.905885+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.922661+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.936666+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.951575+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.964577+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.978748+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:26.994831+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.008581+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.023041+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.038263+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.050874+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.064306+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.076772+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.092033+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.108559+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.124124+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.138642+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.153020+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.166839+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.179655+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.192431+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.205785+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.221300+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.237448+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.253150+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.267410+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.280930+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.293172+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.305528+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.323681+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.338152+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.354371+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.369309+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.381900+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.394646+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.408107+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.422846+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.438830+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.453829+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.467997+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.480881+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.495800+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.508044+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.520887+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.536098+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.553383+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.566047+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.574812+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.584580+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.594988+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.605174+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.614659+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.623474+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.631846+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.642912+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.656726+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.670927+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.685742+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.701467+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.715544+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.727933+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.740810+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.755438+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.769133+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.784167+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.802868+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.818532+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.829531+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.839659+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.849509+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.859387+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.869685+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.882605+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.892845+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.905037+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.914981+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.924906+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.934769+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.945027+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.954710+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.965649+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.977542+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:27.988496+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.000918+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.015591+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.026366+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.037462+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.049415+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.060225+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.070450+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.080863+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.096122+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.105895+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.116678+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.126597+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.139407+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.149393+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.159462+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.170459+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.180735+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.192578+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.204570+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.215697+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.226451+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.237571+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.249406+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.259496+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.269541+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.279587+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.289817+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.300808+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.311320+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.321712+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.332470+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.342719+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.353107+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.368484+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.382149+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.397211+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.414790+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.430769+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.449393+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.463757+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.473699+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.488170+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.503370+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.517463+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.532841+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.546632+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.555696+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.566231+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.575646+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.590693+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.605167+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.620306+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.633333+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.649488+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.665311+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.680833+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.697263+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.712091+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.726138+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.740352+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.754852+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.769501+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.785825+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.800496+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.815083+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.829937+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.844116+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.859914+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.875168+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.889913+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.906257+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.925433+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.939389+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.952652+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.965254+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.976220+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.985717+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:28.998286+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.010241+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.022060+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.033417+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.043430+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.053475+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.063438+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.073642+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.083770+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.093509+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.104097+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.116542+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.127306+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.138195+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.150223+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.160291+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.171043+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.183075+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.195483+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.206743+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.218356+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.236041+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.250726+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.265882+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.279360+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.294519+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.308349+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.322116+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.336496+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.352107+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.363757+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.375610+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.387736+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.399222+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.413775+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:29.427524+0000 INFO 133402516074624 Row inserted successfully into quotes_tags_link.
+2024-11-08T15:20:30.024126+0000 INFO 133402038634176 Successfully fetched the page
+2024-11-08T15:20:30.034998+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:30.036701+0000 INFO 133401929582272 Successfully fetched the page
+2024-11-08T15:20:30.043488+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:30.075473+0000 INFO 133402070091456 Successfully fetched the page
+2024-11-08T15:20:30.077087+0000 INFO 133401749227200 Successfully fetched the page
+2024-11-08T15:20:30.079039+0000 INFO 133402080577216 Successfully fetched the page
+2024-11-08T15:20:30.080052+0000 INFO 133401940068032 Successfully fetched the page
+2024-11-08T15:20:30.086796+0000 INFO 133401898124992 Successfully fetched the page
+2024-11-08T15:20:30.093573+0000 INFO 133401919096512 Successfully fetched the page
+2024-11-08T15:20:30.115307+0000 INFO 133401908610752 Successfully fetched the page
+2024-11-08T15:20:30.123340+0000 INFO 133402059605696 Successfully fetched the page
+2024-11-08T15:20:30.142176+0000 INFO 133401950553792 Row for Marilyn Monroe updated successfully.
+2024-11-08T15:20:30.144146+0000 INFO 133402049119936 Row for Thomas A. Edison updated successfully.
+2024-11-08T15:20:30.148227+0000 INFO 133401950553792 parsed Marilyn Monroe's about page
+2024-11-08T15:20:30.151193+0000 INFO 133402038634176 Row for Eleanor Roosevelt updated successfully.
+2024-11-08T15:20:30.152776+0000 INFO 133402049119936 parsed Thomas A. Edison's about page
+2024-11-08T15:20:30.158641+0000 INFO 133402038634176 parsed Eleanor Roosevelt's about page
+2024-11-08T15:20:30.160027+0000 INFO 133401929582272 Row for J.K. Rowling updated successfully.
+2024-11-08T15:20:30.161557+0000 INFO 133401940068032 Row for Steve Martin updated successfully.
+2024-11-08T15:20:30.179634+0000 INFO 133401929582272 parsed J.K. Rowling's about page
+2024-11-08T15:20:30.183230+0000 INFO 133401940068032 parsed Steve Martin's about page
+2024-11-08T15:20:30.190320+0000 INFO 133401898124992 Row for Douglas Adams updated successfully.
+2024-11-08T15:20:30.202823+0000 INFO 133401898124992 parsed Douglas Adams's about page
+2024-11-08T15:20:30.205788+0000 INFO 133402070091456 Row for Albert Einstein updated successfully.
+2024-11-08T15:20:30.206141+0000 INFO 133402070091456 parsed Albert Einstein's about page
+2024-11-08T15:20:30.211270+0000 INFO 133401908610752 Row for Dr. Seuss updated successfully.
+2024-11-08T15:20:30.212427+0000 INFO 133401919096512 Row for Bob Marley updated successfully.
+2024-11-08T15:20:30.214298+0000 INFO 133401908610752 parsed Dr. Seuss's about page
+2024-11-08T15:20:30.215983+0000 INFO 133401749227200 Row for Elie Wiesel updated successfully.
+2024-11-08T15:20:30.216221+0000 INFO 133401919096512 parsed Bob Marley's about page
+2024-11-08T15:20:30.218434+0000 INFO 133401749227200 parsed Elie Wiesel's about page
+2024-11-08T15:20:30.223686+0000 INFO 133402080577216 Row for Jane Austen updated successfully.
+2024-11-08T15:20:30.223879+0000 INFO 133402080577216 parsed Jane Austen's about page
+2024-11-08T15:20:30.225560+0000 INFO 133402059605696 Row for André Gide updated successfully.
+2024-11-08T15:20:30.225701+0000 INFO 133402059605696 parsed André Gide's about page
+2024-11-08T15:20:30.745421+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:30.747215+0000 INFO 133402038634176 Successfully fetched the page
+2024-11-08T15:20:30.764109+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:30.794883+0000 INFO 133402038634176 Row for Allen Saunders updated successfully.
+2024-11-08T15:20:30.795474+0000 INFO 133402038634176 parsed Allen Saunders's about page
+2024-11-08T15:20:30.802660+0000 INFO 133401950553792 Row for Friedrich Nietzsche updated successfully.
+2024-11-08T15:20:30.803135+0000 INFO 133401950553792 parsed Friedrich Nietzsche's about page
+2024-11-08T15:20:30.808046+0000 INFO 133401898124992 Successfully fetched the page
+2024-11-08T15:20:30.810076+0000 INFO 133401929582272 Successfully fetched the page
+2024-11-08T15:20:30.816344+0000 INFO 133402049119936 Row for Mark Twain updated successfully.
+2024-11-08T15:20:30.816748+0000 INFO 133402049119936 parsed Mark Twain's about page
+2024-11-08T15:20:30.831629+0000 INFO 133402070091456 Successfully fetched the page
+2024-11-08T15:20:30.834361+0000 INFO 133401919096512 Successfully fetched the page
+2024-11-08T15:20:30.837134+0000 INFO 133402059605696 Successfully fetched the page
+2024-11-08T15:20:30.840621+0000 INFO 133402080577216 Successfully fetched the page
+2024-11-08T15:20:30.844709+0000 INFO 133401908610752 Successfully fetched the page
+2024-11-08T15:20:30.847660+0000 INFO 133401749227200 Successfully fetched the page
+2024-11-08T15:20:30.920548+0000 INFO 133401929582272 Row for Pablo Neruda updated successfully.
+2024-11-08T15:20:30.921101+0000 INFO 133401929582272 parsed Pablo Neruda's about page
+2024-11-08T15:20:30.925304+0000 INFO 133401940068032 Successfully fetched the page
+2024-11-08T15:20:30.927619+0000 INFO 133401898124992 Row for Mother Teresa updated successfully.
+2024-11-08T15:20:30.928148+0000 INFO 133401898124992 parsed Mother Teresa's about page
+2024-11-08T15:20:30.940928+0000 INFO 133402070091456 Row for Garrison Keillor updated successfully.
+2024-11-08T15:20:30.942750+0000 INFO 133402070091456 parsed Garrison Keillor's about page
+2024-11-08T15:20:30.953099+0000 INFO 133401919096512 Row for Charles M. Schulz updated successfully.
+2024-11-08T15:20:30.953594+0000 INFO 133401919096512 parsed Charles M. Schulz's about page
+2024-11-08T15:20:30.969841+0000 INFO 133402059605696 Row for George Eliot updated successfully.
+2024-11-08T15:20:30.970123+0000 INFO 133402059605696 parsed George Eliot's about page
+2024-11-08T15:20:30.985940+0000 INFO 133401908610752 Row for Jim Henson updated successfully.
+2024-11-08T15:20:30.986423+0000 INFO 133401908610752 parsed Jim Henson's about page
+2024-11-08T15:20:30.992337+0000 INFO 133401940068032 Row for Ralph Waldo Emerson updated successfully.
+2024-11-08T15:20:30.992748+0000 INFO 133401940068032 parsed Ralph Waldo Emerson's about page
+2024-11-08T15:20:30.996011+0000 INFO 133402080577216 Row for Jorge Luis Borges updated successfully.
+2024-11-08T15:20:30.996546+0000 INFO 133401749227200 Row for William Nicholson updated successfully.
+2024-11-08T15:20:30.997162+0000 INFO 133402080577216 parsed Jorge Luis Borges's about page
+2024-11-08T15:20:30.997644+0000 INFO 133401749227200 parsed William Nicholson's about page
+2024-11-08T15:20:31.567048+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:31.592861+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:31.594548+0000 INFO 133402049119936 Row for Martin Luther King Jr. updated successfully.
+2024-11-08T15:20:31.594946+0000 INFO 133402049119936 parsed Martin Luther King Jr.'s about page
+2024-11-08T15:20:31.623773+0000 INFO 133401950553792 Row for C.S. Lewis updated successfully.
+2024-11-08T15:20:31.624303+0000 INFO 133401950553792 parsed C.S. Lewis's about page
+2024-11-08T15:20:31.636302+0000 INFO 133402038634176 Successfully fetched the page
+2024-11-08T15:20:31.663307+0000 INFO 133402038634176 Row for George R.R. Martin updated successfully.
+2024-11-08T15:20:31.663831+0000 INFO 133402038634176 parsed George R.R. Martin's about page
+2024-11-08T15:20:31.759540+0000 INFO 133401749227200 Successfully fetched the page
+2024-11-08T15:20:31.761134+0000 INFO 133401908610752 Successfully fetched the page
+2024-11-08T15:20:31.776271+0000 INFO 133401919096512 Successfully fetched the page
+2024-11-08T15:20:31.777836+0000 INFO 133401929582272 Successfully fetched the page
+2024-11-08T15:20:31.790439+0000 INFO 133402080577216 Successfully fetched the page
+2024-11-08T15:20:31.792242+0000 INFO 133401940068032 Successfully fetched the page
+2024-11-08T15:20:31.796047+0000 INFO 133402059605696 Successfully fetched the page
+2024-11-08T15:20:31.798164+0000 INFO 133402070091456 Successfully fetched the page
+2024-11-08T15:20:31.817139+0000 INFO 133401898124992 Successfully fetched the page
+2024-11-08T15:20:31.871900+0000 INFO 133401908610752 Row for Helen Keller updated successfully.
+2024-11-08T15:20:31.872433+0000 INFO 133401908610752 parsed Helen Keller's about page
+2024-11-08T15:20:31.888187+0000 INFO 133401749227200 Row for Suzanne Collins updated successfully.
+2024-11-08T15:20:31.888798+0000 INFO 133401919096512 Row for Stephenie Meyer updated successfully.
+2024-11-08T15:20:31.893397+0000 INFO 133401749227200 parsed Suzanne Collins's about page
+2024-11-08T15:20:31.895999+0000 INFO 133401919096512 parsed Stephenie Meyer's about page
+2024-11-08T15:20:31.908883+0000 INFO 133401940068032 Row for George Bernard Shaw updated successfully.
+2024-11-08T15:20:31.917646+0000 INFO 133401929582272 Row for James Baldwin updated successfully.
+2024-11-08T15:20:31.919831+0000 INFO 133401940068032 parsed George Bernard Shaw's about page
+2024-11-08T15:20:31.923657+0000 INFO 133401929582272 parsed James Baldwin's about page
+2024-11-08T15:20:31.934672+0000 INFO 133402080577216 Row for Charles Bukowski updated successfully.
+2024-11-08T15:20:31.934886+0000 INFO 133402080577216 parsed Charles Bukowski's about page
+2024-11-08T15:20:31.937921+0000 INFO 133402070091456 Row for Alexandre Dumas fils updated successfully.
+2024-11-08T15:20:31.938096+0000 INFO 133402070091456 parsed Alexandre Dumas fils's about page
+2024-11-08T15:20:31.941801+0000 INFO 133402059605696 Row for Ernest Hemingway updated successfully.
+2024-11-08T15:20:31.941962+0000 INFO 133402059605696 parsed Ernest Hemingway's about page
+2024-11-08T15:20:31.944036+0000 INFO 133401898124992 Row for Haruki Murakami updated successfully.
+2024-11-08T15:20:31.944183+0000 INFO 133401898124992 parsed Haruki Murakami's about page
+2024-11-08T15:20:32.218548+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:32.228308+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:32.260751+0000 INFO 133402049119936 Row for J.R.R. Tolkien updated successfully.
+2024-11-08T15:20:32.261398+0000 INFO 133402049119936 parsed J.R.R. Tolkien's about page
+2024-11-08T15:20:32.268864+0000 INFO 133401950553792 Row for Alfred Tennyson updated successfully.
+2024-11-08T15:20:32.269367+0000 INFO 133401950553792 parsed Alfred Tennyson's about page
+2024-11-08T15:20:32.277312+0000 INFO 133402038634176 Successfully fetched the page
+2024-11-08T15:20:32.326032+0000 INFO 133402038634176 Row for Terry Pratchett updated successfully.
+2024-11-08T15:20:32.326353+0000 INFO 133402038634176 parsed Terry Pratchett's about page
+2024-11-08T15:20:32.482156+0000 INFO 133401908610752 Successfully fetched the page
+2024-11-08T15:20:32.507656+0000 INFO 133401908610752 Row for J.D. Salinger updated successfully.
+2024-11-08T15:20:32.508137+0000 INFO 133401908610752 parsed J.D. Salinger's about page
+2024-11-08T15:20:32.519883+0000 INFO 133401940068032 Successfully fetched the page
+2024-11-08T15:20:32.527762+0000 INFO 133401749227200 Successfully fetched the page
+2024-11-08T15:20:32.530297+0000 INFO 133401919096512 Successfully fetched the page
+2024-11-08T15:20:32.540173+0000 INFO 133401898124992 Successfully fetched the page
+2024-11-08T15:20:32.547300+0000 INFO 133402070091456 Successfully fetched the page
+2024-11-08T15:20:32.548842+0000 INFO 133402059605696 Successfully fetched the page
+2024-11-08T15:20:32.570198+0000 INFO 133402080577216 Successfully fetched the page
+2024-11-08T15:20:32.571672+0000 INFO 133401929582272 Successfully fetched the page
+2024-11-08T15:20:32.624307+0000 INFO 133401940068032 Row for W.C. Fields updated successfully.
+2024-11-08T15:20:32.624794+0000 INFO 133401940068032 parsed W.C. Fields's about page
+2024-11-08T15:20:32.638044+0000 INFO 133401898124992 Row for Khaled Hosseini updated successfully.
+2024-11-08T15:20:32.639064+0000 INFO 133401749227200 Row for George Carlin updated successfully.
+2024-11-08T15:20:32.641165+0000 INFO 133401898124992 parsed Khaled Hosseini's about page
+2024-11-08T15:20:32.644329+0000 INFO 133401749227200 parsed George Carlin's about page
+2024-11-08T15:20:32.659695+0000 INFO 133401919096512 Row for John Lennon updated successfully.
+2024-11-08T15:20:32.660217+0000 INFO 133401919096512 parsed John Lennon's about page
+2024-11-08T15:20:32.665551+0000 INFO 133402059605696 Row for E.E. Cummings updated successfully.
+2024-11-08T15:20:32.666031+0000 INFO 133402059605696 parsed E.E. Cummings's about page
+2024-11-08T15:20:32.672284+0000 INFO 133402070091456 Row for J.M. Barrie updated successfully.
+2024-11-08T15:20:32.672559+0000 INFO 133402070091456 parsed J.M. Barrie's about page
+2024-11-08T15:20:32.687068+0000 INFO 133402080577216 Row for Jimi Hendrix updated successfully.
+2024-11-08T15:20:32.687373+0000 INFO 133402080577216 parsed Jimi Hendrix's about page
+2024-11-08T15:20:32.689568+0000 INFO 133401929582272 Row for Ayn Rand updated successfully.
+2024-11-08T15:20:32.689815+0000 INFO 133401929582272 parsed Ayn Rand's about page
+2024-11-08T15:20:32.921416+0000 INFO 133402049119936 Successfully fetched the page
+2024-11-08T15:20:32.923271+0000 INFO 133401950553792 Successfully fetched the page
+2024-11-08T15:20:32.961128+0000 INFO 133402049119936 Row for Harper Lee updated successfully.
+2024-11-08T15:20:32.961578+0000 INFO 133402049119936 parsed Harper Lee's about page
+2024-11-08T15:20:32.963994+0000 INFO 133401950553792 Row for Madeleine L'Engle updated successfully.
+2024-11-08T15:20:32.964393+0000 INFO 133401950553792 parsed Madeleine L'Engle's about page
+2024-11-08T15:20:32.977665+0000 INFO 133402516074624 Data exported to ./data/quotes.csv.csv
+2024-11-08T15:20:32.981458+0000 INFO 133402516074624 Data exported to ./data/quote_tag_link.csv
+2024-11-08T15:20:32.983800+0000 INFO 133402516074624 Data exported to ./data/tags.csv
+2024-11-08T15:20:32.991760+0000 INFO 133402516074624 Data exported to ./data/authors.csv
+2024-11-08T15:20:33.001494+0000 INFO 133402516074624 Data exported to ./data/json_output.json

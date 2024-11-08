@@ -1,0 +1,18 @@
+2024-11-08T15:26:21.561035+0000 INFO 125654875635840 Created database engine for db quotes, user root, address localhost:
+2024-11-08T15:26:21.615031+0000 INFO 125654875635840 configuration extracted: {'_comment1': "all paths must not have '/' in the end", 'url': 'https://quotes.toscrape.com/', 'pagesnum': 10, '_comment2': 'i.e. data as csv and json output', 'save_data_path': './data', 'logs_path': './logs', '_comment3': '.csv and .json is added automatically. Specify ONLY filename here', 'csv_filename': 'csv_output', 'json_filename': 'json_output', 'db_name': 'quotes', 'db_username': 'root', 'db_password': '', 'db_ip': 'localhost', 'db_port': '', 'db_enable': 1}
+2024-11-08T15:26:21.627182+0000 INFO 125654875635840 Successfully fetched the page
+2024-11-08T15:26:21.632958+0000 INFO 125654875635840 Data exported to ./data/test.json.json
+2024-11-08T15:26:21.636361+0000 INFO 125654875635840 Data exported to ./data/test.csv
+2024-11-08T15:26:21.643398+0000 INFO 125654875635840 All tables truncated successfully.
+2024-11-08T15:26:21.643873+0000 INFO 125654875635840 Database initialized successfully with new records.
+2024-11-08T15:26:21.646462+0000 ERROR 125654875635840 Tables were not created successfully.
+2024-11-08T15:26:21.650846+0000 INFO 125654875635840 Database schema initialized successfully.
+2024-11-08T15:26:21.652205+0000 INFO 125654875635840 Tables in the database: <MagicMock name='engine._sa_instance_state.get_table_names()' id='125654447250784'>
+2024-11-08T15:26:21.652684+0000 ERROR 125654875635840 Not all required tables were created.
+2024-11-08T15:26:21.670658+0000 ERROR 125654875635840 Error initializing database schema: ()
+2024-11-08T15:26:21.673872+0000 INFO 125654875635840 Row inserted successfully into test_table.
+2024-11-08T15:26:21.678439+0000 ERROR 125654875635840 Error inserting row into test_table: ()
+2024-11-08T15:26:21.680782+0000 ERROR 125654875635840 Tables do not exist. Cannot insert row.
+2024-11-08T15:26:21.684347+0000 INFO 125654875635840 2 records inserted successfully.
+2024-11-08T15:26:21.687338+0000 ERROR 125654875635840 Error inserting records: ()
+2024-11-08T15:26:21.987727+0000 INFO 125654875635840 Successfully fetched the page
