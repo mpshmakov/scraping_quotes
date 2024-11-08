@@ -40,7 +40,7 @@ jobs:
           pip --version
           pip install -r requirements.txt
       - name: Run Scrape Books Script
-        run: python3 -m scripts.scraping_books
+        run: python3 -m scripts.scraping_quotes --db_enable 0
       - name: Commit and push loguru retention changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
