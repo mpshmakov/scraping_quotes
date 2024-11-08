@@ -8,10 +8,10 @@
   "_comment3": ".csv and .json is added automatically. Specify ONLY filename here",
   "csv_filename": "csv_output",
   "json_filename": "json_output",
-  "db_name": "quotes",
-  "db_username": "root",
-  "db_password": "",
-  "db_ip": "localhost",
-  "db_port": "",
+  "db_name": "sql8743567",
+  "db_username": "sql8743567",
+  "db_password": "sJNWeYhhj7",
+  "db_ip": "sql8.freemysqlhosting.net",
+  "db_port": "3306",
   "db_enable": 1
 }
