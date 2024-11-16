@@ -1,8 +1,0 @@
-2024-10-30T17:49:33.514033+0000 INFO 130030466859136 Created database engine for db quotes, user root, address localhost:
-2024-10-30T17:49:33.526066+0000 INFO 130030466859136 configuration extracted: 
-2024-10-30T17:49:33.536634+0000 INFO 130030466859136 Database schema initialized successfully.
-2024-10-30T17:49:33.538018+0000 INFO 130030466859136 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
-2024-10-30T17:49:33.538159+0000 INFO 130030466859136 All required tables have been created successfully.
-2024-10-30T17:49:33.552254+0000 INFO 130030466859136 All tables truncated successfully.
-2024-10-30T17:49:33.552665+0000 INFO 130030466859136 Database initialized successfully with new records.
-2024-10-30T17:49:34.401450+0000 INFO 130030466859136 Successfully fetched the page
