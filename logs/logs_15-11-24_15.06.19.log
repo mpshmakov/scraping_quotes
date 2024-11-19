@@ -1,0 +1,6 @@
+2024-11-15T15:06:20.096457+0000 INFO 132203191554176 Created database engine for db freedb_quotes_db_test, user freedb_smthuser, address sql.freedb.tech:3306
+2024-11-15T15:06:20.111106+0000 INFO 132203191554176 configuration extracted: {'_comment1': "all paths must not have '/' in the end", 'url': 'https://quotes.toscrape.com/', 'pagesnum': 10, '_comment2': 'i.e. data as csv and json output', 'save_data_path': './data', 'logs_path': './logs', '_comment3': '.csv and .json is added automatically. Specify ONLY filename here', 'csv_filename': 'csv_output', 'json_filename': 'json_output', 'db_name': 'freedb_quotes_db_test', 'db_username': 'freedb_smthuser', 'db_password': '?8@s?K6hSFCaEyz', 'db_ip': 'sql.freedb.tech', 'db_port': '3306', 'db_enable': 1}
+2024-11-15T15:06:20.828601+0000 INFO 132203191554176 Successfully fetched the page
+2024-11-15T15:06:20.836669+0000 INFO 132203191554176 page structure hasn't changed.
+2024-11-15T15:06:21.687518+0000 INFO 132203191554176 Successfully fetched the page
+2024-11-15T15:06:21.704495+0000 ERROR 132203191554176 An unexpected error occurred during database initialization: Connection.__init__() got an unexpected keyword argument 'K6hSFCaEyz@sql.freedb.tech:3306/freedb_quotes_db_test?charset'

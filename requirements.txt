@@ -7,3 +7,6 @@ sqlalchemy
 loguru
 tqdm
 pymysql
+fastapi==0.113.0
+uvicorn
+python-multipart

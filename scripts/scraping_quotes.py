@@ -43,6 +43,8 @@ import json
 # 1. append quotes lists to each other
 # 
 
+max_workers = 5 # had to add this because current db supposrts max 5 connections
+
 pbar_quotes = tqdm(total=100, desc="quotes")
 pbar_tags = tqdm(total=138, desc="tags")
 pbar_authors = tqdm(total=50, desc="authors")
@@ -205,7 +207,7 @@ def check_structure_changes(response):
 
 def scrape_quotes(quotes_pages_urls):
             
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         quotes_map = executor.map(quote_page_worker, quotes_pages_urls)
 
 
@@ -246,7 +248,7 @@ def scrape_quotes(quotes_pages_urls):
         authors_list.append({"author":author, "about":authors[author]})
 
     # authors
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         authors_map = executor.map(authors_worker, authors_list)
 
     authors = []

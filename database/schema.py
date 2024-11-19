@@ -90,6 +90,19 @@ class QuotesTagsLink(Base):
         self.quote_id = quote_id
         self.tag = tag
 
+class Users(Base):
+
+    __tablename__ = "users"
+
+    id = Column(String(36), primary_key=True)
+    username = Column(String(30), unique=True)
+    password = Column(TEXT, nullable=False)
+
+    def __init__(self, id:str, username:str, password:str):
+        self.id = id
+        self.username = username
+        self.password = password
+
 
 class TestTable(Base):
     """

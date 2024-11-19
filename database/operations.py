@@ -12,7 +12,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import db_enable
 if db_enable == 1:
     from . import Base, Session, engine
-from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags
+from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users
 
 import inspect as ins
 
@@ -34,6 +34,7 @@ def initialize_schema():
         Table(Authors.__tablename__, metadata, *[c.copy() for c in Authors.__table__.columns],)
         Table(Quotes.__tablename__, metadata, *[c.copy() for c in Quotes.__table__.columns],)
         Table(QuotesTagsLink.__tablename__, metadata, *[c.copy() for c in QuotesTagsLink.__table__.columns],)
+        Table(Users.__tablename__, metadata, *[c.copy() for c in Users.__table__.columns],)
         Table(TestTable.__tablename__, metadata, *[c.copy() for c in TestTable.__table__.columns],)
 
 
@@ -133,7 +134,7 @@ def insert_records(session, records, commit=True):
         raise
 
 
-def initDB():
+def initDB(truncate = True):
     """
     Initialize the database by creating schema, truncating existing tables, and inserting initial records.
 
@@ -156,6 +157,8 @@ def initDB():
             logger.error("Tables were not created successfully.")
             return
 
+        if (truncate == False):
+            return
         session = Session()
         try:
             # Truncate existing tables
@@ -244,3 +247,27 @@ def updateAuthorRowAboutValue(author: str, about_text: str):
         raise
     finally:
         session.close()
+
+def executeOrmStatement(statement):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+
+    session = Session()
+    try:
+        res = session.execute(statement)
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error executing statement '{statement}': {str(e)}")
+        raise        
+
+    return res    
+
+def getModelFromTablename(tablename):
+     for c in Base._decl_class_registry.values():
+        if hasattr(c, '__tablename__') and c.__tablename__ == tablename:
+            return c

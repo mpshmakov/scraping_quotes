@@ -30,3 +30,5 @@ tests
 specify number of quotes to scrape
 
 fast api for db
+
+get notied when user registers, logins etc

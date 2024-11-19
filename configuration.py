@@ -17,7 +17,7 @@ import json
 # db_filename = str()
 import argparse
 
-def get_configuration() -> json:
+def get_configuration(var: str | list[str] = None) -> json:
     # Open and read the JSON file
     with open('configuration.json', 'r') as file:
         configuration = json.load(file)
@@ -42,5 +42,13 @@ def get_configuration() -> json:
         # print(arg, value)
 
 
-
+    if var is not None:
+        if isinstance(var, list):
+            res = []
+            for v in var:
+                res.append(configuration[v])
+            return tuple(res)
+        else:
+            return configuration[var]
+    
     return configuration
