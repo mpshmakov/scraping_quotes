@@ -3,7 +3,8 @@
 This module defines the SQLAlchemy ORM models for the database tables.
 """
 
-from sqlalchemy import DECIMAL, CheckConstraint, Column, Integer, String, TEXT, ForeignKey
+from datetime import datetime
+from sqlalchemy import DECIMAL, CheckConstraint, Column, DateTime, Integer, String, TEXT, ForeignKey, Date, func
 from sqlalchemy.orm import declarative_base, validates, relationship
 
 Base = declarative_base()
@@ -97,11 +98,12 @@ class Users(Base):
     id = Column(String(36), primary_key=True)
     username = Column(String(30), unique=True)
     password = Column(TEXT, nullable=False)
-
+    time_created = Column(DateTime(timezone=True), server_default=func.now())
+    time_updated = Column(DateTime(timezone=True), onupdate=func.now())
     def __init__(self, id:str, username:str, password:str):
         self.id = id
         self.username = username
-        self.password = password
+        self.password = password    
 
 
 class TestTable(Base):
