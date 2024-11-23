@@ -12,6 +12,7 @@ from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
 from secret import SECRET_KEY, ENCODING_ALG as ALGORITHM
+from notifications import email
 
 class OAuth2PasswordRequestJSON(BaseModel):
     # grant_type: str
@@ -63,7 +64,9 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestJSON):
         print('before res')
         res = await client.post('http://127.0.0.1:8000/auth/token', json={"username": user.Users.username, "id": user.Users.id, "access": user.Users.access})
         print("res", res.json())
+        email.login_email_notification(form_data.username)
         return res.json()
+    
 
 @router.post("/token", response_model=Token)
 async def generate_token(user: createToken):
