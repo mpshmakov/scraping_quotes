@@ -15,15 +15,6 @@ from sqlalchemy.exc import SQLAlchemyError
 from tqdm import tqdm
 import json
 
-
-# reminder:
-# create 4 dataframes
-# insert all tables into 1 json
-# 4 csv files for each table
-# insert data into db while parsing it
-
-# can't seem to handle sqlalchemy.exc.IntegrityError exceptions so i insert authors and tags outside of quotes_worker
-
 #*
 # quote_page_worker:
 #
@@ -43,7 +34,7 @@ import json
 # 1. append quotes lists to each other
 # 
 
-max_workers = 5 # had to add this because current db supposrts max 5 connections
+max_workers = 4 # had to add this because current db supposrts max 5 connections (1 connection reserved for api)
 
 pbar_quotes = tqdm(total=100, desc="quotes")
 pbar_tags = tqdm(total=138, desc="tags")

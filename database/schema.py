@@ -98,12 +98,15 @@ class Users(Base):
     id = Column(String(36), primary_key=True)
     username = Column(String(30), unique=True)
     password = Column(TEXT, nullable=False)
+    access = Column(Integer, nullable=False)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
     time_updated = Column(DateTime(timezone=True), onupdate=func.now())
-    def __init__(self, id:str, username:str, password:str):
+    def __init__(self, id:str, username:str, password:str, access:int):
         self.id = id
         self.username = username
-        self.password = password    
+        self.password = password   
+        assert access >= 0 and access <= 1, "Access must be either 0 or 1."
+        self.access = access 
 
 
 class TestTable(Base):

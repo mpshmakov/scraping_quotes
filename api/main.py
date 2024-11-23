@@ -1,15 +1,19 @@
+from datetime import timedelta
 import json
 from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException
+import httpx
 from starlette import status
+import requests
+
 
 from pydantic import BaseModel
-from sqlalchemy import select
+from sqlalchemy import select, update
 import uvicorn
 from api import auth
 from configuration import get_configuration
-from database.operations import executeOrmStatement, getModelFromTablename
-from database.schema import Authors, Quotes, Tags, QuotesTagsLink
+from database.operations import executeOrmStatement, getModelFromTablename, toggleAccessForUser
+from database.schema import Authors, Quotes, Tags, QuotesTagsLink, Users
 from fastapi.security import OAuth2PasswordBearer
 
 app = FastAPI()
@@ -22,10 +26,32 @@ user_dependency = Annotated[dict, Depends(auth.get_current_user)]
 # async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
 #     return {"token": token}
 
-@app.get("/")
-def root(user: user_dependency):
+def check_auth_and_access(user):
+    print("check",user)
     if user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication failed.')
+    if user['access'] == 0:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Access check failed.")
+
+@app.patch("/user/toggle_access")
+async def toggle_current_user_access(user: user_dependency):
+    if user is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication failed.')    
+    print(user)
+    access = toggleAccessForUser(user['id'])
+    async with httpx.AsyncClient() as client:
+        print('before res')
+        res = await client.post('http://127.0.0.1:8000/auth/token', json={"username":user['username'], "id":user['id'], "access":access})
+        print("res", res.json())
+        res = res.json()
+        res["access"] = access
+        return res
+
+    
+
+@app.get("/")
+def root(user: user_dependency):
+    check_auth_and_access(user)
     return {"User": user}
 
 # get data from db
@@ -40,7 +66,9 @@ def root(user: user_dependency):
     # return quotes
 
 @app.get("/quotes")
-def get_quotes():
+def get_quotes(user: user_dependency):
+    print(user)
+    check_auth_and_access(user)
     res = executeOrmStatement(select(Quotes))
     quotes = []
     for quote in res.all():
@@ -49,7 +77,8 @@ def get_quotes():
     return quotes
 
 @app.get("/tags")
-def get_tags():
+def get_tags(user: user_dependency):
+    check_auth_and_access(user)
     res = executeOrmStatement(select(Tags))
     tags = []
     for tag in res.all():
@@ -58,7 +87,8 @@ def get_tags():
     return tags
 
 @app.get("/quotes_tags_link")
-def get_quotes_tags_link():
+def get_quotes_tags_link(user: user_dependency):
+    check_auth_and_access(user)
     res = executeOrmStatement(select(QuotesTagsLink))
     quotes_tags_link = []
     for link in res.all():
@@ -67,7 +97,8 @@ def get_quotes_tags_link():
     return quotes_tags_link
 
 @app.get("/authors")
-def get_authors():
+def get_authors(user: user_dependency):
+    check_auth_and_access(user)
     res = executeOrmStatement(select(Authors))
     authors = []
     for author in res.all():

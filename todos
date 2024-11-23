@@ -31,4 +31,6 @@ specify number of quotes to scrape
 
 fast api for db
 
+change auth from oauthbearer to my own implementation. (i don't need the frontend form functionality)
+
 get notied when user registers, logins etc

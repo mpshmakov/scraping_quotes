@@ -1,0 +1,5 @@
+2024-11-22T18:10:24.951934+0000 INFO 137453439737984 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-11-22T18:10:25.744874+0000 INFO 137453439737984 Database schema initialized successfully.
+2024-11-22T18:10:25.841191+0000 INFO 137453439737984 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-11-22T18:10:25.841567+0000 INFO 137453439737984 All required tables have been created successfully.
+2024-11-22T18:10:32.746022+0000 ERROR 137453439737984 Error toggling user's access statement. user's id: '0': Multiple rows were found when exactly one was required

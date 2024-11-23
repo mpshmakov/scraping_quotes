@@ -263,11 +263,45 @@ def executeOrmStatement(statement):
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error executing statement '{statement}': {str(e)}")
-        raise        
+        # raise        
 
-    return res    
+    return res   
+
+def toggleAccessForUser(user_id):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+
+    access = 0
+    session = Session()
+    try:
+        res = session.query(Users).filter(Users.id == user_id).scalar()
+        if res is None:
+            logger.error(f"User with id {user_id} does not exist.")
+            return
+        print(user_id)
+        # print(res[0].id, res[1].id)
+        b = not bool(res.access)
+        print("b", b)
+        res.access = int(b)
+        access = int(b)
+        print("access = ", access)
+        # print(res)
+        session.flush()
+        session.commit()
+        
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error toggling user's access statement. user's id: '{user_id}': {str(e)}")
+        raise
+    return access
+
 
 def getModelFromTablename(tablename):
-     for c in Base._decl_class_registry.values():
+    for c in Base._decl_class_registry.values():
         if hasattr(c, '__tablename__') and c.__tablename__ == tablename:
             return c
