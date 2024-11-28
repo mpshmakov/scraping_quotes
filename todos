@@ -44,3 +44,5 @@ implement payment part
 explore oauth2 scopes instead of access field
 
 exception handling for notifications
+
+change username to email everywhere

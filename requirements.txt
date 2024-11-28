@@ -10,3 +10,6 @@ pymysql
 fastapi==0.113.0
 uvicorn
 python-multipart
+httpx
+python-jose
+passlib[bcrypt]

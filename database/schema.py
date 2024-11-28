@@ -96,7 +96,7 @@ class Users(Base):
     __tablename__ = "users"
 
     id = Column(String(36), primary_key=True)
-    username = Column(String(30), unique=True)
+    email = Column(String(30), unique=True)
     password = Column(TEXT, nullable=False)
     access = Column(Integer, nullable=False)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
@@ -104,9 +104,9 @@ class Users(Base):
 
     apilogs = relationship("ApiLogs", back_populates='users')
 
-    def __init__(self, id:str, username:str, password:str, access:int):
+    def __init__(self, id:str, email:str, password:str, access:int):
         self.id = id
-        self.username = username
+        self.email = email
         self.password = password   
         assert access >= 0 and access <= 1, "Access must be either 0 or 1."
         self.access = access 
@@ -116,17 +116,17 @@ class ApiLogs(Base):
     __tablename__ = "apilogs"
 
     id = Column(String(36), primary_key=True)
-    username = Column(String(30), ForeignKey('users.username'))
+    email = Column(String(30), ForeignKey('users.email'))
     tag = Column(String(20), nullable=False)
     message = Column(TEXT, nullable=False)
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
 
     users = relationship("Users", back_populates='apilogs')
 
-    def __init__(self, id:str, username:str, tag:str, message:str):
+    def __init__(self, id:str, email:str, tag:str, message:str):
         self.id = id
-        self.username = username
-        print("inside class", username)
+        self.email = email
+        print("inside class", email)
         self.tag = tag
         self.message = message
 
