@@ -15,6 +15,7 @@ from configuration import get_configuration
 from database.operations import executeOrmStatement, getModelFromTablename, toggleAccessForUser
 from database.schema import Authors, Quotes, Tags, QuotesTagsLink, Users
 from fastapi.security import OAuth2PasswordBearer
+from database.apilogclass import log
 
 app = FastAPI()
 app.include_router(auth.router)
@@ -45,6 +46,7 @@ async def toggle_current_user_access(user: user_dependency):
         print("res", res.json())
         res = res.json()
         res["access"] = access
+        log.info(user['username'], f"Set user's access to {access}")
         return res
 
     
@@ -73,7 +75,7 @@ def get_quotes(user: user_dependency):
     quotes = []
     for quote in res.all():
         quotes.append({"quote_uuid" : quote.Quotes.id, "quote_text" :quote.Quotes.text, "quote_author" :quote.Quotes.author})
-
+    log.info(user['username'], "Retrieved quotes.")
     return quotes
 
 @app.get("/tags")
@@ -83,7 +85,7 @@ def get_tags(user: user_dependency):
     tags = []
     for tag in res.all():
         tags.append({"0" : tag.Tags.tag}) # matching how to_dict converts dataframe to dict
-
+    log.info(user['username'], "Retrieved tags.")    
     return tags
 
 @app.get("/quotes_tags_link")
@@ -93,7 +95,7 @@ def get_quotes_tags_link(user: user_dependency):
     quotes_tags_link = []
     for link in res.all():
         quotes_tags_link.append({"quote_uuid" : link.QuotesTagsLink.quote_id, "tag" : link.QuotesTagsLink.tag}) # matching how to_dict converts dataframe to dict
-
+    log.info(user['username'], "Retrieved quotes_tags_link.")
     return quotes_tags_link
 
 @app.get("/authors")
@@ -103,7 +105,7 @@ def get_authors(user: user_dependency):
     authors = []
     for author in res.all():
         authors.append({"author" : author.Authors.author, "about" : author.Authors.about}) 
-
+    log.info(user['username'], "Retrieved authors.")
     return authors
 
 

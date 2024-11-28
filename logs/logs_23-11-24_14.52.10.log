@@ -1,0 +1,8 @@
+2024-11-23T14:52:10.856524+0000 INFO 123715031380096 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-11-23T14:52:11.646978+0000 INFO 123715031380096 Database schema initialized successfully.
+2024-11-23T14:52:11.744156+0000 INFO 123715031380096 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-11-23T14:52:11.744521+0000 INFO 123715031380096 All required tables have been created successfully.
+2024-11-23T14:52:16.112867+0000 WARNING 123715031380096 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'user8' for key 'users.username'")
+[SQL: INSERT INTO users (id, username, password, access, time_updated) VALUES (%(id)s, %(username)s, %(password)s, %(access)s, %(time_updated)s)]
+[parameters: {'id': 'a114b96b-3111-4728-8b4c-29a668373791', 'username': 'user8', 'password': '$2b$12$iJ4eH0Eacxxx4FN8WABpseD/.yIJMo/TyR1XrOqVq8cVUt19yg82W', 'access': 0, 'time_updated': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

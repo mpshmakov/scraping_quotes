@@ -1,0 +1,9 @@
+2024-11-25T16:15:19.122358+0000 INFO 127121225322624 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-11-25T16:15:20.204961+0000 INFO 127121225322624 Database schema initialized successfully.
+2024-11-25T16:15:20.304052+0000 INFO 127121225322624 Tables in the database: ['TestTable', 'apilogs', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-11-25T16:15:20.304534+0000 INFO 127121225322624 All required tables have been created successfully.
+2024-11-25T16:15:27.416862+0000 INFO 127121225322624 Row inserted successfully into users.
+2024-11-25T16:15:27.612959+0000 ERROR 127121225322624 Error inserting row into apilogs: (pymysql.err.OperationalError) (1054, "Unknown column 'tag' in 'field list'")
+[SQL: INSERT INTO apilogs (id, username, tag, message) VALUES (%(id)s, %(username)s, %(tag)s, %(message)s)]
+[parameters: {'id': 'bdbc8b9f-d6b0-4b35-b0ee-f678e5c1ada5', 'username': None, 'tag': 'info', 'message': 'User registered.'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

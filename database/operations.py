@@ -12,7 +12,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from . import db_enable
 if db_enable == 1:
     from . import Base, Session, engine
-from .schema import  TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users
+from .schema import  ApiLogs, TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users
 
 import inspect as ins
 
@@ -35,6 +35,7 @@ def initialize_schema():
         Table(Quotes.__tablename__, metadata, *[c.copy() for c in Quotes.__table__.columns],)
         Table(QuotesTagsLink.__tablename__, metadata, *[c.copy() for c in QuotesTagsLink.__table__.columns],)
         Table(Users.__tablename__, metadata, *[c.copy() for c in Users.__table__.columns],)
+        Table(ApiLogs.__tablename__, metadata, *[c.copy() for c in ApiLogs.__table__.columns],)
         Table(TestTable.__tablename__, metadata, *[c.copy() for c in TestTable.__table__.columns],)
 
 
@@ -77,7 +78,7 @@ def check_tables_exist():
         logger.error(f"Error inspecting database engine: {str(e)}")
         raise
 
-    required_tables = ["quotes", "tags", "authors", "quotes_tags_link", "TestTable"]
+    required_tables = ["quotes", "tags", "authors", "quotes_tags_link", "users", "apilogs", "TestTable"]
     return all(table in existing_tables for table in required_tables)
 
 

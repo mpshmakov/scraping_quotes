@@ -1,31 +1,46 @@
 
 import smtplib
-from secret import gmail_app_password, gmail_user
+from email.message import EmailMessage
+from secret import gmail_app_password, gmail_user, admin_emails as sent_to
 
 def login_email_notification(username: str):
-    # print("notification")
     sent_from = gmail_user
-    sent_to = ['shmakov.mp@gmail.com', 'zeras4z4@gmail.com']
     sent_subject = "User logon to quotes api"
     sent_body = (f"{username} has logged on to the system.")
 
-    email_text = """\
-    From: %s
-    To: %s
-    Subject: %s
-
-    %s
-    """ % (sent_from, ", ".join(sent_to), sent_subject, sent_body)
-
-    print(email_text)
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = ', '.join(sent_to)
 
     try:
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         server.ehlo()
         server.login(gmail_user, gmail_app_password)
-        server.sendmail(sent_from, sent_to, email_text)
+        server.send_message(msg)    
         server.close()
+        print('Email sent!')
+    except Exception as exception:
+        print("Error: %s!\n\n" % exception)
 
+def registration_email_notification(username: str):
+    sent_from = gmail_user
+    sent_subject = "User registered to quotes api"
+    sent_body = (f"{username} has registered to the system.")
+
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = ', '.join(sent_to)
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_app_password)
+        server.send_message(msg)    
+        server.close()
         print('Email sent!')
     except Exception as exception:
         print("Error: %s!\n\n" % exception)

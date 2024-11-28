@@ -13,6 +13,7 @@ from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
 from secret import SECRET_KEY, ENCODING_ALG as ALGORITHM
 from notifications import email
+from database.apilogclass import log
 
 class OAuth2PasswordRequestJSON(BaseModel):
     # grant_type: str
@@ -52,6 +53,8 @@ class createToken(BaseModel):
 async def create_user(create_user_request: CreateUserRequest):
     create_user_model = Users(id=str(uuid.uuid4()), username=create_user_request.username, password=bcrypt_context.hash(create_user_request.password), access=0)
     insertRow(create_user_model)
+    log.info(create_user_request.username, "User registered.")
+    email.registration_email_notification(create_user_request.username)
     return {"username":create_user_model.username, "id":create_user_model.id, "access":0}
 
 @router.post("/login")
@@ -64,6 +67,8 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestJSON):
         print('before res')
         res = await client.post('http://127.0.0.1:8000/auth/token', json={"username": user.Users.username, "id": user.Users.id, "access": user.Users.access})
         print("res", res.json())
+        print(user.Users.username)
+        log.info(str(user.Users.username), "User login.")
         email.login_email_notification(form_data.username)
         return res.json()
     
