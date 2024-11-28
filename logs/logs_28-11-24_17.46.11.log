@@ -1,0 +1,9 @@
+2024-11-28T17:46:11.094301+0000 INFO 8220 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-11-28T17:46:13.004403+0000 INFO 8220 Database schema initialized successfully.
+2024-11-28T17:46:13.258822+0000 INFO 8220 Tables in the database: ['TestTable', 'apilogs', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-11-28T17:46:13.258822+0000 INFO 8220 All required tables have been created successfully.
+2024-11-28T17:46:15.744650+0000 WARNING 8220 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'user8' for key 'users.username'")
+[SQL: INSERT INTO users (id, username, password, access, time_updated) VALUES (%(id)s, %(username)s, %(password)s, %(access)s, %(time_updated)s)]
+[parameters: {'id': '8dbe1abf-6da3-4102-b9d8-64e9527fcae3', 'username': 'user8', 'password': '$2b$12$NMiN09d90d4EUIsd/r8MlupP/pnIyhKAEwCamPTduJmbaWBVrhHxS', 'access': 0, 'time_updated': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-28T17:46:16.231269+0000 INFO 8220 Row inserted successfully into apilogs.

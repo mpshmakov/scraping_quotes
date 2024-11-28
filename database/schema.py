@@ -125,7 +125,7 @@ class ApiLogs(Base):
 
     def __init__(self, id:str, username:str, tag:str, message:str):
         self.id = id
-        self.user = username
+        self.username = username
         print("inside class", username)
         self.tag = tag
         self.message = message

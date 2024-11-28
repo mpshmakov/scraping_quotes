@@ -16,11 +16,8 @@ from notifications import email
 from database.apilogclass import log
 
 class OAuth2PasswordRequestJSON(BaseModel):
-    # grant_type: str
     username: str
     password: str
-    # client_id: Optional[str] 
-    # client_secret: Optional[str] 
 
 
 initDB(truncate=False)
@@ -29,9 +26,6 @@ router = APIRouter(
     prefix='/auth',
     tags=['auth']
 )
-
-# SECRET_KEY = "smth"
-# ALGORITHM = 'HS256'
 
 bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl='auth/token')
@@ -49,8 +43,12 @@ class createToken(BaseModel):
     id:str
     access:int
 
-@router.post("/", status_code=status.HTTP_201_CREATED)
+@router.post("/register", status_code=status.HTTP_201_CREATED)
 async def create_user(create_user_request: CreateUserRequest):
+    user = executeOrmStatement(select(Users).filter(Users.username == create_user_request.username)).first()
+    if user is not None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='This username is already taken.')
+
     create_user_model = Users(id=str(uuid.uuid4()), username=create_user_request.username, password=bcrypt_context.hash(create_user_request.password), access=0)
     insertRow(create_user_model)
     log.info(create_user_request.username, "User registered.")
@@ -83,7 +81,7 @@ async def generate_token(user: createToken):
 
 def authenticate_user(username:str, password:str):
     user = executeOrmStatement(select(Users).filter(Users.username == username)).first()
-    print(user)
+    print("user", user)
     if not user:
         return False
     if not bcrypt_context.verify(password, user.Users.password):

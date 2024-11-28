@@ -1,0 +1,9 @@
+2024-11-28T17:39:11.417009+0000 INFO 2740 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-11-28T17:39:13.607379+0000 INFO 2740 Database schema initialized successfully.
+2024-11-28T17:39:13.850272+0000 INFO 2740 Tables in the database: ['TestTable', 'apilogs', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-11-28T17:39:13.850272+0000 INFO 2740 All required tables have been created successfully.
+2024-11-28T17:42:32.552155+0000 WARNING 2740 Integrity error (probably normal behaviour): (pymysql.err.IntegrityError) (1062, "Duplicate entry 'user8' for key 'users.username'")
+[SQL: INSERT INTO users (id, username, password, access, time_updated) VALUES (%(id)s, %(username)s, %(password)s, %(access)s, %(time_updated)s)]
+[parameters: {'id': '3c441e1b-1a30-4018-972e-ff35cff20b22', 'username': 'user8', 'password': '$2b$12$BdD/sYkAvi3PgFj3uQsBJudDKEs3EeJd.rFchM9T0rCa7RSeaOsuy', 'access': 0, 'time_updated': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-28T17:42:33.023650+0000 INFO 2740 Row inserted successfully into apilogs.
