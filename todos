@@ -33,11 +33,11 @@ fast api for db
 
 change auth from oauthbearer to my own implementation. (i don't need the frontend form functionality)
 
-get notied when user registers, logins etc
+get notied when user registers, logins etc - done
 
-username should be email receiving notification on account registration/login
+username should be email receiving notification on account registration/login - done
 
-endpoint to reset the password (+notification)
+endpoint to reset the password (+notification) - done
 
 implement payment part
 
@@ -45,4 +45,4 @@ explore oauth2 scopes instead of access field
 
 exception handling for notifications
 
-change username to email everywhere
+change username to email everywhere - done

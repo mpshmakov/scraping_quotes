@@ -1,5 +1,16 @@
-from configuration import get_configuration
+import asyncio
+from time import sleep
 
 
-json_filename = get_configuration("json_filename")
-print(json_filename)
+async def t():
+    sleep(5)
+    print("finished")
+
+async def main():    
+    asyncio.create_task(t()) 
+    print("t")
+    sleep(5)
+    print("done")
+
+asyncio.run(main())
+# main()

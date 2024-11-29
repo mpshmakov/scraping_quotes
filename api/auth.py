@@ -1,12 +1,14 @@
+import asyncio
 from datetime import timedelta, datetime
 from typing import Annotated, List, Optional
 import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field, validator
+from email_validator import EmailNotValidError, validate_email
 import httpx
 from sqlalchemy import select
 from starlette import status
-from database.operations import executeOrmStatement, initDB, insertRow
+from database.operations import changeUserPassword, executeOrmStatement, initDB, insertRow
 from database.schema import Authors,Tags,Quotes,QuotesTagsLink,Users
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
@@ -34,6 +36,15 @@ class CreateUserRequest(BaseModel):
     email:str
     password:str
 
+    @validator('email')
+    def validate_emailll(cls, value):
+        try:
+            em = validate_email(value)
+        except Exception:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Email address not supported or the value is not an email.')
+        finally:
+            return em.normalized
+
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -43,11 +54,16 @@ class createToken(BaseModel):
     id:str
     access:int
 
+class changePassword(BaseModel):
+    current:str
+    new:str
+
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 async def create_user(create_user_request: CreateUserRequest):
+    print("req email", create_user_request.email)
     user = executeOrmStatement(select(Users).filter(Users.email == create_user_request.email)).first()
     if user is not None:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='This email is already taken.')
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='This email is already taken.')
 
     id = str(uuid.uuid4())
     create_user_model = Users(id=id, email=create_user_request.email, password=bcrypt_context.hash(create_user_request.password), access=0)
@@ -58,7 +74,7 @@ async def create_user(create_user_request: CreateUserRequest):
         res = await client.post('http://127.0.0.1:8000/auth/token', json={"email": create_user_request.email, "id": id, "access": 0})
         print("res", res.json())
         log.info(create_user_request.email, "User registered.")
-        email.registration_email_notification(create_user_request.email)
+        asyncio.create_task(email.register_notifications(create_user_request.email))
         return res.json()
 
 @router.post("/login")
@@ -73,9 +89,9 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestJSON):
         print("res", res.json())
         print(user.Users.email)
         log.info(str(user.Users.email), "User login.")
-        email.login_email_notification(form_data.email)
+        asyncio.create_task(email.login_notifications(form_data.email))
         return res.json()
-    
+
 
 @router.post("/token", response_model=Token)
 async def generate_token(user: createToken):
@@ -113,3 +129,28 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
         return {'email' : email, 'id': user_id, 'access': access}
     except JWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Could not validate user.')
+
+    
+@router.post("/change_password")
+async def change_password(user: Annotated[dict, Depends(get_current_user)], password: changePassword):
+    if user is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Could not validate user.')
+    print(password)
+
+    if password.current == password.new:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="New password can't be the same as the current one.") 
+
+    try:
+        changeUserPassword(user["id"], bcrypt_context.hash(password.new), password.current)
+    except ValueError:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Current password doesn't match.")
+
+    async with httpx.AsyncClient() as client:
+        print('before res')
+        res = await client.post('http://127.0.0.1:8000/auth/token', json={"email": user['email'], "id": user['id'], "access": user['access']})
+        print("res", res.json())
+        print(user['email'])
+        log.info(str(user['email']), "User login.")
+        asyncio.create_task(email.change_password_notifications(user['email']))
+        return res.json()
+    

@@ -21,11 +21,6 @@ app = FastAPI()
 app.include_router(auth.router)
 user_dependency = Annotated[dict, Depends(auth.get_current_user)]
 
-# oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-# @app.get("/items/")
-# async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
-#     return {"token": token}
 
 def check_auth_and_access(user):
     print("check",user)

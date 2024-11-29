@@ -8,6 +8,8 @@ from configuration import get_configuration
 from squotes import logger
 from sqlalchemy import MetaData, Table, inspect, select, update, exc
 from sqlalchemy.exc import SQLAlchemyError
+from passlib.context import CryptContext
+
 
 from . import db_enable
 if db_enable == 1:
@@ -300,6 +302,35 @@ def toggleAccessForUser(user_id):
         logger.error(f"Error toggling user's access statement. user's id: '{user_id}': {str(e)}")
         raise
     return access
+
+def changeUserPassword(user_id, new_password, old_password):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+    bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
+    session = Session()
+    try:
+        res = session.query(Users).filter(Users.id == user_id).scalar()
+        if res is None:
+            logger.error(f"User with id {user_id} does not exist.")
+            return
+        print(old_password, res.password)
+        print (bcrypt_context.verify(old_password, res.password))
+        if bcrypt_context.verify(old_password, res.password):
+            res.password = new_password
+            session.flush()
+            session.commit()
+        else:
+            raise ValueError("Old password doesn't match")
+
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error changing user's access statement. user's id: '{user_id}': {str(e)}")
+        raise
 
 
 def getModelFromTablename(tablename):
