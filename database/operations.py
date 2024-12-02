@@ -4,6 +4,9 @@ This module provides functions for initializing the database schema,
 checking table existence, inserting records into the database, and truncating tables.
 """
 
+import random
+import secrets
+import string
 from configuration import get_configuration
 from squotes import logger
 from sqlalchemy import MetaData, Table, inspect, select, update, exc
@@ -14,7 +17,7 @@ from passlib.context import CryptContext
 from . import db_enable
 if db_enable == 1:
     from . import Base, Session, engine
-from .schema import  ApiLogs, TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users
+from .schema import  ApiLogs, TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users, ConfirmationCodes
 
 import inspect as ins
 
@@ -39,6 +42,8 @@ def initialize_schema():
         Table(Users.__tablename__, metadata, *[c.copy() for c in Users.__table__.columns],)
         Table(ApiLogs.__tablename__, metadata, *[c.copy() for c in ApiLogs.__table__.columns],)
         Table(TestTable.__tablename__, metadata, *[c.copy() for c in TestTable.__table__.columns],)
+        Table(ConfirmationCodes.__tablename__, metadata, *[c.copy() for c in ConfirmationCodes.__table__.columns],)
+
 
 
         # Create tables
@@ -98,7 +103,7 @@ def truncate_tables(session):
         logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
 
-    for table in [Quotes, Authors, Tags, QuotesTagsLink, TestTable]:
+    for table in [Quotes, Authors, Tags, QuotesTagsLink, TestTable, ApiLogs, ConfirmationCodes, Users]:
         try:
             session.query(table).delete()
         except SQLAlchemyError as e:
@@ -329,8 +334,107 @@ def changeUserPassword(user_id, new_password, old_password):
 
     except SQLAlchemyError as e:
         session.rollback()
-        logger.error(f"Error changing user's access statement. user's id: '{user_id}': {str(e)}")
+        logger.error(f"Error changing user's password. user's id: '{user_id}': {str(e)}")
         raise
+
+def generateAndUpdateUserPassword(email):
+    bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
+    alphabet = string.ascii_letters + string.digits
+    password = ''.join(secrets.choice(alphabet) for i in range(random.randrange(15,25)))
+    hashed_password = bcrypt_context.hash(password)
+
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+    
+    session = Session()
+    try:
+        res = session.query(Users).filter(Users.email == email).scalar()
+        if res is None:
+            logger.error(f"User {email} does not exist.")
+            raise ValueError(f"User {email} does not exist.")
+            return
+       
+        res.password = hashed_password
+        session.flush()
+        session.commit()
+
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error changing user's password. user: '{email}': {str(e)}")
+        raise
+
+    return password
+
+
+def generateAndUpdateConfirmCodeForUser(email):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+
+    code = random.randrange(1000,9999)
+    session = Session()
+    try:
+        u = session.query(Users).filter(Users.email == email).scalar()
+        if u is None:
+            logger.error(f"User {email} does not exist.")
+            return
+        
+        res = session.query(ConfirmationCodes).filter(ConfirmationCodes.email == email).scalar()
+
+        if res is None:
+            row = ConfirmationCodes(email=email, code=code)
+            insertRow(row)
+            
+        else: 
+            res.code = code
+
+        session.flush()
+        session.commit()
+        
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error toggling user's access statement. user: '{email}': {str(e)}")
+        raise
+    return code
+
+def authenticateConfirmCodeAndResetIt(email, code):
+    if db_enable == 0:
+        logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
+        return
+    
+    if not check_tables_exist():
+        logger.error("Tables do not exist. Cannot retrieve records.")
+        return
+    result = False
+    session = Session()
+    try:
+        res = session.query(ConfirmationCodes).filter(ConfirmationCodes.email == email).scalar()
+
+        if res is None:
+            logger.error(f"Code for {email} does not exist.")
+            return
+        
+        if res.code == code:
+            result = True
+            res.code = random.randrange(1000, 9999) #after it is confirmed that the code is correct and is used, the code in the db is reset to a random number for security
+
+        session.flush()
+        session.commit()
+        
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"Error toggling user's access statement. user's id: '{user_id}': {str(e)}")
+        raise
+    return result
 
 
 def getModelFromTablename(tablename):

@@ -2,7 +2,9 @@
 import asyncio
 import smtplib
 from email.message import EmailMessage
+from database.operations import generateAndUpdateConfirmCodeForUser
 from secret import gmail_app_password, gmail_user, admin_emails as sent_to
+import random
 
 async def login_notifications(username: str):
     asyncio.gather(login_email_notification_admin(username), login_email_notification_user(username))
@@ -132,6 +134,50 @@ async def change_password_email_notification_admin(username: str):
     msg['Subject'] = sent_subject
     msg['From'] = sent_from
     msg['To'] = ', '.join(sent_to)
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_app_password)
+        server.send_message(msg)    
+        server.close()
+        print('Email sent!')
+    except Exception as exception:
+        print("Error: %s!\n\n" % exception)
+
+async def send_password_reset_code(email: str):
+    code = generateAndUpdateConfirmCodeForUser(email)
+
+    sent_from = gmail_user
+    sent_subject = "Your password reset code."
+    sent_body = (f"Your code for the resetting the password: {code}. Contact support you didn't request it.")
+
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = email
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_app_password)
+        server.send_message(msg)    
+        server.close()
+        print('Email sent!')
+    except Exception as exception:
+        print("Error: %s!\n\n" % exception)
+
+async def send_new_password(email: str, password: str):    
+    sent_from = gmail_user
+    sent_subject = "Your password reset code."
+    sent_body = (f"Your new password: {password}. Contact support if you didn't request it.")
+
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = email
 
     try:
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)

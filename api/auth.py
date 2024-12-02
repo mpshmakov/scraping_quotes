@@ -8,7 +8,7 @@ from email_validator import EmailNotValidError, validate_email
 import httpx
 from sqlalchemy import select
 from starlette import status
-from database.operations import changeUserPassword, executeOrmStatement, initDB, insertRow
+from database.operations import authenticateConfirmCodeAndResetIt, changeUserPassword, executeOrmStatement, generateAndUpdateConfirmCodeForUser, generateAndUpdateUserPassword, initDB, insertRow
 from database.schema import Authors,Tags,Quotes,QuotesTagsLink,Users
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
@@ -57,6 +57,13 @@ class createToken(BaseModel):
 class changePassword(BaseModel):
     current:str
     new:str
+
+class requestCode(BaseModel):
+    email:str
+
+class resetPassword(BaseModel):
+    email:str
+    code:int
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 async def create_user(create_user_request: CreateUserRequest):
@@ -154,3 +161,26 @@ async def change_password(user: Annotated[dict, Depends(get_current_user)], pass
         asyncio.create_task(email.change_password_notifications(user['email']))
         return res.json()
     
+@router.post("/password_reset")
+async def generate_new_password(body:resetPassword):
+    auth = authenticateConfirmCodeAndResetIt(email=body.email, code=body.code)
+    if auth is False:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Code doesn't match.")
+
+    password = None
+    try:
+        password = generateAndUpdateUserPassword(body.email)
+        asyncio.create_task(email.send_new_password(body.email, password))
+    except ValueError:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Current password doesn't match.")
+    
+    return {"new_password": password}
+
+    
+@router.post("/request_code")
+async def request_code(body: requestCode):
+    try:
+        await email.send_password_reset_code(body.email)
+    except ValueError :
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"User with the email {email.email} doesn't exist.")
+    return {"msg":"The code has been sent to your email. Send the code with your email address to /auth/password_reset endpoint."}

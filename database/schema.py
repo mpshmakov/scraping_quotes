@@ -103,6 +103,8 @@ class Users(Base):
     time_updated = Column(DateTime(timezone=True), onupdate=func.now())
 
     apilogs = relationship("ApiLogs", back_populates='users')
+    confirm_codes = relationship("ConfirmationCodes", back_populates='users')
+
 
     def __init__(self, id:str, email:str, password:str, access:int):
         self.id = id
@@ -129,6 +131,20 @@ class ApiLogs(Base):
         print("inside class", email)
         self.tag = tag
         self.message = message
+
+class ConfirmationCodes(Base):
+
+    __tablename__ = "confirm_codes"
+
+    email = Column(String(30), ForeignKey('users.email'), primary_key=True)
+    code = Column(Integer, nullable=False)
+    timestamp = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.current_timestamp())
+
+    users = relationship("Users", back_populates='confirm_codes')
+
+    def __init__(self, email:str, code:int):
+        self.email = email
+        self.code = code
 
 
 class TestTable(Base):
