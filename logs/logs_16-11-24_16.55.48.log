@@ -1,8 +1,0 @@
-2024-11-16T16:55:48.646014+0000 INFO 124384383144064 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
-2024-11-16T16:55:49.351992+0000 INFO 124384383144064 Database schema initialized successfully.
-2024-11-16T16:55:49.446562+0000 INFO 124384383144064 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags']
-2024-11-16T16:55:49.446937+0000 INFO 124384383144064 All required tables have been created successfully.
-2024-11-16T16:55:54.201062+0000 ERROR 124384383144064 Error inserting row into users: (pymysql.err.ProgrammingError) (1146, "Table 'quotesdbtest_whistleask.users' doesn't exist")
-[SQL: INSERT INTO users (username, password) VALUES (%(username)s, %(password)s)]
-[parameters: {'username': 'user1', 'password': '$2b$12$Gwfpd55mQqTRqa74w3L6zOhF1z.A375cAlrgCz0tFekuHDDICmrAS'}]
-(Background on this error at: https://sqlalche.me/e/20/f405)
