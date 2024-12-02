@@ -9,7 +9,7 @@ import secrets
 import string
 from configuration import get_configuration
 from squotes import logger
-from sqlalchemy import MetaData, Table, inspect, select, update, exc
+from sqlalchemy import MetaData, Table, inspect, select, update, exc, event, DDL
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 
@@ -63,6 +63,46 @@ def initialize_schema():
         logger.error(f"Error initializing database schema: {str(e)}")
         raise
 
+def create_triggers():
+    update_code_function = DDL('''
+    CREATE FUNCTION update_code_if_old(last_update TIMESTAMP)
+    RETURNS INT
+    BEGIN
+        IF (last_update < NOW() - INTERVAL 3 MINUTE) THEN
+            RETURN FLOOR(1000 + RAND() * 9000);
+        ELSE
+            RETURN NULL;
+        END IF;
+    END;
+    ''')
+
+    update_code_trigger_insert = DDL('''
+    CREATE TRIGGER update_code_before_insert
+    BEFORE INSERT ON confirm_codes
+    FOR EACH ROW
+    BEGIN
+        IF (NEW.timestamp < NOW() - INTERVAL 3 MINUTE) THEN
+            SET NEW.code = FLOOR(1000 + RAND() * 9000);
+            SET NEW.timestamp = NOW();
+        END IF;
+    END;
+    ''')
+
+    update_code_trigger_update = DDL('''
+    CREATE TRIGGER update_code_before_update
+    BEFORE UPDATE ON confirm_codes
+    FOR EACH ROW
+    BEGIN
+        IF (NEW.timestamp < NOW() - INTERVAL 3 MINUTE) THEN
+            SET NEW.code = FLOOR(1000 + RAND() * 9000);
+            SET NEW.timestamp = NOW();
+        END IF;
+    END;
+    ''')
+
+    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_function)
+    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_insert)
+    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_update)
 
 def check_tables_exist():
     """
@@ -159,7 +199,7 @@ def initDB(truncate = True):
     try:
         # Initialize the schema first
         initialize_schema()
-
+        create_triggers()
         # Check if tables exist
         if not check_tables_exist():
             logger.error("Tables were not created successfully.")
@@ -272,6 +312,8 @@ def executeOrmStatement(statement):
         session.rollback()
         logger.error(f"Error executing statement '{statement}': {str(e)}")
         # raise        
+    finally:
+        session.close()
 
     return res   
 
@@ -306,6 +348,8 @@ def toggleAccessForUser(user_id):
         session.rollback()
         logger.error(f"Error toggling user's access statement. user's id: '{user_id}': {str(e)}")
         raise
+    finally:
+        session.close()
     return access
 
 def changeUserPassword(user_id, new_password, old_password):
@@ -336,6 +380,8 @@ def changeUserPassword(user_id, new_password, old_password):
         session.rollback()
         logger.error(f"Error changing user's password. user's id: '{user_id}': {str(e)}")
         raise
+    finally:
+        session.close()
 
 def generateAndUpdateUserPassword(email):
     bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
@@ -367,6 +413,8 @@ def generateAndUpdateUserPassword(email):
         session.rollback()
         logger.error(f"Error changing user's password. user: '{email}': {str(e)}")
         raise
+    finally:
+        session.close()
 
     return password
 
@@ -404,6 +452,8 @@ def generateAndUpdateConfirmCodeForUser(email):
         session.rollback()
         logger.error(f"Error toggling user's access statement. user: '{email}': {str(e)}")
         raise
+    finally:
+        session.close()
     return code
 
 def authenticateConfirmCodeAndResetIt(email, code):
@@ -421,8 +471,10 @@ def authenticateConfirmCodeAndResetIt(email, code):
 
         if res is None:
             logger.error(f"Code for {email} does not exist.")
-            return
+            return result
         
+        print(f"code for {email}",res.code)
+        print("req code", code)
         if res.code == code:
             result = True
             res.code = random.randrange(1000, 9999) #after it is confirmed that the code is correct and is used, the code in the db is reset to a random number for security
@@ -432,8 +484,10 @@ def authenticateConfirmCodeAndResetIt(email, code):
         
     except SQLAlchemyError as e:
         session.rollback()
-        logger.error(f"Error toggling user's access statement. user's id: '{user_id}': {str(e)}")
+        logger.error(f"Error toggling user's access statement. user: '{email}': {str(e)}")
         raise
+    finally:
+        session.close()
     return result
 
 

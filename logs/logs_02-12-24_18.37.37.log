@@ -1,0 +1,9 @@
+2024-12-02T18:37:37.677525+0000 INFO 4184 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-02T18:37:38.436259+0000 INFO 4184 Database schema initialized successfully.
+2024-12-02T18:37:38.527396+0000 INFO 4184 Tables in the database: ['TestTable', 'apilogs', 'authors', 'confirm_codes', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-12-02T18:37:38.527481+0000 INFO 4184 All required tables have been created successfully.
+2024-12-02T18:37:40.446221+0000 ERROR 4184 Code for fastuperza@gufum.com does not exist.
+2024-12-02T18:50:02.814550+0000 ERROR 4184 Error inspecting database engine: (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-02T18:50:02.874873+0000 ERROR 4184 Error toggling user's access statement. user: 'fastuperza@gufum.com': (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

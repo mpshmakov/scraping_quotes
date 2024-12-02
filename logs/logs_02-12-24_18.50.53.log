@@ -1,0 +1,8 @@
+2024-12-02T18:50:53.417154+0000 INFO 12628 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-02T18:50:54.141527+0000 INFO 12628 Database schema initialized successfully.
+2024-12-02T18:50:54.233562+0000 INFO 12628 Tables in the database: ['TestTable', 'apilogs', 'authors', 'confirm_codes', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-12-02T18:50:54.233562+0000 INFO 12628 All required tables have been created successfully.
+2024-12-02T18:51:02.672387+0000 ERROR 12628 Error inspecting database engine: (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-02T18:51:02.732448+0000 ERROR 12628 Error toggling user's access statement. user: 'fastuperza@gufum.com': (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
