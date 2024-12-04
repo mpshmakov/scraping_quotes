@@ -49,6 +49,6 @@ exception handling for notifications
 
 change username to email everywhere - done
 
-add retention policy for the logs table - 2 years (add trigger to the db)
+add retention policy for the logs table - 2 years (add trigger to the db) - done (via python, not sql)
 
 trigger which resets confirmation code after 3 minutes
