@@ -1,0 +1,4 @@
+2024-12-03T10:36:33.691404+0000 INFO 9532 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-03T10:36:33.802458+0000 ERROR 9532 Error during database initialization: Textual SQL expression '\n            CREATE FUNCT...' should be explicitly declared as text('\n            CREATE FUNCT...')
+2024-12-03T10:36:33.802458+0000 ERROR 9532 An unexpected error occurred during database initialization: Textual SQL expression '\n            CREATE FUNCT...' should be explicitly declared as text('\n            CREATE FUNCT...')
+2024-12-03T10:36:33.802458+0000 ERROR 9532 An unexpected error occurred during database initialization: Textual SQL expression '\n            CREATE FUNCT...' should be explicitly declared as text('\n            CREATE FUNCT...')

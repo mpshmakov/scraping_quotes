@@ -1,0 +1,4 @@
+
+from database.operations import deleteApiLogsRowsOlderThanRetentionPolicy
+
+deleteApiLogsRowsOlderThanRetentionPolicy()

@@ -4,12 +4,13 @@ This module provides functions for initializing the database schema,
 checking table existence, inserting records into the database, and truncating tables.
 """
 
+from datetime import datetime, timedelta
 import random
 import secrets
 import string
 from configuration import get_configuration
 from squotes import logger
-from sqlalchemy import MetaData, Table, inspect, select, update, exc, event, DDL
+from sqlalchemy import MetaData, Table, delete, insert, inspect, select, update, exc, event, DDL
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 
@@ -20,6 +21,9 @@ if db_enable == 1:
 from .schema import  ApiLogs, TestTable, Authors, Quotes, QuotesTagsLink, Tags, Users, ConfirmationCodes
 
 import inspect as ins
+
+retention_policy = timedelta(weeks=104) # 2 years
+# retention_policy = timedelta(hours=1)
 
 def initialize_schema():
     """
@@ -63,46 +67,39 @@ def initialize_schema():
         logger.error(f"Error initializing database schema: {str(e)}")
         raise
 
-def create_triggers():
-    update_code_function = DDL('''
-    CREATE FUNCTION update_code_if_old(last_update TIMESTAMP)
-    RETURNS INT
-    BEGIN
-        IF (last_update < NOW() - INTERVAL 3 MINUTE) THEN
-            RETURN FLOOR(1000 + RAND() * 9000);
-        ELSE
-            RETURN NULL;
-        END IF;
-    END;
-    ''')
+# def create_triggers():
+#     update_code_function = DDL('''
+#     CREATE FUNCTION update_code_if_old() RETURNS TRIGGER
+#     BEGIN
+#         IF (NEW.timestamp < NOW() - INTERVAL 3 MINUTE) THEN
+#             SET NEW.code = FLOOR(1000 + RAND() * 9000);
+#             SET NEW.timestamp = NOW();
+#         END IF;
+#         RETURN NEW;
+#     END;
+#     ''')
 
-    update_code_trigger_insert = DDL('''
-    CREATE TRIGGER update_code_before_insert
-    BEFORE INSERT ON confirm_codes
-    FOR EACH ROW
-    BEGIN
-        IF (NEW.timestamp < NOW() - INTERVAL 3 MINUTE) THEN
-            SET NEW.code = FLOOR(1000 + RAND() * 9000);
-            SET NEW.timestamp = NOW();
-        END IF;
-    END;
-    ''')
+#     update_code_trigger_insert = DDL('''
+#     CREATE TRIGGER update_code_before_insert
+#     BEFORE INSERT ON confirm_codes
+#     FOR EACH ROW
+#     BEGIN
+#         CALL update_code_if_old();
+#     END;
+#     ''')
 
-    update_code_trigger_update = DDL('''
-    CREATE TRIGGER update_code_before_update
-    BEFORE UPDATE ON confirm_codes
-    FOR EACH ROW
-    BEGIN
-        IF (NEW.timestamp < NOW() - INTERVAL 3 MINUTE) THEN
-            SET NEW.code = FLOOR(1000 + RAND() * 9000);
-            SET NEW.timestamp = NOW();
-        END IF;
-    END;
-    ''')
+#     update_code_trigger_update = DDL('''
+#     CREATE TRIGGER update_code_before_update
+#     BEFORE UPDATE ON confirm_codes
+#     FOR EACH ROW
+#     BEGIN
+#         CALL update_code_if_old();
+#     END;
+#     ''')
 
-    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_function)
-    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_insert)
-    event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_update)
+#     event.listen(ConfirmationCodes.__table__, 'after_create', update_code_function)
+#     event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_insert)
+#     event.listen(ConfirmationCodes.__table__, 'after_create', update_code_trigger_update)
 
 def check_tables_exist():
     """
@@ -197,9 +194,9 @@ def initDB(truncate = True):
         return
 
     try:
+        # create_triggers()
         # Initialize the schema first
         initialize_schema()
-        create_triggers()
         # Check if tables exist
         if not check_tables_exist():
             logger.error("Tables were not created successfully.")
@@ -308,12 +305,11 @@ def executeOrmStatement(statement):
     session = Session()
     try:
         res = session.execute(statement)
+        session.commit()
     except SQLAlchemyError as e:
         session.rollback()
         logger.error(f"Error executing statement '{statement}': {str(e)}")
         # raise        
-    finally:
-        session.close()
 
     return res   
 
@@ -475,9 +471,14 @@ def authenticateConfirmCodeAndResetIt(email, code):
         
         print(f"code for {email}",res.code)
         print("req code", code)
+
+        if res.timestamp < (datetime.utcnow()-timedelta(minutes=3)):
+            res.code = random.randrange(1000, 9999)
         if res.code == code:
             result = True
             res.code = random.randrange(1000, 9999) #after it is confirmed that the code is correct and is used, the code in the db is reset to a random number for security
+
+        
 
         session.flush()
         session.commit()
@@ -489,6 +490,11 @@ def authenticateConfirmCodeAndResetIt(email, code):
     finally:
         session.close()
     return result
+
+def deleteApiLogsRowsOlderThanRetentionPolicy():
+    statement = delete(ApiLogs).where(ApiLogs.timestamp < (datetime.utcnow() - retention_policy))
+    executeOrmStatement(statement)
+
 
 
 def getModelFromTablename(tablename):

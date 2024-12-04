@@ -4,7 +4,7 @@ from database.operations import insertRow
 
 class apilog:
     def info(self, username:str, message:str):
-        insertRow(ApiLogs(str(uuid4()), username, "warning", message))
+        insertRow(ApiLogs(str(uuid4()), username, "info", message))
     
     def warning(self, username:str, message:str):
         insertRow(ApiLogs(str(uuid4()), username, "warning", message))

@@ -1,0 +1,5 @@
+2024-12-03T11:17:11.978636+0000 INFO 17040 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-03T11:17:12.926461+0000 INFO 17040 Database schema initialized successfully.
+2024-12-03T11:17:13.016270+0000 INFO 17040 Tables in the database: ['TestTable', 'apilogs', 'authors', 'confirm_codes', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-12-03T11:17:13.016270+0000 INFO 17040 All required tables have been created successfully.
+2024-12-03T11:17:41.648605+0000 ERROR 17040 Code for fastuperza@gufum.com does not exist.
