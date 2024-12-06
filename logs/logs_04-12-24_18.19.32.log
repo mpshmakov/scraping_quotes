@@ -1,0 +1,9 @@
+2024-12-04T18:19:33.043637+0000 INFO 17132 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-04T18:19:34.156178+0000 INFO 17132 Database schema initialized successfully.
+2024-12-04T18:19:34.245241+0000 INFO 17132 Tables in the database: ['TestTable', 'apilogs', 'authors', 'confirm_codes', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-12-04T18:19:34.245241+0000 INFO 17132 All required tables have been created successfully.
+2024-12-04T18:20:07.967069+0000 INFO 17132 Row inserted successfully into users.
+2024-12-04T18:20:08.617322+0000 INFO 17132 Row inserted successfully into apilogs.
+2024-12-04T18:20:47.124945+0000 INFO 17132 Row inserted successfully into confirm_codes.
+2024-12-04T18:21:36.962290+0000 ERROR 17132 User asdfsdf does not exist.
+2024-12-04T18:25:25.430853+0000 ERROR 17132 User sdfsdf does not exist.

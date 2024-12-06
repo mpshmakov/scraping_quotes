@@ -32,18 +32,21 @@ router = APIRouter(
 bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl='auth/token')
 
+def email_val(email):
+    try:
+        em = validate_email(email)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Email address not supported or the value is not an email.')
+    finally:
+        return em.normalized
+
 class CreateUserRequest(BaseModel):
     email:str
     password:str
 
     @validator('email')
     def validate_emailll(cls, value):
-        try:
-            em = validate_email(value)
-        except Exception:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Email address not supported or the value is not an email.')
-        finally:
-            return em.normalized
+        email_val(value)
 
 class Token(BaseModel):
     access_token: str
@@ -61,9 +64,17 @@ class changePassword(BaseModel):
 class requestCode(BaseModel):
     email:str
 
+    @validator('email')
+    def validate_emailll(cls, value):
+        email_val(value)
+
 class resetPassword(BaseModel):
     email:str
     code:int
+
+    @validator('email')
+    def validate_emailll(cls, value):
+        email_val(value)
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 async def create_user(create_user_request: CreateUserRequest):
