@@ -1,0 +1,5 @@
+2024-12-07T16:54:14.197378+0000 INFO 11736 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-07T16:54:14.374113+0000 ERROR 11736 Error initializing database schema: (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-12-07T16:54:14.374113+0000 ERROR 11736 An unexpected error occurred during database initialization: (pymysql.err.OperationalError) (1226, "User 'quotesdbtest_whistleask' has exceeded the 'max_user_connections' resource (current value: 5)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

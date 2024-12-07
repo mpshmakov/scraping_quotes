@@ -96,7 +96,7 @@ async def handle_stripe_webhook(request: Request):
         # print(payment_intent)
         print("event", event)
         print("PaymentIntent was successful!")
-        toggleAccessForUser(user_id=None, stripe_id=payment_intent['customer'], access=True) #TODO: test this
+        toggleAccessForUser(user_id=None, stripe_id=payment_intent['customer'], access=True)
     elif event['type'] == 'payment_intent.payment_failed':
         print("failed")
 
