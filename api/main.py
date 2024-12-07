@@ -1,7 +1,7 @@
 from datetime import timedelta
 import json
 from typing import Annotated
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 import httpx
@@ -20,7 +20,7 @@ from database.schema import Authors, Quotes, Tags, QuotesTagsLink, Users
 from fastapi.security import OAuth2PasswordBearer
 from database.apilogclass import log
 from . import domain, port
-from secret import stripe_api_key
+from secret import stripe_api_key, stripe_webhook_secret
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="api/frontend"), name="static")
@@ -75,6 +75,33 @@ async def toggle_current_user_access(user: user_dependency):
 
 #     return str(checkout_session.url)
 
+@app.post("/stripe_webhook")
+async def handle_stripe_webhook(request: Request):
+    # print("received stripe webhook")
+
+    payload = await request.body()
+    sig_header = request.headers.get('stripe-signature')
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, stripe_webhook_secret
+        )
+    except ValueError as e:
+        return HTTPException(status_code=400, detail="Invalid payload")
+    except stripe.error.SignatureVerificationError as e:
+        return HTTPException(status_code=400, detail="Invalid signature")
+
+    if event['type'] == 'payment_intent.succeeded':
+        payment_intent = event['data']['object']
+        # print(payment_intent)
+        print("event", event)
+        print("PaymentIntent was successful!")
+        toggleAccessForUser(user_id=None, stripe_id=payment_intent['customer'], access=True) #TODO: test this
+    elif event['type'] == 'payment_intent.payment_failed':
+        print("failed")
+
+    return {"status": "success"}
+
 @app.post("/subscription")
 async def pay_for_subscription(user: user_dependency):
     try:
@@ -93,10 +120,11 @@ async def pay_for_subscription(user: user_dependency):
                     'quantity': 1,
                 },
             ],
-            customer=res,
+            customer=res, 
             mode='subscription',
             success_url= domain + '/static/success.html',
             cancel_url= domain + '/static/cancel.html',
+            
         )
         print("done")
         print(checkout_session.url)

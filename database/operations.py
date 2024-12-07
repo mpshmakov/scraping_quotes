@@ -313,7 +313,7 @@ def executeOrmStatement(statement):
 
     return res   
 
-def toggleAccessForUser(user_id):
+def toggleAccessForUser(user_id, stripe_id=None, access=None):
     if db_enable == 0:
         logger.info(f"db is disabled in configuration. {ins.stack()[0][3]} ignored.")
         return
@@ -322,20 +322,27 @@ def toggleAccessForUser(user_id):
         logger.error("Tables do not exist. Cannot retrieve records.")
         return
 
-    access = 0
+    _access = 0
     session = Session()
     try:
-        res = session.query(Users).filter(Users.id == user_id).scalar()
+        if stripe_id is not None:
+            res = session.query(Users).filter(Users.stripe_id == stripe_id).scalar()
+        else:    
+            res = session.query(Users).filter(Users.id == user_id).scalar()
         if res is None:
             logger.error(f"User with id {user_id} does not exist.")
             return
         print(user_id)
         # print(res[0].id, res[1].id)
-        b = not bool(res.access)
-        print("b", b)
-        res.access = int(b)
-        access = int(b)
-        print("access = ", access)
+        if access is not None:
+            res.access = access
+            _access = access
+        else:
+            b = not bool(res.access)
+            print("b", b)
+            res.access = int(b)
+            _access = int(b)
+        print("access = ", _access)
         # print(res)
         session.flush()
         session.commit()
@@ -346,7 +353,7 @@ def toggleAccessForUser(user_id):
         raise
     finally:
         session.close()
-    return access
+    return _access
 
 def changeUserPassword(user_id, new_password, old_password):
     if db_enable == 0:
