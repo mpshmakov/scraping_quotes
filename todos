@@ -39,7 +39,7 @@ username should be email receiving notification on account registration/login - 
 
 endpoint to reset the password (+notification) - done
 
-forgot the password endpoint (email code)
+forgot the password endpoint (email code) - done
 
 implement payment part
 
@@ -49,6 +49,6 @@ exception handling for notifications
 
 change username to email everywhere - done
 
-add retention policy for the logs table - 2 years (add trigger to the db) - done (via python, not sql)
+add retention policy for the logs table - 2 years (add trigger to the db)
 
 trigger which resets confirmation code after 3 minutes

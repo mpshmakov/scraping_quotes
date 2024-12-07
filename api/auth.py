@@ -44,11 +44,12 @@ def email_val(email):
 
 class CreateUserRequest(BaseModel):
     email:str
+    fullname: str
     password:str
 
     @validator('email')
     def validate_emailll(cls, value):
-        email_val(value)
+        return email_val(value)
 
 class Token(BaseModel):
     access_token: str
@@ -86,7 +87,7 @@ async def create_user(create_user_request: CreateUserRequest):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='This email is already taken.')
 
     id = str(uuid.uuid4())
-    create_user_model = Users(id=id, email=create_user_request.email, password=bcrypt_context.hash(create_user_request.password), access=0)
+    create_user_model = Users(id=id, stripe_id=None, email=create_user_request.email, fullname=create_user_request.fullname, password=bcrypt_context.hash(create_user_request.password), access=0)
     insertRow(create_user_model)
 
     async with httpx.AsyncClient() as client:

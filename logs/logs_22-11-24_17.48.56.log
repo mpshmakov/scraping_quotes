@@ -1,5 +1,0 @@
-2024-11-22T17:48:56.631655+0000 INFO 128659581526144 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
-2024-11-22T17:48:57.436469+0000 INFO 128659581526144 Database schema initialized successfully.
-2024-11-22T17:48:57.523571+0000 INFO 128659581526144 Tables in the database: ['TestTable', 'authors', 'quotes', 'quotes_tags_link', 'tags', 'users']
-2024-11-22T17:48:57.523992+0000 INFO 128659581526144 All required tables have been created successfully.
-2024-11-22T17:50:36.549606+0000 INFO 128659581526144 Row inserted successfully into users.
