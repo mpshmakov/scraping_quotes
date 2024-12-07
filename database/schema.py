@@ -96,7 +96,9 @@ class Users(Base):
     __tablename__ = "users"
 
     id = Column(String(36), primary_key=True)
+    stripe_id = Column(String(150), unique=True, nullable=True)
     email = Column(String(30), unique=True)
+    fullname = Column(String(100))
     password = Column(TEXT, nullable=False)
     access = Column(Integer, nullable=False)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
@@ -106,9 +108,11 @@ class Users(Base):
     confirm_codes = relationship("ConfirmationCodes", back_populates='users')
 
 
-    def __init__(self, id:str, email:str, password:str, access:int):
+    def __init__(self, id:str, stripe_id, email:str, fullname:str, password:str, access:int):
         self.id = id
+        self.stripe_id = stripe_id
         self.email = email
+        self.fullname = fullname
         self.password = password   
         assert access >= 0 and access <= 1, "Access must be either 0 or 1."
         self.access = access 

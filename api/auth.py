@@ -16,6 +16,8 @@ from jose import jwt, JWTError
 from secret import SECRET_KEY, ENCODING_ALG as ALGORITHM
 from notifications import email
 from database.apilogclass import log
+from . import domain, port
+
 
 class OAuth2PasswordRequestJSON(BaseModel):
     email: str
@@ -89,7 +91,7 @@ async def create_user(create_user_request: CreateUserRequest):
 
     async with httpx.AsyncClient() as client:
         print('before res')
-        res = await client.post('http://127.0.0.1:8000/auth/token', json={"email": create_user_request.email, "id": id, "access": 0})
+        res = await client.post(domain + '/auth/token', json={"email": create_user_request.email, "id": id, "access": 0})
         print("res", res.json())
         log.info(create_user_request.email, "User registered.")
         asyncio.create_task(email.register_notifications(create_user_request.email))
@@ -103,7 +105,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestJSON):
     
     async with httpx.AsyncClient() as client:
         print('before res')
-        res = await client.post('http://127.0.0.1:8000/auth/token', json={"email": user.Users.email, "id": user.Users.id, "access": user.Users.access})
+        res = await client.post(domain + '/auth/token', json={"email": user.Users.email, "id": user.Users.id, "access": user.Users.access})
         print("res", res.json())
         print(user.Users.email)
         log.info(str(user.Users.email), "User login.")
@@ -165,7 +167,7 @@ async def change_password(user: Annotated[dict, Depends(get_current_user)], pass
 
     async with httpx.AsyncClient() as client:
         print('before res')
-        res = await client.post('http://127.0.0.1:8000/auth/token', json={"email": user['email'], "id": user['id'], "access": user['access']})
+        res = await client.post(domain + '/auth/token', json={"email": user['email'], "id": user['id'], "access": user['access']})
         print("res", res.json())
         print(user['email'])
         log.info(str(user['email']), "User login.")

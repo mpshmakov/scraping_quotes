@@ -495,7 +495,13 @@ def deleteApiLogsRowsOlderThanRetentionPolicy():
     statement = delete(ApiLogs).where(ApiLogs.timestamp < (datetime.utcnow() - retention_policy))
     executeOrmStatement(statement)
 
+def isStripeIdNull(user_id):
+    statement = select(Users.c.stripe_id).where(Users.id == user_id)
+    return executeOrmStatement(statement)
 
+def updateStripeIdForUser(user_id, stripe_id):
+    statement = update(Users).where(Users.id == user_id).values(stripe_id=stripe_id)
+    executeOrmStatement(statement)
 
 def getModelFromTablename(tablename):
     for c in Base._decl_class_registry.values():
