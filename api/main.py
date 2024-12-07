@@ -3,6 +3,7 @@ import json
 from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 import httpx
 from starlette import status
 import requests
@@ -14,7 +15,7 @@ import stripe
 import uvicorn
 from api import auth
 from configuration import get_configuration
-from database.operations import executeOrmStatement, getModelFromTablename, isStripeIdNull, toggleAccessForUser, updateStripeIdForUser
+from database.operations import executeOrmStatement, getModelFromTablename, getUserStripeId, toggleAccessForUser, updateStripeIdForUser
 from database.schema import Authors, Quotes, Tags, QuotesTagsLink, Users
 from fastapi.security import OAuth2PasswordBearer
 from database.apilogclass import log
@@ -22,6 +23,7 @@ from . import domain, port
 from secret import stripe_api_key
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="api/frontend"), name="static")
 app.include_router(auth.router)
 user_dependency = Annotated[dict, Depends(auth.get_current_user)]
 stripe.api_key = stripe_api_key
@@ -76,12 +78,13 @@ async def toggle_current_user_access(user: user_dependency):
 @app.post("/subscription")
 async def pay_for_subscription(user: user_dependency):
     try:
-        res = isStripeIdNull(user['id'])
+        res = getUserStripeId(user['id'])
+        print(res)
         if res is None:
             stripe_customer = stripe.Customer.create(email=user['email'])
             updateStripeIdForUser(user['id'], stripe_customer.id)
             res = stripe_customer.id
-
+        
         checkout_session = stripe.checkout.Session.create(
             line_items=[
                 {
@@ -92,8 +95,8 @@ async def pay_for_subscription(user: user_dependency):
             ],
             customer=res,
             mode='subscription',
-            success_url= domain + '/success.html',
-            cancel_url= domain + '/cancel.html',
+            success_url= domain + '/static/success.html',
+            cancel_url= domain + '/static/cancel.html',
         )
         print("done")
         print(checkout_session.url)
