@@ -90,7 +90,7 @@ async def pay_for_subscription(user: user_dependency):
                     'quantity': 1,
                 },
             ],
-            customer=res
+            customer=res,
             mode='subscription',
             success_url= domain + '/success.html',
             cancel_url= domain + '/cancel.html',
