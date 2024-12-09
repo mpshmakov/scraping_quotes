@@ -188,3 +188,45 @@ async def send_new_password(email: str, password: str):
         print('Email sent!')
     except Exception as exception:
         print("Error: %s!\n\n" % exception)
+
+async def send_payment_succeeded_user(email: str, price:int, currency:str, item:str, receipt_url:str):    
+    sent_from = gmail_user
+    sent_subject = "Payment receipt."
+    sent_body = (f"Your last payment of {price} {currency} for {item} was successful. Receipt url: {receipt_url}. Contact support for any questions.")
+
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = email
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_app_password)
+        server.send_message(msg)    
+        server.close()
+        print('Email sent!')
+    except Exception as exception:
+        print("Error: %s!\n\n" % exception)
+
+async def send_payment_failed_user(email: str, price:int, currency:str, item:str):    
+    sent_from = gmail_user
+    sent_subject = "Payment receipt."
+    sent_body = (f"Your last payment of {price} {currency} for {item} was unsuccessful. Contact support for any questions.")
+
+    msg = EmailMessage()
+    msg.set_content(sent_body)
+    msg['Subject'] = sent_subject
+    msg['From'] = sent_from
+    msg['To'] = email
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_app_password)
+        server.send_message(msg)    
+        server.close()
+        print('Email sent!')
+    except Exception as exception:
+        print("Error: %s!\n\n" % exception) 

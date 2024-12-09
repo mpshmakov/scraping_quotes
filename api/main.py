@@ -1,4 +1,6 @@
+import asyncio
 from datetime import timedelta
+from notifications import email
 import json
 from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException, Request
@@ -27,7 +29,7 @@ app.mount("/static", StaticFiles(directory="api/frontend"), name="static")
 app.include_router(auth.router)
 user_dependency = Annotated[dict, Depends(auth.get_current_user)]
 stripe.api_key = stripe_api_key
-
+ 
 
 
 def check_auth_and_access(user):
@@ -90,15 +92,42 @@ async def handle_stripe_webhook(request: Request):
         return HTTPException(status_code=400, detail="Invalid payload")
     except stripe.error.SignatureVerificationError as e:
         return HTTPException(status_code=400, detail="Invalid signature")
-
+    object = event['data']['object']
     if event['type'] == 'payment_intent.succeeded':
-        payment_intent = event['data']['object']
-        # print(payment_intent)
-        print("event", event)
-        print("PaymentIntent was successful!")
-        toggleAccessForUser(user_id=None, stripe_id=payment_intent['customer'], access=True)
+        # print(event)
+        # print(object)
+        
+        # print("event", event)
+        print("PaymentIntent was successful!") 
+        toggleAccessForUser(user_id=None, stripe_id=object['customer'], access=True)
     elif event['type'] == 'payment_intent.payment_failed':
-        print("failed")
+        print("payment failed") 
+
+    elif event['type'] == 'payment_intent.canceled':
+        print("payment canceled")
+
+    elif event['type'] == 'invoice.paid':
+        price = object['amount_paid'] / 100
+        currency = object['currency']
+        em = object['customer_email']
+        product = stripe.Product.retrieve(object['lines']['data'][0]['price']['product'])
+        charge = stripe.Charge.retrieve(object['charge'])
+        item = product['name']
+        receipt_url = charge['receipt_url']
+        asyncio.create_task(email.send_payment_succeeded_user(em, price, currency, item, receipt_url))
+        print("product", product)
+        print("charge", charge)
+
+    elif event['type'] == 'invoice.payment_failed':
+        price = object['amount_due'] / 100
+        currency = object['currency']
+        em = object['customer_email']
+        product = stripe.Product.retrieve(object['lines']['data'][0]['price']['product'])
+        charge = stripe.Charge.retrieve(object['charge'])
+        item = product['name']
+        asyncio.create_task(email.send_payment_failed_user(em, price, currency, item))
+        print("product", product)
+        print("charge", charge)
 
     return {"status": "success"}
 
@@ -133,29 +162,7 @@ async def pay_for_subscription(user: user_dependency):
 
     return {"url":str(checkout_session.url)}
 
-def fulfill_checkout(session_id):
-  print("Fulfilling Checkout Session", session_id)
 
-  # TODO: Make this function safe to run multiple times,
-  # even concurrently, with the same session ID
-
-  # TODO: Make sure fulfillment hasn't already been
-  # peformed for this Checkout Session
-
-  # Retrieve the Checkout Session from the API with line_items expanded
-  checkout_session = stripe.checkout.Session.retrieve(
-    session_id,
-    expand=['line_items'],
-  )
-
-  # Check the Checkout Session's payment_status property
-  # to determine if fulfillment should be peformed
-  if checkout_session.payment_status != 'unpaid':
-    pass
-    # TODO: Perform fulfillment of the line items
-
-    # TODO: Record/save fulfillment status for this
-    # Checkout Session
 
 # redirect test
 @app.get("/typer", response_class=RedirectResponse)

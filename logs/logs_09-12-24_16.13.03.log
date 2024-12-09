@@ -1,0 +1,4 @@
+2024-12-09T16:13:03.744153+0000 INFO 2032 Created database engine for db quotesdbtest_whistleask, user quotesdbtest_whistleask, address pcyp4.h.filess.io:3307
+2024-12-09T16:13:04.618978+0000 INFO 2032 Database schema initialized successfully.
+2024-12-09T16:13:04.695537+0000 INFO 2032 Tables in the database: ['TestTable', 'apilogs', 'authors', 'confirm_codes', 'quotes', 'quotes_tags_link', 'tags', 'users']
+2024-12-09T16:13:04.695537+0000 INFO 2032 All required tables have been created successfully.
