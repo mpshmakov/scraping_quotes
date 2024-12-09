@@ -41,7 +41,7 @@ endpoint to reset the password (+notification) - done
 
 forgot the password endpoint (email code) - done
 
-implement payment part
+implement payment part - done
 
 explore oauth2 scopes instead of access field
 
@@ -51,7 +51,7 @@ change username to email everywhere - done
 
 add retention policy for the logs table - 2 years (add trigger to the db)
 
-trigger which resets confirmation code after 3 minutes
+trigger which resets confirmation code after 3 minutes - done
 
 email notifications after payment - done
 
