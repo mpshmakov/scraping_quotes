@@ -53,8 +53,8 @@ add retention policy for the logs table - 2 years (add trigger to the db)
 
 trigger which resets confirmation code after 3 minutes
 
-email notifications after payment
+email notifications after payment - done
 
-cancelled/failed payment page
+cancelled/failed payment page - done
 
 implement gh actions for a selenium script
